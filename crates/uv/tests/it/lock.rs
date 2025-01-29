@@ -63,6 +63,9 @@ fn lock_wheel_registry() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/68/fe/7ce1926952c8a403b35029e194555558514b365ad77d75125f521a2bec62/anyio-3.7.0-py3-none-any.whl", hash = "sha256:eddca883c4175f14df8aedce21054bfca3adb70ffe76a9f607aef9d7fa2ea7f0", size = 80873 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -71,6 +74,9 @@ fn lock_wheel_registry() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -81,6 +87,7 @@ fn lock_wheel_registry() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio", specifier = "==3.7.0" }]
 
         [[package]]
@@ -91,6 +98,9 @@ fn lock_wheel_registry() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -187,6 +197,7 @@ fn lock_sdist_registry() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "source-distribution", specifier = "==0.0.1" }]
 
         [[package]]
@@ -194,6 +205,9 @@ fn lock_sdist_registry() -> Result<()> {
         version = "0.0.1"
         source = { registry = "https://pypi.org/simple" }
         sdist = { url = "https://files.pythonhosted.org/packages/10/1f/57aa4cce1b1abf6b433106676e15f9fa2c92ed2bd4cf77c3b50a9e9ac773/source_distribution-0.0.1.tar.gz", hash = "sha256:1f83ed7498336c7f2ab9b002cf22583d91115ebc624053dc4eb3a45694490106", size = 2157 }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -284,12 +298,16 @@ fn lock_sdist_git() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "uv-public-pypackage", git = "https://github.com/astral-test/uv-public-pypackage?tag=0.0.1" }]
 
         [[package]]
         name = "uv-public-pypackage"
         version = "0.1.0"
         source = { git = "https://github.com/astral-test/uv-public-pypackage?tag=0.0.1#0dacfd662c64cb4ceb16e6cf65a157a8b715b979" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -542,6 +560,9 @@ fn lock_sdist_git_subdirectory() -> Result<()> {
         version = "1"
         source = { git = "https://github.com/pypa/sample-namespace-packages.git?subdirectory=pkg_resources%2Fpkg_a&rev=df7530eeb8fa0cb7dbb8ecb28363e8e36bfa2f45#df7530eeb8fa0cb7dbb8ecb28363e8e36bfa2f45" }
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -551,6 +572,7 @@ fn lock_sdist_git_subdirectory() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "example-pkg-a", git = "https://github.com/pypa/sample-namespace-packages.git?subdirectory=pkg_resources%2Fpkg_a&rev=df7530eeb8fa0cb7dbb8ecb28363e8e36bfa2f45" }]
         "###
         );
@@ -639,12 +661,16 @@ fn lock_sdist_git_pep508() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "uv-public-pypackage", git = "https://github.com/astral-test/uv-public-pypackage.git?rev=0.0.1" }]
 
         [[package]]
         name = "uv-public-pypackage"
         version = "0.1.0"
         source = { git = "https://github.com/astral-test/uv-public-pypackage.git?rev=0.0.1#0dacfd662c64cb4ceb16e6cf65a157a8b715b979" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -872,12 +898,16 @@ fn lock_sdist_git_short_rev() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "uv-public-pypackage", git = "https://github.com/astral-test/uv-public-pypackage?rev=0dacfd6" }]
 
         [[package]]
         name = "uv-public-pypackage"
         version = "0.1.0"
         source = { git = "https://github.com/astral-test/uv-public-pypackage?rev=0dacfd6#0dacfd662c64cb4ceb16e6cf65a157a8b715b979" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -1010,6 +1040,9 @@ fn lock_wheel_url() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -1019,6 +1052,7 @@ fn lock_wheel_url() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio", url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl" }]
 
         [[package]]
@@ -1029,6 +1063,9 @@ fn lock_wheel_url() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -1161,6 +1198,9 @@ fn lock_sdist_url() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -1170,6 +1210,7 @@ fn lock_sdist_url() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio", url = "https://files.pythonhosted.org/packages/db/4d/3970183622f0330d3c23d9b8a5f52e365e50381fd484d08e3285104333d3/anyio-4.3.0.tar.gz" }]
 
         [[package]]
@@ -1180,6 +1221,9 @@ fn lock_sdist_url() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -1275,6 +1319,9 @@ fn lock_sdist_url_subdirectory() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -1283,6 +1330,9 @@ fn lock_sdist_url_subdirectory() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -1293,6 +1343,7 @@ fn lock_sdist_url_subdirectory() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "root", url = "https://github.com/user-attachments/files/18216295/subdirectory-test.tar.gz", subdirectory = "packages/root" }]
 
         [[package]]
@@ -1305,6 +1356,7 @@ fn lock_sdist_url_subdirectory() -> Result<()> {
         sdist = { hash = "sha256:24b55efee28d08ad3cdc58903e359e820601baa6a4a4b3424311541ebcfb09d3" }
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio" }]
 
         [[package]]
@@ -1315,6 +1367,9 @@ fn lock_sdist_url_subdirectory() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -1408,6 +1463,9 @@ fn lock_sdist_url_subdirectory_pep508() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -1416,6 +1474,9 @@ fn lock_sdist_url_subdirectory_pep508() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -1426,6 +1487,7 @@ fn lock_sdist_url_subdirectory_pep508() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "root", url = "https://github.com/user-attachments/files/18216295/subdirectory-test.tar.gz", subdirectory = "packages/root" }]
 
         [[package]]
@@ -1438,6 +1500,7 @@ fn lock_sdist_url_subdirectory_pep508() -> Result<()> {
         sdist = { hash = "sha256:24b55efee28d08ad3cdc58903e359e820601baa6a4a4b3424311541ebcfb09d3" }
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio" }]
 
         [[package]]
@@ -1448,6 +1511,9 @@ fn lock_sdist_url_subdirectory_pep508() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -1544,6 +1610,9 @@ fn lock_project_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/68/fe/7ce1926952c8a403b35029e194555558514b365ad77d75125f521a2bec62/anyio-3.7.0-py3-none-any.whl", hash = "sha256:eddca883c4175f14df8aedce21054bfca3adb70ffe76a9f607aef9d7fa2ea7f0", size = 80873 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -1553,6 +1622,9 @@ fn lock_project_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "iniconfig"
         version = "2.0.0"
@@ -1561,6 +1633,9 @@ fn lock_project_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -1590,6 +1665,9 @@ fn lock_project_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -1910,6 +1988,9 @@ fn lock_dependency_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/fa/2a/7f3714cbc6356a0efec525ce7a0613d581072ed6eb53eb7b9754f33db807/blinker-1.7.0-py3-none-any.whl", hash = "sha256:c3f865d4d54db7abc53758a01601cf343fe55b84c1de4e3fa910e420b438d5b9", size = 13068 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "click"
         version = "8.1.7"
@@ -1922,6 +2003,9 @@ fn lock_dependency_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/00/2e/d53fa4befbf2cfa713304affc7ca780ce4fc1fd8710527771b58311a3229/click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28", size = 97941 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "colorama"
         version = "0.4.6"
@@ -1930,6 +2014,9 @@ fn lock_dependency_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "flask"
@@ -1952,6 +2039,9 @@ fn lock_dependency_extra() -> Result<()> {
             { name = "python-dotenv" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "itsdangerous"
         version = "2.1.2"
@@ -1960,6 +2050,9 @@ fn lock_dependency_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/68/5f/447e04e828f47465eeab35b5d408b7ebaaaee207f48b7136c5a7267a30ae/itsdangerous-2.1.2-py3-none-any.whl", hash = "sha256:2c2349112351b88699d8d4b6b075022c0808887cb7ad10069318a8b0bc88db44", size = 15749 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "jinja2"
@@ -1972,6 +2065,9 @@ fn lock_dependency_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/30/6d/6de6be2d02603ab56e72997708809e8a5b0fbfee080735109b40a3564843/Jinja2-3.1.3-py3-none-any.whl", hash = "sha256:7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa", size = 133236 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "markupsafe"
@@ -1991,6 +2087,9 @@ fn lock_dependency_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/3f/14/c3554d512d5f9100a95e737502f4a2323a1959f6d0d01e0d0997b35f7b10/MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl", hash = "sha256:823b65d8706e32ad2df51ed89496147a42a2a6e01c13cfb6ffb8b1e92bc910bb", size = 17127 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -2000,6 +2099,7 @@ fn lock_dependency_extra() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "flask", extras = ["dotenv"] }]
 
         [[package]]
@@ -2010,6 +2110,9 @@ fn lock_dependency_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/6a/3e/b68c118422ec867fa7ab88444e1274aa40681c606d59ac27de5a5588f082/python_dotenv-1.0.1-py3-none-any.whl", hash = "sha256:f7b63ef50f1b690dddf550d03497b66d609393b40b564ed0d674909a68ebf16a", size = 19863 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "werkzeug"
@@ -2022,6 +2125,9 @@ fn lock_dependency_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c3/fc/254c3e9b5feb89ff5b9076a23218dafbc99c96ac5941e900b71206e6313b/werkzeug-3.0.1-py3-none-any.whl", hash = "sha256:90a285dc0e42ad56b34e696398b8122ee4c681833fb35b8334a095d82c56da10", size = 226669 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -2111,6 +2217,9 @@ fn lock_conditional_dependency_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ba/06/a07f096c664aeb9f01624f858c3add0a4e913d6c96257acb4fce61e7de14/certifi-2024.2.2-py3-none-any.whl", hash = "sha256:dc383c07b76109f368f6106eee2b593b04a011ea4d55f652c6ca24a754d1cdd1", size = 163774 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "charset-normalizer"
@@ -2209,6 +2318,9 @@ fn lock_conditional_dependency_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/28/76/e6222113b83e3622caa4bb41032d0b1bf785250607392e1b778aca0b8a7d/charset_normalizer-3.3.2-py3-none-any.whl", hash = "sha256:3e4d1f6587322d2788836a99c69062fbb091331ec940e02d12d179c1d53e25fc", size = 48543 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -2217,6 +2329,9 @@ fn lock_conditional_dependency_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -2228,6 +2343,7 @@ fn lock_conditional_dependency_extra() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "requests" },
             { name = "requests", extras = ["socks"], marker = "python_full_version < '3.10'" },
@@ -2241,6 +2357,9 @@ fn lock_conditional_dependency_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/8d/59/b4572118e098ac8e46e399a1dd0f2d85403ce8bbaad9ec79373ed6badaf9/PySocks-1.7.1-py3-none-any.whl", hash = "sha256:2725bd0a9925919b9b51739eea5f9e2bae91e83288108a9ad338b2e3a4435ee5", size = 16725 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "requests"
@@ -2263,6 +2382,9 @@ fn lock_conditional_dependency_extra() -> Result<()> {
             { name = "pysocks", marker = "python_full_version < '3.10'" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "urllib3"
         version = "2.0.7"
@@ -2274,6 +2396,9 @@ fn lock_conditional_dependency_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/d2/b2/b157855192a68541a91ba7b2bbcb91f1b4faa51f8bae38d8005c034be524/urllib3-2.0.7-py3-none-any.whl", hash = "sha256:fdb6d215c776278489906c2f8916e6e7d4f5a9b602ccbcfdf7f016fc8da0596e", size = 124213 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "urllib3"
@@ -2287,6 +2412,9 @@ fn lock_conditional_dependency_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/a2/73/a68704750a7679d0b6d3ad7aa8d4da8e14e151ae82e6fee774e6e0d05ec8/urllib3-2.2.1-py3-none-any.whl", hash = "sha256:450b20ec296a467077128bff42b73080516e71b56ff59a60a02bef2232c4fa9d", size = 121067 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -2404,6 +2532,9 @@ fn lock_dependency_non_existent_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/fa/2a/7f3714cbc6356a0efec525ce7a0613d581072ed6eb53eb7b9754f33db807/blinker-1.7.0-py3-none-any.whl", hash = "sha256:c3f865d4d54db7abc53758a01601cf343fe55b84c1de4e3fa910e420b438d5b9", size = 13068 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "click"
         version = "8.1.7"
@@ -2416,6 +2547,9 @@ fn lock_dependency_non_existent_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/00/2e/d53fa4befbf2cfa713304affc7ca780ce4fc1fd8710527771b58311a3229/click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28", size = 97941 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "colorama"
         version = "0.4.6"
@@ -2424,6 +2558,9 @@ fn lock_dependency_non_existent_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "flask"
@@ -2441,6 +2578,9 @@ fn lock_dependency_non_existent_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/93/a6/aa98bfe0eb9b8b15d36cdfd03c8ca86a03968a87f27ce224fb4f766acb23/flask-3.0.2-py3-none-any.whl", hash = "sha256:3232e0e9c850d781933cf0207523d1ece087eb8d87b23777ae38456e2fbe7c6e", size = 101300 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "itsdangerous"
         version = "2.1.2"
@@ -2449,6 +2589,9 @@ fn lock_dependency_non_existent_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/68/5f/447e04e828f47465eeab35b5d408b7ebaaaee207f48b7136c5a7267a30ae/itsdangerous-2.1.2-py3-none-any.whl", hash = "sha256:2c2349112351b88699d8d4b6b075022c0808887cb7ad10069318a8b0bc88db44", size = 15749 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "jinja2"
@@ -2461,6 +2604,9 @@ fn lock_dependency_non_existent_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/30/6d/6de6be2d02603ab56e72997708809e8a5b0fbfee080735109b40a3564843/Jinja2-3.1.3-py3-none-any.whl", hash = "sha256:7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa", size = 133236 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "markupsafe"
@@ -2480,6 +2626,9 @@ fn lock_dependency_non_existent_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/3f/14/c3554d512d5f9100a95e737502f4a2323a1959f6d0d01e0d0997b35f7b10/MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl", hash = "sha256:823b65d8706e32ad2df51ed89496147a42a2a6e01c13cfb6ffb8b1e92bc910bb", size = 17127 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -2489,6 +2638,7 @@ fn lock_dependency_non_existent_extra() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "flask", extras = ["foo"] }]
 
         [[package]]
@@ -2502,6 +2652,9 @@ fn lock_dependency_non_existent_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c3/fc/254c3e9b5feb89ff5b9076a23218dafbc99c96ac5941e900b71206e6313b/werkzeug-3.0.1-py3-none-any.whl", hash = "sha256:90a285dc0e42ad56b34e696398b8122ee4c681833fb35b8334a095d82c56da10", size = 226669 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -2584,11 +2737,17 @@ fn lock_upgrade_log() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "markupsafe"
         version = "1.1.1"
         source = { registry = "https://pypi.org/simple" }
         sdist = { url = "https://files.pythonhosted.org/packages/b9/2e/64db92e53b86efccfaea71321f597fa2e1b2bd3853d8ce658568f7a13094/MarkupSafe-1.1.1.tar.gz", hash = "sha256:29872e92839765e546828bb7754a68c418d927cd064fd4708fab9fe9c8bb116b", size = 19151 }
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -2600,6 +2759,7 @@ fn lock_upgrade_log() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "iniconfig" },
             { name = "markupsafe", specifier = "<2" },
@@ -2756,6 +2916,9 @@ fn lock_upgrade_log_multi_version() -> Result<()> {
         ]
         sdist = { url = "https://files.pythonhosted.org/packages/b9/2e/64db92e53b86efccfaea71321f597fa2e1b2bd3853d8ce658568f7a13094/MarkupSafe-1.1.1.tar.gz", hash = "sha256:29872e92839765e546828bb7754a68c418d927cd064fd4708fab9fe9c8bb116b", size = 19151 }
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "markupsafe"
         version = "2.0.0"
@@ -2764,6 +2927,9 @@ fn lock_upgrade_log_multi_version() -> Result<()> {
             "sys_platform == 'win32'",
         ]
         sdist = { url = "https://files.pythonhosted.org/packages/67/6a/5b3ed5c122e20c33d2562df06faf895a6b91b0a6b96a4626440ffe1d5c8e/MarkupSafe-2.0.0.tar.gz", hash = "sha256:4fae0677f712ee090721d8b17f412f1cbceefbf0dc180fe91bab3232f38b4527", size = 18466 }
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -2775,6 +2941,7 @@ fn lock_upgrade_log_multi_version() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "markupsafe", marker = "sys_platform != 'win32'", specifier = "<2" },
             { name = "markupsafe", marker = "sys_platform == 'win32'", specifier = "==2.0.0" },
@@ -2910,6 +3077,9 @@ fn lock_preference() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/9b/dd/b3c12c6d707058fa947864b67f0c4e0c39ef8610988d7baea9578f3c48f3/iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3", size = 4990 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -2919,6 +3089,7 @@ fn lock_preference() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig", specifier = "<2" }]
         "###
         );
@@ -3083,12 +3254,16 @@ fn lock_git_plus_prefix() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "uv-public-pypackage", git = "https://github.com/astral-test/uv-public-pypackage" }]
 
         [[package]]
         name = "uv-public-pypackage"
         version = "0.1.0"
         source = { git = "https://github.com/astral-test/uv-public-pypackage#b270df1a2fb5d012294e9aaf05e7e0bab1e6a389" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -3179,6 +3354,9 @@ fn lock_partial_git() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "anyio"
         version = "4.6.2"
@@ -3193,6 +3371,9 @@ fn lock_partial_git() -> Result<()> {
             { name = "typing-extensions", marker = "python_full_version < '3.11'" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "exceptiongroup"
         version = "1.2.0"
@@ -3202,6 +3383,9 @@ fn lock_partial_git() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/b8/9a/5028fd52db10e600f1c4674441b968cf2ea4959085bfb5b99fb1250e5f68/exceptiongroup-1.2.0-py3-none-any.whl", hash = "sha256:4bfd3996ac73b41e9b9628b04e079f193850720ea5945fc96a08633c66912f14", size = 16210 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -3210,6 +3394,9 @@ fn lock_partial_git() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -3221,6 +3408,7 @@ fn lock_partial_git() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "anyio", marker = "python_full_version < '3.12'", git = "https://github.com/agronholm/anyio?rev=4.6.2" },
             { name = "anyio", marker = "python_full_version >= '3.12'" },
@@ -3235,6 +3423,9 @@ fn lock_partial_git() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typing-extensions"
         version = "4.10.0"
@@ -3243,6 +3434,9 @@ fn lock_partial_git() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -3457,12 +3651,16 @@ fn lock_git_sha() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "uv-public-pypackage", git = "https://github.com/astral-test/uv-public-pypackage?rev=main" }]
 
         [[package]]
         name = "uv-public-pypackage"
         version = "0.1.0"
         source = { git = "https://github.com/astral-test/uv-public-pypackage?rev=main#b270df1a2fb5d012294e9aaf05e7e0bab1e6a389" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -3565,6 +3763,9 @@ fn lock_requires_python() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e0/44/827b2a91a5816512fcaf3cc4ebc465ccd5d598c45cefa6703fcf4a79018f/attrs-23.2.0-py3-none-any.whl", hash = "sha256:99b87a485a5820b23b879f04c2305b44b951b502fd64be915879d77a7e8fc6f1", size = 60752 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "cattrs"
         version = "23.1.2"
@@ -3584,6 +3785,9 @@ fn lock_requires_python() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/3a/ba/05df14efaa0624fac6b1510e87f5ce446208d2f6ce50270a89b6268aebfe/cattrs-23.1.2-py3-none-any.whl", hash = "sha256:b2bb14311ac17bed0d58785e5a60f022e5431aca3932e3fc5cc8ed8639de50a4", size = 50845 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "cattrs"
         version = "23.2.3"
@@ -3601,6 +3805,9 @@ fn lock_requires_python() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/b3/0d/cd4a4071c7f38385dc5ba91286723b4d1090b87815db48216212c6c6c30e/cattrs-23.2.3-py3-none-any.whl", hash = "sha256:0341994d94971052e9ee70662542699a3162ea1e0c62f7ce1b4a57f563685108", size = 57474 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "exceptiongroup"
         version = "1.2.0"
@@ -3609,6 +3816,9 @@ fn lock_requires_python() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/b8/9a/5028fd52db10e600f1c4674441b968cf2ea4959085bfb5b99fb1250e5f68/exceptiongroup-1.2.0-py3-none-any.whl", hash = "sha256:4bfd3996ac73b41e9b9628b04e079f193850720ea5945fc96a08633c66912f14", size = 16210 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "importlib-metadata"
@@ -3622,6 +3832,9 @@ fn lock_requires_python() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ff/94/64287b38c7de4c90683630338cf28f129decbba0a44f0c6db35a873c73c4/importlib_metadata-6.7.0-py3-none-any.whl", hash = "sha256:cb52082e659e97afc5dac71e79de97d8681de3aa07ff18578330904a9d18e5b5", size = 22934 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "lsprotocol"
@@ -3638,6 +3851,9 @@ fn lock_requires_python() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/2d/5b/f18eb1823a4cee9bed70cdcc25eed5a75845367c42e63a79010a7c34f8a7/lsprotocol-2023.0.0-py3-none-any.whl", hash = "sha256:e85fc87ee26c816adca9eb497bb3db1a7c79c477a11563626e712eaccf926a05", size = 70789 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "lsprotocol"
@@ -3658,6 +3874,9 @@ fn lock_requires_python() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/8d/37/2351e48cb3309673492d3a8c59d407b75fb6630e560eb27ecd4da03adc9a/lsprotocol-2023.0.1-py3-none-any.whl", hash = "sha256:c75223c9e4af2f24272b14c6375787438279369236cd568f596d4951052a60f2", size = 70826 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -3670,6 +3889,7 @@ fn lock_requires_python() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "pygls" }]
 
         [[package]]
@@ -3688,6 +3908,9 @@ fn lock_requires_python() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/da/9b/4fd77a060068f2f3f46f97ed6ba8762c5a73f11ef0c196cfd34f3a9be878/pygls-1.0.1-py3-none-any.whl", hash = "sha256:adacc96da77598c70f46acfdfd1481d3da90cd54f639f7eee52eb6e4dbd57b55", size = 40367 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "pygls"
         version = "1.0.2"
@@ -3704,6 +3927,9 @@ fn lock_requires_python() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/6d/c6/ed6aa6fb709abf57b1a75b83f7809792b79320247391dda8f04d2a003548/pygls-1.0.2-py3-none-any.whl", hash = "sha256:6d278d29fa6559b0f7a448263c85cb64ec6e9369548b02f1a7944060848b21f9", size = 38654 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "pygls"
         version = "1.2.1"
@@ -3718,6 +3944,9 @@ fn lock_requires_python() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/36/31/3799444d3f072ffca1a35eb02a48f964384cc13f001125e87d9f0748687b/pygls-1.2.1-py3-none-any.whl", hash = "sha256:7dcfcf12b6f15beb606afa46de2ed348b65a279c340ef2242a9a35c22eeafe94", size = 55983 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "pygls"
@@ -3735,6 +3964,9 @@ fn lock_requires_python() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/4e/1e/643070d8f5c851958662e7e5df16d9c3a068a598a7ee7bb2eb8d95b4e5d7/pygls-1.3.0-py3-none-any.whl", hash = "sha256:d4a01414b6ed4e34e7e8fd29b77d3e88c29615df7d0bbff49bf019e15ec04b8f", size = 56031 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typeguard"
         version = "2.13.3"
@@ -3746,6 +3978,9 @@ fn lock_requires_python() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/9a/bb/d43e5c75054e53efce310e79d63df0ac3f25e34c926be5dffb7d283fb2a8/typeguard-2.13.3-py3-none-any.whl", hash = "sha256:5e3e3be01e887e7eafae5af63d1f36c849aaa94e3a0112097312aabfa16284f1", size = 17605 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "typeguard"
@@ -3763,6 +3998,9 @@ fn lock_requires_python() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e2/62/7d206b0ac6fcbb163215ecc622a54eb747f85ad86d14bc513a834442d0f6/typeguard-3.0.2-py3-none-any.whl", hash = "sha256:bbe993854385284ab42fd5bd3bee6f6556577ce8b50696d6cb956d704f286c8e", size = 30696 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typing-extensions"
         version = "4.7.1"
@@ -3777,6 +4015,9 @@ fn lock_requires_python() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ec/6b/63cc3df74987c36fe26157ee12e09e8f9db4de771e0f3404263117e75b95/typing_extensions-4.7.1-py3-none-any.whl", hash = "sha256:440d5dd3af93b060174bf433bccd69b0babc3b15b1a8dca43789fd7f61514b36", size = 33232 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typing-extensions"
         version = "4.10.0"
@@ -3789,6 +4030,9 @@ fn lock_requires_python() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "zipp"
         version = "3.15.0"
@@ -3797,6 +4041,9 @@ fn lock_requires_python() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/5b/fa/c9e82bbe1af6266adf08afb563905eb87cab83fde00a0a08963510621047/zipp-3.15.0-py3-none-any.whl", hash = "sha256:48904fc76a60e542af151aded95726c1a5c34ed43ab4134b597665c86d7ad556", size = 6758 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -4198,6 +4445,9 @@ fn lock_requires_python_upper() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/78/b6/6307fbef88d9b5ee7421e68d78a9f162e0da4900bc5f5793f6d3d0e34fb8/annotated_types-0.7.0-py3-none-any.whl", hash = "sha256:1f02e8b43a8fbbc3f3e0d4f0f4bfc8131bcb4eebe8849b8e5c773f3a1c582a53", size = 13643 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "pydantic"
         version = "2.8.2"
@@ -4211,6 +4461,9 @@ fn lock_requires_python_upper() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/1f/fa/b7f815b8c9ad021c07f88875b601222ef5e70619391ade4a49234d12d278/pydantic-2.8.2-py3-none-any.whl", hash = "sha256:73ee9fddd406dc318b885c7a2eab8a6472b68b8fb5ba8150949fc3db939f23c8", size = 423875 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "pydantic-core"
@@ -4235,6 +4488,9 @@ fn lock_requires_python_upper() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/35/7f/58758c42c61b0bdd585158586fecea295523d49933cb33664ea888162daf/pydantic_core-2.20.1-cp311-none-win_amd64.whl", hash = "sha256:40a783fb7ee353c50bd3853e626f15677ea527ae556429453685ae32280c19c2", size = 1901750 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typing-extensions"
         version = "4.12.2"
@@ -4243,6 +4499,9 @@ fn lock_requires_python_upper() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d", size = 37438 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "warehouse"
@@ -4253,6 +4512,7 @@ fn lock_requires_python_upper() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "pydantic" }]
         "###
         );
@@ -4415,6 +4675,9 @@ fn lock_requires_python_fork() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/d6/c2/7219ee34993c50b3fedd81a7d77f27232df0bcf5451920dd16717fcc9b1f/uv-0.4.0-py3-none-win_amd64.whl", hash = "sha256:6b9b8db49928b71f926cf48150a34c69458447e554e7b65c1337d3e907bd7fb5", size = 12145169 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "warehouse"
         version = "1.0.0"
@@ -4424,6 +4687,7 @@ fn lock_requires_python_fork() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "uv", marker = "python_full_version >= '3.8'" }]
         "###
         );
@@ -4508,6 +4772,9 @@ fn lock_requires_python_wheels() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/83/10/466fe96dae1bff622021ee687f68e5524d6392b0a2f80d05001cd3a451ba/frozenlist-1.4.1-py3-none-any.whl", hash = "sha256:04ced3e6a46b4cfffe20f9ae482818e34eba9b5fb0ce4056e4cc9b6e212d09b7", size = 11552 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -4517,6 +4784,7 @@ fn lock_requires_python_wheels() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "frozenlist" }]
         "###
         );
@@ -4669,6 +4937,9 @@ fn lock_requires_python_star() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e0/44/827b2a91a5816512fcaf3cc4ebc465ccd5d598c45cefa6703fcf4a79018f/attrs-23.2.0-py3-none-any.whl", hash = "sha256:99b87a485a5820b23b879f04c2305b44b951b502fd64be915879d77a7e8fc6f1", size = 60752 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "cattrs"
         version = "23.2.3"
@@ -4680,6 +4951,9 @@ fn lock_requires_python_star() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/b3/0d/cd4a4071c7f38385dc5ba91286723b4d1090b87815db48216212c6c6c30e/cattrs-23.2.3-py3-none-any.whl", hash = "sha256:0341994d94971052e9ee70662542699a3162ea1e0c62f7ce1b4a57f563685108", size = 57474 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "linehaul"
@@ -4695,6 +4969,9 @@ fn lock_requires_python_star() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/03/73/c73588052198be06462d1a7c4653b602a109a0df0208c59e58075dc3bc73/linehaul-1.0.1-py3-none-any.whl", hash = "sha256:d19ca669008dad910868dfae7f904dfc5362583729bda344799cf7ea2ad5ef12", size = 27848 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "packaging"
         version = "24.0"
@@ -4703,6 +4980,9 @@ fn lock_requires_python_star() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/49/df/1fceb2f8900f8639e278b056416d49134fb8d84c5942ffaa01ad34782422/packaging-24.0-py3-none-any.whl", hash = "sha256:2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5", size = 53488 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -4713,6 +4993,7 @@ fn lock_requires_python_star() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "linehaul" }]
 
         [[package]]
@@ -4723,6 +5004,9 @@ fn lock_requires_python_star() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/9d/ea/6d76df31432a0e6fdf81681a895f009a4bb47b3c39036db3e1b528191d52/pyparsing-3.1.2-py3-none-any.whl", hash = "sha256:f9db75911801ed778fe61bb643079ff86601aca99fcae6345aa67292038fb742", size = 103245 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -4790,6 +5074,9 @@ fn lock_requires_python_not_equal() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -4799,6 +5086,7 @@ fn lock_requires_python_not_equal() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
         "###
         );
@@ -4868,6 +5156,9 @@ fn lock_requires_python_pre() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e0/44/827b2a91a5816512fcaf3cc4ebc465ccd5d598c45cefa6703fcf4a79018f/attrs-23.2.0-py3-none-any.whl", hash = "sha256:99b87a485a5820b23b879f04c2305b44b951b502fd64be915879d77a7e8fc6f1", size = 60752 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "cattrs"
         version = "23.2.3"
@@ -4879,6 +5170,9 @@ fn lock_requires_python_pre() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/b3/0d/cd4a4071c7f38385dc5ba91286723b4d1090b87815db48216212c6c6c30e/cattrs-23.2.3-py3-none-any.whl", hash = "sha256:0341994d94971052e9ee70662542699a3162ea1e0c62f7ce1b4a57f563685108", size = 57474 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "linehaul"
@@ -4894,6 +5188,9 @@ fn lock_requires_python_pre() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/03/73/c73588052198be06462d1a7c4653b602a109a0df0208c59e58075dc3bc73/linehaul-1.0.1-py3-none-any.whl", hash = "sha256:d19ca669008dad910868dfae7f904dfc5362583729bda344799cf7ea2ad5ef12", size = 27848 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "packaging"
         version = "24.0"
@@ -4902,6 +5199,9 @@ fn lock_requires_python_pre() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/49/df/1fceb2f8900f8639e278b056416d49134fb8d84c5942ffaa01ad34782422/packaging-24.0-py3-none-any.whl", hash = "sha256:2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5", size = 53488 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -4912,6 +5212,7 @@ fn lock_requires_python_pre() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "linehaul" }]
 
         [[package]]
@@ -4922,6 +5223,9 @@ fn lock_requires_python_pre() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/9d/ea/6d76df31432a0e6fdf81681a895f009a4bb47b3c39036db3e1b528191d52/pyparsing-3.1.2-py3-none-any.whl", hash = "sha256:f9db75911801ed778fe61bb643079ff86601aca99fcae6345aa67292038fb742", size = 103245 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -4996,6 +5300,9 @@ fn lock_requires_python_unbounded() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/9b/dd/b3c12c6d707058fa947864b67f0c4e0c39ef8610988d7baea9578f3c48f3/iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3", size = 4990 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "iniconfig"
         version = "2.0.0"
@@ -5008,6 +5315,9 @@ fn lock_requires_python_unbounded() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -5018,6 +5328,7 @@ fn lock_requires_python_unbounded() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
         "###
         );
@@ -5162,6 +5473,9 @@ fn lock_requires_python_maximum_version() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/fc/dd/9106005eb477d022b60b3817ed5937a43dad8fd1f20b0610ea8a32fcb407/numpy-1.24.4-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:e98f220aa76ca2a977fe435f5b04d7b3470c0a2e6312907b37ba6068f26787f2", size = 14734290 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "numpy"
         version = "1.26.4"
@@ -5208,6 +5522,9 @@ fn lock_requires_python_maximum_version() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/f4/5f/fafd8c51235f60d49f7a88e2275e13971e90555b67da52dd6416caec32fe/numpy-1.26.4-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:7e50d0a0cc3189f9cb0aeb3a6a6af18c16f59f004b866cd2be1c14b36134a4a0", size = 15709730 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -5218,6 +5535,7 @@ fn lock_requires_python_maximum_version() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "numpy" }]
         "###
         );
@@ -5314,6 +5632,9 @@ fn lock_requires_python_fewest_versions() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/fc/dd/9106005eb477d022b60b3817ed5937a43dad8fd1f20b0610ea8a32fcb407/numpy-1.24.4-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:e98f220aa76ca2a977fe435f5b04d7b3470c0a2e6312907b37ba6068f26787f2", size = 14734290 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -5323,6 +5644,7 @@ fn lock_requires_python_fewest_versions() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "numpy" }]
         "###
         );
@@ -5409,6 +5731,9 @@ fn lock_python_version_marker_complement() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e0/44/827b2a91a5816512fcaf3cc4ebc465ccd5d598c45cefa6703fcf4a79018f/attrs-23.2.0-py3-none-any.whl", hash = "sha256:99b87a485a5820b23b879f04c2305b44b951b502fd64be915879d77a7e8fc6f1", size = 60752 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "iniconfig"
         version = "2.0.0"
@@ -5417,6 +5742,9 @@ fn lock_python_version_marker_complement() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -5429,6 +5757,7 @@ fn lock_python_version_marker_complement() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "attrs", marker = "python_full_version < '3.11'" },
             { name = "attrs", marker = "python_full_version >= '3.11'" },
@@ -5446,6 +5775,9 @@ fn lock_python_version_marker_complement() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -5513,6 +5845,9 @@ fn lock_dev() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -5527,6 +5862,7 @@ fn lock_dev() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
 
         [package.metadata.requires-dev]
@@ -5539,6 +5875,9 @@ fn lock_dev() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d" },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -5626,6 +5965,9 @@ fn lock_conditional_unconditional() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -5635,6 +5977,7 @@ fn lock_conditional_unconditional() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "iniconfig" },
             { name = "iniconfig", marker = "python_full_version < '3.12'" },
@@ -5703,6 +6046,9 @@ fn lock_multiple_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -5712,6 +6058,7 @@ fn lock_multiple_markers() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "iniconfig", marker = "python_full_version < '3.12'" },
             { name = "iniconfig", marker = "implementation_name == 'cpython'" },
@@ -5819,6 +6166,7 @@ fn lock_relative_and_absolute_paths() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "b", directory = "b" },
             { name = "c", directory = "c" },
@@ -5829,10 +6177,16 @@ fn lock_relative_and_absolute_paths() -> Result<()> {
         version = "0.1.0"
         source = { directory = "b" }
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "c"
         version = "0.1.0"
         source = { directory = "c" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -5897,6 +6251,9 @@ fn lock_cycles() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/f2/94/3af39d34be01a24a6e65433d19e107099374224905f1e0cc6bbe1fd22a2f/argparse-1.4.0-py2.py3-none-any.whl", hash = "sha256:c31647edb69fd3d465a847ea3157d37bed1f95f19760b11a47aa91c04b666314", size = 23000 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "extras"
         version = "1.0.0"
@@ -5905,6 +6262,9 @@ fn lock_cycles() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/03/e9/e915af1f97914cd0bc021e125fd1bfd4106de614a275e4b6866dd9a209ac/extras-1.0.0-py2.py3-none-any.whl", hash = "sha256:f689f08df47e2decf76aa6208c081306e7bd472630eb1ec8a875c67de2366e87", size = 7279 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "fixtures"
@@ -5920,6 +6280,9 @@ fn lock_cycles() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/a8/28/7eed6bf76792f418029a18d5b2ace87ce7562927cdd00f1cefe481cd148f/fixtures-3.0.0-py2.py3-none-any.whl", hash = "sha256:2a551b0421101de112d9497fb5f6fd25e5019391c0fbec9bad591ecae981420d", size = 67478 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "linecache2"
         version = "1.0.0"
@@ -5929,6 +6292,9 @@ fn lock_cycles() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c7/a3/c5da2a44c85bfbb6eebcfc1dde24933f8704441b98fdde6528f4831757a6/linecache2-1.0.0-py2.py3-none-any.whl", hash = "sha256:e78be9c0a0dfcbac712fe04fbf92b96cddae80b1b842f24248214c8496f006ef", size = 12967 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "pbr"
         version = "6.0.0"
@@ -5937,6 +6303,9 @@ fn lock_cycles() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/64/dd/171c9fb653591cf265bcc89c436eec75c9bde3dec921cc236fa71e5698df/pbr-6.0.0-py2.py3-none-any.whl", hash = "sha256:4a7317d5e3b17a3dccb6a8cfe67dab65b20551404c52c8ed41279fa4f0cb4cda", size = 107506 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -5948,6 +6317,7 @@ fn lock_cycles() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "fixtures", specifier = "==3.0.0" },
             { name = "testtools", specifier = "==2.3.0" },
@@ -5962,6 +6332,9 @@ fn lock_cycles() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/26/2e/03bce213a9bf02a2750dcb04e761785e9c763fc11071edc4b447eacbb842/python_mimeparse-1.6.0-py2.py3-none-any.whl", hash = "sha256:a295f03ff20341491bfe4717a39cd0a8cc9afad619ba44b77e86b0ab8a2b8282", size = 6057 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "six"
         version = "1.16.0"
@@ -5970,6 +6343,9 @@ fn lock_cycles() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254", size = 11053 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "testtools"
@@ -5989,6 +6365,9 @@ fn lock_cycles() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/87/74/a4d55da28d7bba6d6f49430f22a62afd8472cb24a63fa61daef80d3e821b/testtools-2.3.0-py2.py3-none-any.whl", hash = "sha256:a2be448869171b6e0f26d9544088b8b98439ec180ce272040236d570a40bcbed", size = 184636 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "traceback2"
         version = "1.4.0"
@@ -6000,6 +6379,9 @@ fn lock_cycles() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/17/0a/6ac05a3723017a967193456a2efa0aa9ac4b51456891af1e2353bb9de21e/traceback2-1.4.0-py2.py3-none-any.whl", hash = "sha256:8253cebec4b19094d67cc5ed5af99bf1dba1285292226e98a31929f87a5d6b23", size = 16793 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "unittest2"
@@ -6014,6 +6396,9 @@ fn lock_cycles() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/72/20/7f0f433060a962200b7272b8c12ba90ef5b903e218174301d0abfd523813/unittest2-1.1.0-py2.py3-none-any.whl", hash = "sha256:13f77d0875db6d9b435e1d4f41e74ad4cc2eb6e1d5c824996092b3430f088bb8", size = 96379 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -6099,6 +6484,9 @@ fn lock_new_extras() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ba/06/a07f096c664aeb9f01624f858c3add0a4e913d6c96257acb4fce61e7de14/certifi-2024.2.2-py3-none-any.whl", hash = "sha256:dc383c07b76109f368f6106eee2b593b04a011ea4d55f652c6ca24a754d1cdd1", size = 163774 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "charset-normalizer"
         version = "3.3.2"
@@ -6123,6 +6511,9 @@ fn lock_new_extras() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/28/76/e6222113b83e3622caa4bb41032d0b1bf785250607392e1b778aca0b8a7d/charset_normalizer-3.3.2-py3-none-any.whl", hash = "sha256:3e4d1f6587322d2788836a99c69062fbb091331ec940e02d12d179c1d53e25fc", size = 48543 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -6131,6 +6522,9 @@ fn lock_new_extras() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -6141,6 +6535,7 @@ fn lock_new_extras() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "requests", specifier = "==2.31.0" }]
 
         [[package]]
@@ -6158,6 +6553,9 @@ fn lock_new_extras() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/70/8e/0e2d847013cb52cd35b38c009bb167a1a26b2ce6cd6965bf26b47bc0bf44/requests-2.31.0-py3-none-any.whl", hash = "sha256:58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f", size = 62574 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "urllib3"
         version = "2.2.1"
@@ -6166,6 +6564,9 @@ fn lock_new_extras() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/a2/73/a68704750a7679d0b6d3ad7aa8d4da8e14e151ae82e6fee774e6e0d05ec8/urllib3-2.2.1-py3-none-any.whl", hash = "sha256:450b20ec296a467077128bff42b73080516e71b56ff59a60a02bef2232c4fa9d", size = 121067 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -6470,6 +6871,9 @@ fn lock_resolution_mode() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -6478,6 +6882,9 @@ fn lock_resolution_mode() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -6488,6 +6895,7 @@ fn lock_resolution_mode() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio", specifier = ">=3" }]
 
         [[package]]
@@ -6498,6 +6906,9 @@ fn lock_resolution_mode() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -6718,6 +7129,9 @@ fn lock_same_version_multiple_urls() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/3b/49/ebee263b69fe243bd1fd0a88bc6bb0f7732bf1794ba3273cb446351f9482/anyio-3.0.0-py3-none-any.whl", hash = "sha256:e71c3d9d72291d12056c0265d07c6bbedf92332f78573e278aeb116f24f30395", size = 72182 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "anyio"
         version = "3.7.0"
@@ -6734,6 +7148,9 @@ fn lock_same_version_multiple_urls() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/68/fe/7ce1926952c8a403b35029e194555558514b365ad77d75125f521a2bec62/anyio-3.7.0-py3-none-any.whl", hash = "sha256:eddca883c4175f14df8aedce21054bfca3adb70ffe76a9f607aef9d7fa2ea7f0", size = 80873 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "dependency"
         version = "0.0.1"
@@ -6746,6 +7163,7 @@ fn lock_same_version_multiple_urls() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio", specifier = "==3.7.0" }]
 
         [[package]]
@@ -6760,6 +7178,7 @@ fn lock_same_version_multiple_urls() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio", specifier = "==3.0.0" }]
 
         [[package]]
@@ -6771,6 +7190,9 @@ fn lock_same_version_multiple_urls() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -6781,6 +7203,7 @@ fn lock_same_version_multiple_urls() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "dependency", marker = "sys_platform != 'darwin'", directory = "v2" },
             { name = "dependency", marker = "sys_platform == 'darwin'", directory = "v1" },
@@ -6794,6 +7217,9 @@ fn lock_same_version_multiple_urls() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -6928,12 +7354,16 @@ fn lock_exclusion() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "project", virtual = "../" }]
 
         [[package]]
         name = "project"
         version = "0.1.0"
         source = { virtual = "../" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -7234,6 +7664,9 @@ fn lock_peer_member() -> Result<()> {
         version = "0.1.0"
         source = { editable = "../child" }
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -7243,6 +7676,7 @@ fn lock_peer_member() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "child", editable = "../child" }]
         "###
         );
@@ -7360,6 +7794,7 @@ fn lock_index_workspace_member() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig", specifier = ">=2", index = "https://pypi-proxy.fly.dev/basic-auth/simple" }]
 
         [[package]]
@@ -7371,6 +7806,9 @@ fn lock_index_workspace_member() -> Result<()> {
             { url = "https://pypi-proxy.fly.dev/basic-auth/files/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -7380,6 +7818,7 @@ fn lock_index_workspace_member() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "child", editable = "child" }]
         "###
         );
@@ -7510,6 +7949,7 @@ fn lock_dev_transitive() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "baz", editable = "baz" },
             { name = "foo", virtual = "../foo" },
@@ -7527,6 +7967,7 @@ fn lock_dev_transitive() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
 
         [package.metadata.requires-dev]
         dev = [{ name = "typing-extensions", specifier = ">4" }]
@@ -7537,6 +7978,7 @@ fn lock_dev_transitive() -> Result<()> {
         source = { virtual = "../foo" }
 
         [package.metadata]
+        provides-extras = []
 
         [package.metadata.requires-dev]
         dev = [{ name = "anyio" }]
@@ -7550,6 +7992,9 @@ fn lock_dev_transitive() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typing-extensions"
         version = "4.10.0"
@@ -7558,6 +8003,9 @@ fn lock_dev_transitive() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -7634,6 +8082,7 @@ fn lock_redact_https() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
 
         [[package]]
@@ -7644,6 +8093,9 @@ fn lock_redact_https() -> Result<()> {
         wheels = [
             { url = "https://pypi-proxy.fly.dev/basic-auth/files/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -7821,12 +8273,16 @@ fn lock_redact_git_pep508() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "uv-private-pypackage", git = "https://github.com/astral-test/uv-private-pypackage" }]
 
         [[package]]
         name = "uv-private-pypackage"
         version = "0.1.0"
         source = { git = "https://github.com/astral-test/uv-private-pypackage#d780faf0ac91257d4d5a4f0c5a0e4509608c0071" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -7913,12 +8369,16 @@ fn lock_redact_git_sources() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "uv-private-pypackage", git = "https://github.com/astral-test/uv-private-pypackage" }]
 
         [[package]]
         name = "uv-private-pypackage"
         version = "0.1.0"
         source = { git = "https://github.com/astral-test/uv-private-pypackage#d780faf0ac91257d4d5a4f0c5a0e4509608c0071" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -8003,6 +8463,9 @@ fn lock_redact_git_pep508_non_project() -> Result<()> {
         name = "uv-private-pypackage"
         version = "0.1.0"
         source = { git = "https://github.com/astral-test/uv-private-pypackage#d780faf0ac91257d4d5a4f0c5a0e4509608c0071" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -8092,6 +8555,7 @@ fn lock_redact_index_sources() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig", specifier = ">=2", index = "https://pypi-proxy.fly.dev/basic-auth/simple" }]
 
         [[package]]
@@ -8102,6 +8566,9 @@ fn lock_redact_index_sources() -> Result<()> {
         wheels = [
             { url = "https://pypi-proxy.fly.dev/basic-auth/files/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -8184,6 +8651,7 @@ fn lock_redact_url_sources() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig", url = "https://public:heron@pypi-proxy.fly.dev/basic-auth/files/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl" }]
 
         [[package]]
@@ -8193,6 +8661,9 @@ fn lock_redact_url_sources() -> Result<()> {
         wheels = [
             { url = "https://public:heron@pypi-proxy.fly.dev/basic-auth/files/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374" },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -8291,6 +8762,7 @@ fn lock_env_credentials() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
 
         [[package]]
@@ -8301,6 +8773,9 @@ fn lock_env_credentials() -> Result<()> {
         wheels = [
             { url = "https://pypi-proxy.fly.dev/basic-auth/files/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -8358,6 +8833,7 @@ fn lock_relative_index() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
 
         [[package]]
@@ -8368,6 +8844,9 @@ fn lock_relative_index() -> Result<()> {
         wheels = [
             { url = "https://pypi-proxy.fly.dev/files/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -8469,6 +8948,7 @@ fn lock_no_sources() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
 
         [[package]]
@@ -8479,6 +8959,9 @@ fn lock_no_sources() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -8494,6 +8977,7 @@ fn lock_no_sources() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio", directory = "anyio" }]
 
         [package.metadata.requires-dev]
@@ -8507,6 +8991,9 @@ fn lock_no_sources() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -8729,6 +9216,9 @@ fn lock_migrate() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -8737,6 +9227,9 @@ fn lock_migrate() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -8747,6 +9240,7 @@ fn lock_migrate() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio" }]
 
         [[package]]
@@ -8757,6 +9251,9 @@ fn lock_migrate() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -8827,6 +9324,9 @@ fn lock_upgrade_package() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/8a/19/10fe682e962efd1610aa41376399fc3f3e002425449b02d0fb04749bb712/anyio-2.0.0-py3-none-any.whl", hash = "sha256:0b8375c8fc665236cb4d143ea13e849eb9e074d727b1b5c27d88aba44ca8c547", size = 62675 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.0"
@@ -8835,6 +9335,9 @@ fn lock_upgrade_package() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/0f/6b/3a878f15ef3324754bf4780f8f047d692d9860be894ff8fb3135cef8bed8/idna-3.0-py2.py3-none-any.whl", hash = "sha256:320229aadbdfc597bc28876748cc0c9d04d476e0fe6caacaaddea146365d9f63", size = 58618 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -8846,6 +9349,7 @@ fn lock_upgrade_package() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "anyio", specifier = "<=2" },
             { name = "idna", specifier = "<=3" },
@@ -8859,6 +9363,9 @@ fn lock_upgrade_package() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -9190,6 +9697,7 @@ fn lock_find_links_local_wheel() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "tqdm", specifier = "==1000.0.0" }]
 
         [[package]]
@@ -9199,6 +9707,9 @@ fn lock_find_links_local_wheel() -> Result<()> {
         wheels = [
             { path = "tqdm-1000.0.0-py3-none-any.whl" },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -9303,6 +9814,7 @@ fn lock_find_links_local_sdist() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "tqdm", specifier = "==999.0.0" }]
 
         [[package]]
@@ -9310,6 +9822,9 @@ fn lock_find_links_local_sdist() -> Result<()> {
         version = "999.0.0"
         source = { registry = "../links" }
         sdist = { path = "tqdm-999.0.0.tar.gz" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -9393,6 +9908,9 @@ fn lock_find_links_http_wheel() -> Result<()> {
             { url = "https://raw.githubusercontent.com/astral-sh/packse/PACKSE_VERSION/vendor/build/packaging-23.2-py3-none-any.whl" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -9402,6 +9920,7 @@ fn lock_find_links_http_wheel() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "packaging", specifier = "==23.2" }]
         "###
         );
@@ -9483,6 +10002,9 @@ fn lock_find_links_http_sdist() -> Result<()> {
             { url = "https://raw.githubusercontent.com/astral-sh/packse/PACKSE_VERSION/vendor/build/packaging-23.2-py3-none-any.whl" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -9492,6 +10014,7 @@ fn lock_find_links_http_sdist() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "packaging", specifier = "==23.2" }]
         "###
         );
@@ -9610,6 +10133,7 @@ fn lock_local_index() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "tqdm" }]
 
         [[package]]
@@ -9619,6 +10143,9 @@ fn lock_local_index() -> Result<()> {
         wheels = [
             { path = "tqdm/tqdm-1000.0.0-py3-none-any.whl" },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -9703,6 +10230,9 @@ fn lock_sources_url() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -9711,6 +10241,9 @@ fn lock_sources_url() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -9721,6 +10254,7 @@ fn lock_sources_url() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "workspace", url = "https://github.com/user-attachments/files/16592193/workspace.zip" }]
 
         [[package]]
@@ -9732,6 +10266,9 @@ fn lock_sources_url() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "workspace"
         version = "0.1.0"
@@ -9742,6 +10279,7 @@ fn lock_sources_url() -> Result<()> {
         sdist = { hash = "sha256:ba690a925dc3d1b53e0675201c9ec26ab59eeec72ab271562f53297bf1817263" }
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio" }]
         "###
         );
@@ -9838,6 +10376,9 @@ fn lock_sources_archive() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -9846,6 +10387,9 @@ fn lock_sources_archive() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -9856,6 +10400,7 @@ fn lock_sources_archive() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "workspace", path = "workspace.zip" }]
 
         [[package]]
@@ -9867,6 +10412,9 @@ fn lock_sources_archive() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "workspace"
         version = "0.1.0"
@@ -9877,6 +10425,7 @@ fn lock_sources_archive() -> Result<()> {
         sdist = { hash = "sha256:ba690a925dc3d1b53e0675201c9ec26ab59eeec72ab271562f53297bf1817263" }
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio" }]
         "###
         );
@@ -9980,6 +10529,9 @@ fn lock_sources_source_tree() -> Result<()> {
         version = "0.1.0"
         source = { editable = "workspace/anyio" }
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -9989,6 +10541,7 @@ fn lock_sources_source_tree() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "workspace", directory = "workspace" }]
 
         [[package]]
@@ -10000,6 +10553,7 @@ fn lock_sources_source_tree() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio", editable = "workspace/anyio" }]
         "###
         );
@@ -10126,12 +10680,16 @@ fn lock_editable() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "library", directory = "library" }]
 
         [[package]]
         name = "library"
         version = "0.1.0"
         source = { directory = "library" }
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "workspace"
@@ -10142,6 +10700,7 @@ fn lock_editable() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "library", directory = "library" }]
         "###
         );
@@ -10376,6 +10935,9 @@ fn lock_mixed_extras() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "leaf1"
         version = "0.1.0"
@@ -10408,6 +10970,9 @@ fn lock_mixed_extras() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "workspace1"
         version = "0.1.0"
@@ -10439,6 +11004,7 @@ fn lock_mixed_extras() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "leaf2", editable = "../workspace2/packages/leaf2" }]
         "###
         );
@@ -10572,6 +11138,9 @@ fn lock_transitive_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "leaf"
         version = "0.1.0"
@@ -10594,6 +11163,9 @@ fn lock_transitive_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "workspace"
@@ -10716,12 +11288,16 @@ fn lock_mismatched_sources() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "uv-public-pypackage", git = "https://github.com/astral-test/uv-public-pypackage?tag=0.0.1" }]
 
         [[package]]
         name = "uv-public-pypackage"
         version = "0.1.0"
         source = { git = "https://github.com/astral-test/uv-public-pypackage?tag=0.0.1#0dacfd662c64cb4ceb16e6cf65a157a8b715b979" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -10825,12 +11401,16 @@ fn lock_mismatched_versions() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "uv-public-pypackage", git = "https://github.com/astral-test/uv-public-pypackage?tag=0.0.1" }]
 
         [[package]]
         name = "uv-public-pypackage"
         version = "0.1.0"
         source = { git = "https://github.com/astral-test/uv-public-pypackage?tag=0.0.1#0dacfd662c64cb4ceb16e6cf65a157a8b715b979" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -10940,6 +11520,9 @@ fn lock_change_index() -> Result<()> {
             { url = "https://pypi-proxy.fly.dev/basic-auth/files/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -10949,6 +11532,7 @@ fn lock_change_index() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
         "###
         );
@@ -11093,6 +11677,9 @@ fn lock_remove_member() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -11101,6 +11688,9 @@ fn lock_remove_member() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "leaf"
@@ -11111,6 +11701,7 @@ fn lock_remove_member() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio", specifier = ">3" }]
 
         [[package]]
@@ -11122,6 +11713,7 @@ fn lock_remove_member() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "leaf", virtual = "leaf" }]
 
         [[package]]
@@ -11132,6 +11724,9 @@ fn lock_remove_member() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -11256,6 +11851,9 @@ fn lock_add_member() -> Result<()> {
         name = "project"
         version = "0.1.0"
         source = { virtual = "." }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -11478,6 +12076,9 @@ fn lock_redundant_add_member() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -11486,6 +12087,9 @@ fn lock_redundant_add_member() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -11496,6 +12100,7 @@ fn lock_redundant_add_member() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio" }]
 
         [[package]]
@@ -11506,6 +12111,9 @@ fn lock_redundant_add_member() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -11673,6 +12281,9 @@ fn lock_new_constraints() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -11681,6 +12292,9 @@ fn lock_new_constraints() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -11691,6 +12305,7 @@ fn lock_new_constraints() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio" }]
 
         [[package]]
@@ -11701,6 +12316,9 @@ fn lock_new_constraints() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -11888,6 +12506,9 @@ fn lock_remove_member_non_project() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -11896,6 +12517,9 @@ fn lock_remove_member_non_project() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "leaf"
@@ -11906,6 +12530,7 @@ fn lock_remove_member_non_project() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio", specifier = ">3" }]
 
         [[package]]
@@ -11916,6 +12541,9 @@ fn lock_remove_member_non_project() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -12033,6 +12661,9 @@ fn lock_rename_project() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -12042,6 +12673,7 @@ fn lock_rename_project() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
         "###
         );
@@ -12232,6 +12864,9 @@ fn lock_missing_metadata() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/68/fe/7ce1926952c8a403b35029e194555558514b365ad77d75125f521a2bec62/anyio-3.7.0-py3-none-any.whl", hash = "sha256:eddca883c4175f14df8aedce21054bfca3adb70ffe76a9f607aef9d7fa2ea7f0", size = 80873 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -12240,6 +12875,9 @@ fn lock_missing_metadata() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -12250,6 +12888,7 @@ fn lock_missing_metadata() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio", specifier = "==3.7.0" }]
 
         [[package]]
@@ -12260,6 +12899,9 @@ fn lock_missing_metadata() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -12378,6 +13020,9 @@ fn lock_dev_dependencies_alias() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -12392,6 +13037,7 @@ fn lock_dev_dependencies_alias() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "typing-extensions" }]
 
         [package.metadata.requires-dev]
@@ -12405,6 +13051,9 @@ fn lock_dev_dependencies_alias() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -12464,6 +13113,9 @@ fn lock_reorder() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -12473,6 +13125,9 @@ fn lock_reorder() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "iniconfig"
         version = "2.0.0"
@@ -12481,6 +13136,9 @@ fn lock_reorder() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -12492,6 +13150,7 @@ fn lock_reorder() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "anyio" },
             { name = "iniconfig" },
@@ -12505,6 +13164,9 @@ fn lock_reorder() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -12615,6 +13277,7 @@ fn lock_narrowed_python_version_upper() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
 
         [[package]]
@@ -12626,6 +13289,9 @@ fn lock_narrowed_python_version_upper() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -12635,6 +13301,7 @@ fn lock_narrowed_python_version_upper() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "dependency", marker = "python_full_version >= '3.10'", virtual = "dependency" }]
         "###
         );
@@ -12724,6 +13391,7 @@ fn lock_narrowed_python_version() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
 
         [[package]]
@@ -12735,6 +13403,9 @@ fn lock_narrowed_python_version() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -12744,6 +13415,7 @@ fn lock_narrowed_python_version() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "dependency", marker = "python_full_version < '3.9'", directory = "dependency" },
             { name = "dependency", marker = "python_full_version >= '3.11'", directory = "dependency" },
@@ -12826,6 +13498,9 @@ fn lock_exclude_unnecessary_python_forks() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "foo"
         version = "0.1.0"
@@ -12835,6 +13510,7 @@ fn lock_exclude_unnecessary_python_forks() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "anyio", marker = "python_full_version >= '3.11'" },
             { name = "anyio", marker = "sys_platform == 'darwin'" },
@@ -12849,6 +13525,9 @@ fn lock_exclude_unnecessary_python_forks() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sniffio"
         version = "1.3.1"
@@ -12857,6 +13536,9 @@ fn lock_exclude_unnecessary_python_forks() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -12941,6 +13623,9 @@ fn lock_constrained_environment() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/4d/ea/31770a7e49f3eedfd8cd7b35e78b3a3aaad860400f8673994bc988318135/black-24.3.0-py3-none-any.whl", hash = "sha256:41622020d7120e01d377f74249e677039d20e6344ff5851de8a10f11f513bf93", size = 201493 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "click"
         version = "8.1.7"
@@ -12949,6 +13634,9 @@ fn lock_constrained_environment() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/00/2e/d53fa4befbf2cfa713304affc7ca780ce4fc1fd8710527771b58311a3229/click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28", size = 97941 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "mypy-extensions"
@@ -12959,6 +13647,9 @@ fn lock_constrained_environment() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/2a/e2/5d3f6ada4297caebe1a2add3b126fe800c96f56dbe5d1988a2cbe0b267aa/mypy_extensions-1.0.0-py3-none-any.whl", hash = "sha256:4392f6c0eb8a5668a69e23d168ffa70f0be9ccfd32b5cc2d26a34ae5b844552d", size = 4695 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "packaging"
         version = "24.0"
@@ -12967,6 +13658,9 @@ fn lock_constrained_environment() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/49/df/1fceb2f8900f8639e278b056416d49134fb8d84c5942ffaa01ad34782422/packaging-24.0-py3-none-any.whl", hash = "sha256:2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5", size = 53488 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "pathspec"
@@ -12977,6 +13671,9 @@ fn lock_constrained_environment() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/cc/20/ff623b09d963f88bfde16306a54e12ee5ea43e9b597108672ff3a408aad6/pathspec-0.12.1-py3-none-any.whl", hash = "sha256:a0d503e138a4c123b27490a4f7beda6a01c6f288df0e4a8b79c7eb0dc7b4cc08", size = 31191 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "platformdirs"
         version = "4.2.0"
@@ -12985,6 +13682,9 @@ fn lock_constrained_environment() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/55/72/4898c44ee9ea6f43396fbc23d9bfaf3d06e01b83698bdf2e4c919deceb7c/platformdirs-4.2.0-py3-none-any.whl", hash = "sha256:0614df2a2f37e1a662acbd8e2b25b92ccf8632929bc6d43467e17fe89c75e068", size = 17717 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -12995,6 +13695,7 @@ fn lock_constrained_environment() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "black" }]
         "###
         );
@@ -13268,6 +13969,9 @@ fn lock_constrained_environment_legacy() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/4d/ea/31770a7e49f3eedfd8cd7b35e78b3a3aaad860400f8673994bc988318135/black-24.3.0-py3-none-any.whl", hash = "sha256:41622020d7120e01d377f74249e677039d20e6344ff5851de8a10f11f513bf93", size = 201493 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "child"
         version = "0.1.0"
@@ -13277,6 +13981,7 @@ fn lock_constrained_environment_legacy() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "black" }]
 
         [[package]]
@@ -13288,6 +13993,9 @@ fn lock_constrained_environment_legacy() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/00/2e/d53fa4befbf2cfa713304affc7ca780ce4fc1fd8710527771b58311a3229/click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28", size = 97941 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "mypy-extensions"
         version = "1.0.0"
@@ -13296,6 +14004,9 @@ fn lock_constrained_environment_legacy() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/2a/e2/5d3f6ada4297caebe1a2add3b126fe800c96f56dbe5d1988a2cbe0b267aa/mypy_extensions-1.0.0-py3-none-any.whl", hash = "sha256:4392f6c0eb8a5668a69e23d168ffa70f0be9ccfd32b5cc2d26a34ae5b844552d", size = 4695 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "packaging"
@@ -13306,6 +14017,9 @@ fn lock_constrained_environment_legacy() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/49/df/1fceb2f8900f8639e278b056416d49134fb8d84c5942ffaa01ad34782422/packaging-24.0-py3-none-any.whl", hash = "sha256:2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5", size = 53488 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "pathspec"
         version = "0.12.1"
@@ -13315,6 +14029,9 @@ fn lock_constrained_environment_legacy() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/cc/20/ff623b09d963f88bfde16306a54e12ee5ea43e9b597108672ff3a408aad6/pathspec-0.12.1-py3-none-any.whl", hash = "sha256:a0d503e138a4c123b27490a4f7beda6a01c6f288df0e4a8b79c7eb0dc7b4cc08", size = 31191 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "platformdirs"
         version = "4.2.0"
@@ -13323,6 +14040,9 @@ fn lock_constrained_environment_legacy() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/55/72/4898c44ee9ea6f43396fbc23d9bfaf3d06e01b83698bdf2e4c919deceb7c/platformdirs-4.2.0-py3-none-any.whl", hash = "sha256:0614df2a2f37e1a662acbd8e2b25b92ccf8632929bc6d43467e17fe89c75e068", size = 17717 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -13454,6 +14174,9 @@ fn lock_non_project_fork() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/49/c3/b83a3c02c7d6f66932e9a72621d7f207cbfd2bd72b4c8931567ee386fb55/anyio-2.2.0-py3-none-any.whl", hash = "sha256:aa3da546ed17f097ca876c78024dea380a3b7fa80759abfdda59f12176a3dac8", size = 65320 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "anyio"
         version = "4.3.0"
@@ -13472,6 +14195,9 @@ fn lock_non_project_fork() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "exceptiongroup"
         version = "1.2.0"
@@ -13480,6 +14206,9 @@ fn lock_non_project_fork() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/b8/9a/5028fd52db10e600f1c4674441b968cf2ea4959085bfb5b99fb1250e5f68/exceptiongroup-1.2.0-py3-none-any.whl", hash = "sha256:4bfd3996ac73b41e9b9628b04e079f193850720ea5945fc96a08633c66912f14", size = 16210 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "idna"
@@ -13490,6 +14219,9 @@ fn lock_non_project_fork() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sniffio"
         version = "1.3.1"
@@ -13499,6 +14231,9 @@ fn lock_non_project_fork() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typing-extensions"
         version = "4.10.0"
@@ -13507,6 +14242,9 @@ fn lock_non_project_fork() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -13636,6 +14374,9 @@ fn lock_non_project_conditional() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -13645,6 +14386,9 @@ fn lock_non_project_conditional() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sniffio"
         version = "1.3.1"
@@ -13653,6 +14397,9 @@ fn lock_non_project_conditional() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -13750,6 +14497,9 @@ fn lock_non_project_group() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "exceptiongroup"
         version = "1.2.0"
@@ -13758,6 +14508,9 @@ fn lock_non_project_group() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/b8/9a/5028fd52db10e600f1c4674441b968cf2ea4959085bfb5b99fb1250e5f68/exceptiongroup-1.2.0-py3-none-any.whl", hash = "sha256:4bfd3996ac73b41e9b9628b04e079f193850720ea5945fc96a08633c66912f14", size = 16210 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "idna"
@@ -13768,6 +14521,9 @@ fn lock_non_project_group() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "iniconfig"
         version = "2.0.0"
@@ -13776,6 +14532,9 @@ fn lock_non_project_group() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "sniffio"
@@ -13786,6 +14545,9 @@ fn lock_non_project_group() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typing-extensions"
         version = "4.10.0"
@@ -13794,6 +14556,9 @@ fn lock_non_project_group() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -13878,6 +14643,9 @@ fn lock_non_project_sources() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/d7/77/ff688d1504cdc4db2a938e2b7b9adee5dd52e34efbd2431051efc9984de9/idna-3.2-py3-none-any.whl", hash = "sha256:14475042e284991034cb48e06f6851428fb14c4dc953acd9be9a5e95c7b6dd7a" },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -13966,6 +14734,9 @@ fn lock_dropped_dev_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/46/c4/1dfe76d96034a347d717a2392b004d42d45934cb94efa362ad41ca871f6e/coverage-7.4.4-cp312-cp312-win_amd64.whl", hash = "sha256:d71eec7d83298f1af3326ce0ff1d0ea83c7cb98f72b577097f9083b20bdaf05e", size = 209415 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -13977,6 +14748,7 @@ fn lock_dropped_dev_extra() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
 
         [package.metadata.requires-dev]
         dev = [{ name = "coverage", extras = ["toml"] }]
@@ -14070,6 +14842,9 @@ fn lock_empty_dev_dependencies() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -14079,6 +14854,7 @@ fn lock_empty_dev_dependencies() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
 
         [package.metadata.requires-dev]
@@ -14173,6 +14949,9 @@ fn lock_empty_dependency_group() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -14182,6 +14961,7 @@ fn lock_empty_dependency_group() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
 
         [package.metadata.requires-dev]
@@ -14280,6 +15060,9 @@ fn lock_trailing_slash() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/68/fe/7ce1926952c8a403b35029e194555558514b365ad77d75125f521a2bec62/anyio-3.7.0-py3-none-any.whl", hash = "sha256:eddca883c4175f14df8aedce21054bfca3adb70ffe76a9f607aef9d7fa2ea7f0", size = 80873 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -14288,6 +15071,9 @@ fn lock_trailing_slash() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -14298,6 +15084,7 @@ fn lock_trailing_slash() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio", specifier = "==3.7.0" }]
 
         [[package]]
@@ -14308,6 +15095,9 @@ fn lock_trailing_slash() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -14455,6 +15245,9 @@ fn lock_explicit_index() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/68/fe/7ce1926952c8a403b35029e194555558514b365ad77d75125f521a2bec62/anyio-3.7.0-py3-none-any.whl", hash = "sha256:eddca883c4175f14df8aedce21054bfca3adb70ffe76a9f607aef9d7fa2ea7f0", size = 80873 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -14464,6 +15257,9 @@ fn lock_explicit_index() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "iniconfig"
         version = "2.0.0"
@@ -14472,6 +15268,9 @@ fn lock_explicit_index() -> Result<()> {
         wheels = [
             { url = "https://test-files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -14483,6 +15282,7 @@ fn lock_explicit_index() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "anyio", specifier = "==3.7.0" },
             { name = "iniconfig", specifier = "==2.0.0", index = "https://test.pypi.org/simple" },
@@ -14496,6 +15296,9 @@ fn lock_explicit_index() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -14558,6 +15361,9 @@ fn lock_explicit_default_index() -> Result<()> {
             { url = "https://test-files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -14567,6 +15373,7 @@ fn lock_explicit_default_index() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig", specifier = "==2.0.0", index = "https://test.pypi.org/simple" }]
         "###
         );
@@ -14719,6 +15526,7 @@ fn lock_named_index() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "typing-extensions" }]
 
         [[package]]
@@ -14729,6 +15537,9 @@ fn lock_named_index() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -14787,6 +15598,9 @@ fn lock_default_index() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -14796,6 +15610,7 @@ fn lock_default_index() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
         "###
         );
@@ -14927,6 +15742,9 @@ fn lock_named_index_cli() -> Result<()> {
             { url = "https://download.pytorch.org/whl/Jinja2-3.1.2-py3-none-any.whl", hash = "sha256:6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "markupsafe"
         version = "3.0.2"
@@ -14934,6 +15752,9 @@ fn lock_named_index_cli() -> Result<()> {
         wheels = [
             { url = "https://download.pytorch.org/whl/MarkupSafe-3.0.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:15ab75ef81add55874e7ab7055e9c397312385bd9ced94920f2802310c930396" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -14944,6 +15765,7 @@ fn lock_named_index_cli() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "jinja2", specifier = "==3.1.2", index = "https://download.pytorch.org/whl/cu121" }]
         "###
         );
@@ -15012,6 +15834,9 @@ fn lock_repeat_named_index() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -15021,6 +15846,7 @@ fn lock_repeat_named_index() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
         "###
         );
@@ -15087,6 +15913,9 @@ fn lock_repeat_named_index_cli() -> Result<()> {
             { url = "https://download.pytorch.org/whl/Jinja2-3.1.2-py3-none-any.whl", hash = "sha256:6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "markupsafe"
         version = "2.1.5"
@@ -15101,6 +15930,9 @@ fn lock_repeat_named_index_cli() -> Result<()> {
             { url = "https://download.pytorch.org/whl/MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl", hash = "sha256:823b65d8706e32ad2df51ed89496147a42a2a6e01c13cfb6ffb8b1e92bc910bb" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -15110,6 +15942,7 @@ fn lock_repeat_named_index_cli() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "jinja2", specifier = "==3.1.2" }]
         "###
         );
@@ -15247,6 +16080,9 @@ fn lock_explicit_virtual_project() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "black"
         version = "24.3.0"
@@ -15267,6 +16103,9 @@ fn lock_explicit_virtual_project() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/4d/ea/31770a7e49f3eedfd8cd7b35e78b3a3aaad860400f8673994bc988318135/black-24.3.0-py3-none-any.whl", hash = "sha256:41622020d7120e01d377f74249e677039d20e6344ff5851de8a10f11f513bf93", size = 201493 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "click"
         version = "8.1.7"
@@ -15279,6 +16118,9 @@ fn lock_explicit_virtual_project() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/00/2e/d53fa4befbf2cfa713304affc7ca780ce4fc1fd8710527771b58311a3229/click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28", size = 97941 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "colorama"
         version = "0.4.6"
@@ -15287,6 +16129,9 @@ fn lock_explicit_virtual_project() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "idna"
@@ -15297,6 +16142,9 @@ fn lock_explicit_virtual_project() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "mypy-extensions"
         version = "1.0.0"
@@ -15305,6 +16153,9 @@ fn lock_explicit_virtual_project() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/2a/e2/5d3f6ada4297caebe1a2add3b126fe800c96f56dbe5d1988a2cbe0b267aa/mypy_extensions-1.0.0-py3-none-any.whl", hash = "sha256:4392f6c0eb8a5668a69e23d168ffa70f0be9ccfd32b5cc2d26a34ae5b844552d", size = 4695 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "packaging"
@@ -15315,6 +16166,9 @@ fn lock_explicit_virtual_project() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/49/df/1fceb2f8900f8639e278b056416d49134fb8d84c5942ffaa01ad34782422/packaging-24.0-py3-none-any.whl", hash = "sha256:2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5", size = 53488 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "pathspec"
         version = "0.12.1"
@@ -15324,6 +16178,9 @@ fn lock_explicit_virtual_project() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/cc/20/ff623b09d963f88bfde16306a54e12ee5ea43e9b597108672ff3a408aad6/pathspec-0.12.1-py3-none-any.whl", hash = "sha256:a0d503e138a4c123b27490a4f7beda6a01c6f288df0e4a8b79c7eb0dc7b4cc08", size = 31191 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "platformdirs"
         version = "4.2.0"
@@ -15332,6 +16189,9 @@ fn lock_explicit_virtual_project() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/55/72/4898c44ee9ea6f43396fbc23d9bfaf3d06e01b83698bdf2e4c919deceb7c/platformdirs-4.2.0-py3-none-any.whl", hash = "sha256:0614df2a2f37e1a662acbd8e2b25b92ccf8632929bc6d43467e17fe89c75e068", size = 17717 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -15347,6 +16207,7 @@ fn lock_explicit_virtual_project() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "black" }]
 
         [package.metadata.requires-dev]
@@ -15360,6 +16221,9 @@ fn lock_explicit_virtual_project() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -15464,6 +16328,9 @@ fn lock_implicit_virtual_project() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "black"
         version = "24.3.0"
@@ -15484,6 +16351,9 @@ fn lock_implicit_virtual_project() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/4d/ea/31770a7e49f3eedfd8cd7b35e78b3a3aaad860400f8673994bc988318135/black-24.3.0-py3-none-any.whl", hash = "sha256:41622020d7120e01d377f74249e677039d20e6344ff5851de8a10f11f513bf93", size = 201493 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "click"
         version = "8.1.7"
@@ -15496,6 +16366,9 @@ fn lock_implicit_virtual_project() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/00/2e/d53fa4befbf2cfa713304affc7ca780ce4fc1fd8710527771b58311a3229/click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28", size = 97941 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "colorama"
         version = "0.4.6"
@@ -15504,6 +16377,9 @@ fn lock_implicit_virtual_project() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "idna"
@@ -15514,6 +16390,9 @@ fn lock_implicit_virtual_project() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "mypy-extensions"
         version = "1.0.0"
@@ -15522,6 +16401,9 @@ fn lock_implicit_virtual_project() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/2a/e2/5d3f6ada4297caebe1a2add3b126fe800c96f56dbe5d1988a2cbe0b267aa/mypy_extensions-1.0.0-py3-none-any.whl", hash = "sha256:4392f6c0eb8a5668a69e23d168ffa70f0be9ccfd32b5cc2d26a34ae5b844552d", size = 4695 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "packaging"
@@ -15532,6 +16414,9 @@ fn lock_implicit_virtual_project() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/49/df/1fceb2f8900f8639e278b056416d49134fb8d84c5942ffaa01ad34782422/packaging-24.0-py3-none-any.whl", hash = "sha256:2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5", size = 53488 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "pathspec"
         version = "0.12.1"
@@ -15541,6 +16426,9 @@ fn lock_implicit_virtual_project() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/cc/20/ff623b09d963f88bfde16306a54e12ee5ea43e9b597108672ff3a408aad6/pathspec-0.12.1-py3-none-any.whl", hash = "sha256:a0d503e138a4c123b27490a4f7beda6a01c6f288df0e4a8b79c7eb0dc7b4cc08", size = 31191 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "platformdirs"
         version = "4.2.0"
@@ -15549,6 +16437,9 @@ fn lock_implicit_virtual_project() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/55/72/4898c44ee9ea6f43396fbc23d9bfaf3d06e01b83698bdf2e4c919deceb7c/platformdirs-4.2.0-py3-none-any.whl", hash = "sha256:0614df2a2f37e1a662acbd8e2b25b92ccf8632929bc6d43467e17fe89c75e068", size = 17717 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -15564,6 +16455,7 @@ fn lock_implicit_virtual_project() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "black" }]
 
         [package.metadata.requires-dev]
@@ -15577,6 +16469,9 @@ fn lock_implicit_virtual_project() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -15691,6 +16586,9 @@ fn lock_implicit_virtual_path() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "child"
         version = "0.1.0"
@@ -15700,6 +16598,7 @@ fn lock_implicit_virtual_path() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig", specifier = ">1" }]
 
         [[package]]
@@ -15711,6 +16610,9 @@ fn lock_implicit_virtual_path() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "iniconfig"
         version = "2.0.0"
@@ -15719,6 +16621,9 @@ fn lock_implicit_virtual_path() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -15730,6 +16635,7 @@ fn lock_implicit_virtual_path() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "anyio", specifier = ">3" },
             { name = "child", virtual = "child" },
@@ -15743,6 +16649,9 @@ fn lock_implicit_virtual_path() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -15877,6 +16786,7 @@ fn lock_split_python_environment() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "uv", marker = "python_full_version >= '3.8'" }]
 
         [[package]]
@@ -15902,6 +16812,9 @@ fn lock_split_python_environment() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c0/8b/a83689be89c764c98dd19be9e1a044e64ad9c1d17643c5c08262f640908f/uv-0.1.24-py3-none-win32.whl", hash = "sha256:a273f468f170b12e6cb6362aa90a65dd12a397db02df55ffb47a21c11b577d8c", size = 8143891 },
             { url = "https://files.pythonhosted.org/packages/d6/7d/55d81e3ecab3595ba9f7be7b394fec61d1e33c1852452e7997bc8022b6f0/uv-0.1.24-py3-none-win_amd64.whl", hash = "sha256:87cce6b44a86e761f845a85e52ea0de44fcd579b9a63b2d856118b0d1847bca7", size = 9178836 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -15987,6 +16900,9 @@ fn lock_python_upper_bound() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/00/2e/d53fa4befbf2cfa713304affc7ca780ce4fc1fd8710527771b58311a3229/click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28", size = 97941 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "colorama"
         version = "0.4.6"
@@ -15995,6 +16911,9 @@ fn lock_python_upper_bound() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "coloredlogs"
@@ -16008,6 +16927,9 @@ fn lock_python_upper_bound() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/a7/06/3d6badcf13db419e25b07041d9c7b4a2c331d3f4e7134445ec5df57714cd/coloredlogs-15.0.1-py2.py3-none-any.whl", hash = "sha256:612ee75c546f53e92e70049c9dbfcc18c935a2b9a53b66085ce9ef6a6e5c0934", size = 46018 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "flatbuffers"
         version = "24.3.7"
@@ -16016,6 +16938,9 @@ fn lock_python_upper_bound() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/bf/45/c961e3cb6ddad76b325c163d730562bb6deb1ace5acbed0306f5fbefb90e/flatbuffers-24.3.7-py2.py3-none-any.whl", hash = "sha256:80c4f5dcad0ee76b7e349671a0d657f2fbba927a0244f88dd3f5ed6a3694e1fc", size = 26772 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "humanfriendly"
@@ -16028,6 +16953,9 @@ fn lock_python_upper_bound() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f0/0f/310fb31e39e2d734ccaa2c0fb981ee41f7bd5056ce9bc29b2248bd569169/humanfriendly-10.0-py2.py3-none-any.whl", hash = "sha256:1697e1a8a8f550fd43c2865cd84542fc175a61dcb779b6fee18cf6b6ccba1477", size = 86794 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "magika"
@@ -16047,6 +16975,9 @@ fn lock_python_upper_bound() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/66/79/e1c167ec35060692b70bfc4f2d0aa9314dd7e37ba8e30c1c27965e2f1daa/magika-0.5.1-py3-none-any.whl", hash = "sha256:a4d1f64f71460f335841c13c3d16cfc2cb21e839c1898a1ae9bd5adc8d66cb2b", size = 1008301 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "mpmath"
         version = "1.3.0"
@@ -16055,6 +16986,9 @@ fn lock_python_upper_bound() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl", hash = "sha256:a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c", size = 536198 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "numpy"
@@ -16093,6 +17027,9 @@ fn lock_python_upper_bound() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/42/e7/4bf953c6e05df90c6d351af69966384fed8e988d0e8c54dad7103b59f3ba/numpy-1.24.4-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:95f7ac6540e95bc440ad77f56e520da5bf877f87dca58bd095288dce8940532a", size = 16705744 },
             { url = "https://files.pythonhosted.org/packages/fc/dd/9106005eb477d022b60b3817ed5937a43dad8fd1f20b0610ea8a32fcb407/numpy-1.24.4-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:e98f220aa76ca2a977fe435f5b04d7b3470c0a2e6312907b37ba6068f26787f2", size = 14734290 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "numpy"
@@ -16140,6 +17077,9 @@ fn lock_python_upper_bound() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/f4/5f/fafd8c51235f60d49f7a88e2275e13971e90555b67da52dd6416caec32fe/numpy-1.26.4-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:7e50d0a0cc3189f9cb0aeb3a6a6af18c16f59f004b866cd2be1c14b36134a4a0", size = 15709730 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "onnxruntime"
         version = "1.17.1"
@@ -16181,6 +17121,9 @@ fn lock_python_upper_bound() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/cf/7f/f11990c263bbc144e1fcbba1061be5bcff7f09494dbf3186d2c5a8a17835/onnxruntime-1.17.1-cp39-cp39-win_amd64.whl", hash = "sha256:f7e9f7fb049825cdddf4a923cfc7c649d84d63c0134315f8e0aa9e0c3004672c", size = 5601956 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "packaging"
         version = "24.0"
@@ -16189,6 +17132,9 @@ fn lock_python_upper_bound() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/49/df/1fceb2f8900f8639e278b056416d49134fb8d84c5942ffaa01ad34782422/packaging-24.0-py3-none-any.whl", hash = "sha256:2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5", size = 53488 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -16199,6 +17145,7 @@ fn lock_python_upper_bound() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "magika", marker = "python_full_version < '3.13'" }]
 
         [[package]]
@@ -16219,6 +17166,9 @@ fn lock_python_upper_bound() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/82/98/757626ed06e0d99c59428f5761c57c0e35bddb45041c0e222183492d6ddb/protobuf-5.26.0-py3-none-any.whl", hash = "sha256:a49b6c5359bf34fb7bf965bf21abfab4476e4527d822ab5289ee3bf73f291159", size = 161231 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "pyreadline3"
         version = "3.4.1"
@@ -16228,6 +17178,9 @@ fn lock_python_upper_bound() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/56/fc/a3c13ded7b3057680c8ae95a9b6cc83e63657c38e0005c400a5d018a33a7/pyreadline3-3.4.1-py3-none-any.whl", hash = "sha256:b0efb6516fd4fb07b45949053826a62fa4cb353db5be2bbb4a7aa1fdd1e345fb", size = 95203 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "python-dotenv"
         version = "1.0.1"
@@ -16236,6 +17189,9 @@ fn lock_python_upper_bound() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/6a/3e/b68c118422ec867fa7ab88444e1274aa40681c606d59ac27de5a5588f082/python_dotenv-1.0.1-py3-none-any.whl", hash = "sha256:f7b63ef50f1b690dddf550d03497b66d609393b40b564ed0d674909a68ebf16a", size = 19863 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "sympy"
@@ -16249,6 +17205,9 @@ fn lock_python_upper_bound() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/d2/05/e6600db80270777c4a64238a98d442f0fd07cc8915be2a1c16da7f2b9e74/sympy-1.12-py3-none-any.whl", hash = "sha256:c3588cd4295d0c0f603d0f2ae780587e64e2efeedb3521e46b9bb1d08d184fa5", size = 5742435 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "tabulate"
         version = "0.9.0"
@@ -16257,6 +17216,9 @@ fn lock_python_upper_bound() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/40/44/4a5f08c96eb108af5cb50b41f76142f0afa346dfa99d5296fe7202a11854/tabulate-0.9.0-py3-none-any.whl", hash = "sha256:024ca478df22e9340661486f85298cff5f6dcdba14f3813e8830015b9ed1948f", size = 35252 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "tqdm"
@@ -16269,6 +17231,9 @@ fn lock_python_upper_bound() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/2a/14/e75e52d521442e2fcc9f1df3c5e456aead034203d4797867980de558ab34/tqdm-4.66.2-py3-none-any.whl", hash = "sha256:1ee4f8a893eb9bef51c6e35730cebf234d5d0b6bd112b0271e10ed7c24a02bd9", size = 78296 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -16358,6 +17323,9 @@ fn lock_simplified_environments() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -16367,6 +17335,7 @@ fn lock_simplified_environments() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
         "###
         );
@@ -16469,6 +17438,9 @@ fn lock_dependency_metadata() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/68/fe/7ce1926952c8a403b35029e194555558514b365ad77d75125f521a2bec62/anyio-3.7.0-py3-none-any.whl", hash = "sha256:eddca883c4175f14df8aedce21054bfca3adb70ffe76a9f607aef9d7fa2ea7f0", size = 80873 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "iniconfig"
         version = "2.0.0"
@@ -16477,6 +17449,9 @@ fn lock_dependency_metadata() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -16487,6 +17462,7 @@ fn lock_dependency_metadata() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio", specifier = "==3.7.0" }]
         "###
         );
@@ -16670,6 +17646,9 @@ fn lock_dependency_metadata_git() -> Result<()> {
             { name = "iniconfig" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "iniconfig"
         version = "2.0.0"
@@ -16678,6 +17657,9 @@ fn lock_dependency_metadata_git() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -16688,6 +17670,7 @@ fn lock_dependency_metadata_git() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio", git = "https://github.com/agronholm/anyio?tag=4.6.2" }]
         "###
         );
@@ -16775,6 +17758,9 @@ fn lock_strip_fragment() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -16784,6 +17770,7 @@ fn lock_strip_fragment() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig", url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl" }]
         "###
         );
@@ -17186,6 +18173,9 @@ fn lock_change_requires_python() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/49/c3/b83a3c02c7d6f66932e9a72621d7f207cbfd2bd72b4c8931567ee386fb55/anyio-2.2.0-py3-none-any.whl", hash = "sha256:aa3da546ed17f097ca876c78024dea380a3b7fa80759abfdda59f12176a3dac8", size = 65320 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "anyio"
         version = "3.7.1"
@@ -17202,6 +18192,9 @@ fn lock_change_requires_python() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/19/24/44299477fe7dcc9cb58d0a57d5a7588d6af2ff403fdd2d47a246c91a3246/anyio-3.7.1-py3-none-any.whl", hash = "sha256:91dee416e570e92c64041bd18b900d1d6fa78dff7048769ce5ac5ddad004fbb5", size = 80896 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -17210,6 +18203,9 @@ fn lock_change_requires_python() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -17221,6 +18217,7 @@ fn lock_change_requires_python() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "anyio", marker = "python_full_version == '3.12.*'", specifier = "<3" },
             { name = "anyio", marker = "python_full_version >= '3.13'", specifier = ">3,<4" },
@@ -17234,6 +18231,9 @@ fn lock_change_requires_python() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -17428,6 +18428,7 @@ fn lock_keyring_credentials() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
 
         [[package]]
@@ -17438,6 +18439,9 @@ fn lock_keyring_credentials() -> Result<()> {
         wheels = [
             { url = "https://pypi-proxy.fly.dev/basic-auth/files/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -17501,6 +18505,9 @@ fn lock_multiple_sources() -> Result<()> {
         ]
         sdist = { hash = "sha256:2d91e135bf72d31a410b17c16da610a82cb55f6b0477d1a902134b24a455b8b3" }
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "iniconfig"
         version = "2.0.0"
@@ -17512,6 +18519,9 @@ fn lock_multiple_sources() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -17522,6 +18532,7 @@ fn lock_multiple_sources() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "iniconfig", marker = "sys_platform != 'win32'", url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl" },
             { name = "iniconfig", marker = "sys_platform == 'win32'", url = "https://files.pythonhosted.org/packages/d7/4b/cbd8e699e64a6f16ca3a8220661b5f83792b3017d0f79807cb8708d33913/iniconfig-2.0.0.tar.gz" },
@@ -17693,6 +18704,9 @@ fn lock_multiple_sources_index_disjoint_markers() -> Result<()> {
             { url = "https://download.pytorch.org/whl/Jinja2-3.1.3-py3-none-any.whl", hash = "sha256:7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "jinja2"
         version = "3.1.3"
@@ -17706,6 +18720,9 @@ fn lock_multiple_sources_index_disjoint_markers() -> Result<()> {
         wheels = [
             { url = "https://download.pytorch.org/whl/Jinja2-3.1.3-py3-none-any.whl", hash = "sha256:7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "markupsafe"
@@ -17721,6 +18738,9 @@ fn lock_multiple_sources_index_disjoint_markers() -> Result<()> {
             { url = "https://download.pytorch.org/whl/MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl", hash = "sha256:823b65d8706e32ad2df51ed89496147a42a2a6e01c13cfb6ffb8b1e92bc910bb" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -17731,6 +18751,7 @@ fn lock_multiple_sources_index_disjoint_markers() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "jinja2", marker = "sys_platform != 'win32'", specifier = ">=3,<3.1.4", index = "https://download.pytorch.org/whl/cu124" },
             { name = "jinja2", marker = "sys_platform == 'win32'", specifier = ">=3,<3.1.4", index = "https://download.pytorch.org/whl/cu118" },
@@ -17820,6 +18841,9 @@ fn lock_multiple_sources_index_mixed() -> Result<()> {
             { url = "https://download.pytorch.org/whl/Jinja2-3.1.3-py3-none-any.whl", hash = "sha256:7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "jinja2"
         version = "3.1.4"
@@ -17855,6 +18879,9 @@ fn lock_multiple_sources_index_mixed() -> Result<()> {
             { url = "https://download.pytorch.org/whl/MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl", hash = "sha256:823b65d8706e32ad2df51ed89496147a42a2a6e01c13cfb6ffb8b1e92bc910bb" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -17865,6 +18892,7 @@ fn lock_multiple_sources_index_mixed() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "jinja2", marker = "sys_platform != 'win32'", url = "https://files.pythonhosted.org/packages/31/80/3a54838c3fb461f6fec263ebf3a3a41771bd05190238de3486aae8540c36/jinja2-3.1.4-py3-none-any.whl" },
             { name = "jinja2", marker = "sys_platform == 'win32'", specifier = ">=3,<3.1.4", index = "https://download.pytorch.org/whl/cu118" },
@@ -17989,6 +19017,9 @@ fn lock_multiple_sources_index_explicit() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/30/6d/6de6be2d02603ab56e72997708809e8a5b0fbfee080735109b40a3564843/Jinja2-3.1.3-py3-none-any.whl", hash = "sha256:7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa", size = 133236 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "jinja2"
         version = "3.1.3"
@@ -18003,6 +19034,9 @@ fn lock_multiple_sources_index_explicit() -> Result<()> {
         wheels = [
             { url = "https://test-files.pythonhosted.org/packages/47/dc/9d1c0f1ddbedb1e67f7d00e91819b5a9157056ad83bfa64c12ecef8a4f4e/Jinja2-3.1.3-py3-none-any.whl", hash = "sha256:ddd11470e8a1dc4c30e3146400f0130fed7d85886c5f8082f309355b4b0c1128", size = 133236 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "markupsafe"
@@ -18022,6 +19056,9 @@ fn lock_multiple_sources_index_explicit() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/3f/14/c3554d512d5f9100a95e737502f4a2323a1959f6d0d01e0d0997b35f7b10/MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl", hash = "sha256:823b65d8706e32ad2df51ed89496147a42a2a6e01c13cfb6ffb8b1e92bc910bb", size = 17127 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -18032,6 +19069,7 @@ fn lock_multiple_sources_index_explicit() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "jinja2", marker = "sys_platform != 'win32'", specifier = ">=3" },
             { name = "jinja2", marker = "sys_platform == 'win32'", specifier = ">=3", index = "https://test.pypi.org/simple" },
@@ -18111,6 +19149,9 @@ fn lock_multiple_sources_non_total() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "iniconfig"
         version = "2.0.0"
@@ -18122,6 +19163,9 @@ fn lock_multiple_sources_non_total() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -18132,6 +19176,7 @@ fn lock_multiple_sources_non_total() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "iniconfig", marker = "sys_platform != 'darwin'" },
             { name = "iniconfig", marker = "sys_platform == 'darwin'", url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl" },
@@ -18204,6 +19249,9 @@ fn lock_multiple_sources_respect_marker() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -18213,6 +19261,7 @@ fn lock_multiple_sources_respect_marker() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig", marker = "sys_platform == 'win32'" }]
         "###
         );
@@ -18283,6 +19332,9 @@ fn lock_multiple_sources_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -18716,6 +19768,9 @@ fn lock_group_include() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "attrs"
         version = "23.2.0"
@@ -18724,6 +19779,9 @@ fn lock_group_include() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e0/44/827b2a91a5816512fcaf3cc4ebc465ccd5d598c45cefa6703fcf4a79018f/attrs-23.2.0-py3-none-any.whl", hash = "sha256:99b87a485a5820b23b879f04c2305b44b951b502fd64be915879d77a7e8fc6f1", size = 60752 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "cffi"
@@ -18738,6 +19796,9 @@ fn lock_group_include() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e9/63/e285470a4880a4f36edabe4810057bd4b562c6ddcc165eacf9c3c7210b40/cffi-1.16.0-cp312-cp312-win_amd64.whl", hash = "sha256:68678abf380b42ce21a5f2abde8efee05c114c2fdb2e9eef2efdb0257fba1235", size = 181956 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -18746,6 +19807,9 @@ fn lock_group_include() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "outcome"
@@ -18758,6 +19822,9 @@ fn lock_group_include() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/55/8b/5ab7257531a5d830fc8000c476e63c935488d74609b50f9384a643ec0a62/outcome-1.3.0.post0-py2.py3-none-any.whl", hash = "sha256:e771c5ce06d1415e356078d3bdd68523f284b4ce5419828922b6871e65eda82b", size = 10692 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -18777,6 +19844,7 @@ fn lock_group_include() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "typing-extensions" }]
 
         [package.metadata.requires-dev]
@@ -18795,6 +19863,9 @@ fn lock_group_include() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/62/d5/5f610ebe421e85889f2e55e33b7f9a6795bd982198517d912eb1c76e1a53/pycparser-2.21-py2.py3-none-any.whl", hash = "sha256:8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9", size = 118697 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sniffio"
         version = "1.3.1"
@@ -18804,6 +19875,9 @@ fn lock_group_include() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sortedcontainers"
         version = "2.4.0"
@@ -18812,6 +19886,9 @@ fn lock_group_include() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/32/46/9cb0e58b2deb7f82b84065f37f3bffeb12413f947f9388e4cac22c4621ce/sortedcontainers-2.4.0-py2.py3-none-any.whl", hash = "sha256:a163dcaede0f1c021485e957a39245190e74249897e2ae4b2aa38595db237ee0", size = 29575 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "trio"
@@ -18830,6 +19907,9 @@ fn lock_group_include() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/17/c9/f86f89f14d52f9f2f652ce24cb2f60141a51d087db1563f3fba94ba07346/trio-0.25.0-py3-none-any.whl", hash = "sha256:e6458efe29cc543e557a91e614e2b51710eba2961669329ce9c862d50c6e8e81", size = 467161 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typing-extensions"
         version = "4.10.0"
@@ -18838,6 +19918,9 @@ fn lock_group_include() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -19250,6 +20333,9 @@ fn lock_group_workspace() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "child"
         version = "0.1.0"
@@ -19267,6 +20353,7 @@ fn lock_group_workspace() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig", specifier = ">1" }]
 
         [package.metadata.requires-dev]
@@ -19282,6 +20369,9 @@ fn lock_group_workspace() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -19290,6 +20380,9 @@ fn lock_group_workspace() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "iniconfig"
@@ -19300,6 +20393,9 @@ fn lock_group_workspace() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "packaging"
         version = "24.0"
@@ -19309,6 +20405,9 @@ fn lock_group_workspace() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/49/df/1fceb2f8900f8639e278b056416d49134fb8d84c5942ffaa01ad34782422/packaging-24.0-py3-none-any.whl", hash = "sha256:2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5", size = 53488 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "pluggy"
         version = "1.4.0"
@@ -19317,6 +20416,9 @@ fn lock_group_workspace() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/a5/5b/0cc789b59e8cc1bf288b38111d002d8c5917123194d45b29dcdac64723cc/pluggy-1.4.0-py3-none-any.whl", hash = "sha256:7db9f7b503d67d1c5b95f59773ebb58a8c1c288129a88665838012cfb07b8981", size = 20120 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -19335,6 +20437,7 @@ fn lock_group_workspace() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "child", editable = "child" }]
 
         [package.metadata.requires-dev]
@@ -19356,6 +20459,9 @@ fn lock_group_workspace() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/4d/7e/c79cecfdb6aa85c6c2e3cf63afc56d0f165f24f5c66c03c695c4d9b84756/pytest-8.1.1-py3-none-any.whl", hash = "sha256:2a8386cfc11fa9d2c50ee7b2a57e7d898ef90470a7a34c4b949ff59662bb78b7", size = 337359 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sniffio"
         version = "1.3.1"
@@ -19365,6 +20471,9 @@ fn lock_group_workspace() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typing-extensions"
         version = "4.10.0"
@@ -19373,6 +20482,9 @@ fn lock_group_workspace() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -19430,6 +20542,7 @@ fn lock_transitive_git() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "c", git = "https://github.com/astral-sh/workspace-virtual-root-test?subdirectory=packages%2Fc&rev=fac39c8d4c5d0ef32744e2bb309bbe34a759fd46" }]
 
         [[package]]
@@ -19445,6 +20558,9 @@ fn lock_transitive_git() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "c"
         version = "1.0.0"
@@ -19453,6 +20569,9 @@ fn lock_transitive_git() -> Result<()> {
             { name = "d" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "d"
         version = "1.0.0"
@@ -19460,6 +20579,9 @@ fn lock_transitive_git() -> Result<()> {
         dependencies = [
             { name = "anyio" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "idna"
@@ -19470,6 +20592,9 @@ fn lock_transitive_git() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sniffio"
         version = "1.3.1"
@@ -19478,6 +20603,9 @@ fn lock_transitive_git() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -19586,6 +20714,9 @@ fn lock_dynamic_version() -> Result<()> {
         [[package]]
         name = "project"
         source = { editable = "." }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -19786,6 +20917,9 @@ fn lock_dynamic_version_workspace_member() -> Result<()> {
         name = "dynamic"
         source = { editable = "dynamic" }
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "iniconfig"
         version = "2.0.0"
@@ -19794,6 +20928,9 @@ fn lock_dynamic_version_workspace_member() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -19805,6 +20942,7 @@ fn lock_dynamic_version_workspace_member() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "dynamic", editable = "dynamic" },
             { name = "iniconfig", specifier = ">=2" },
@@ -19966,6 +21104,9 @@ fn lock_dynamic_version_path_dependency() -> Result<()> {
         name = "dynamic"
         source = { directory = "dynamic" }
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "iniconfig"
         version = "2.0.0"
@@ -19974,6 +21115,9 @@ fn lock_dynamic_version_path_dependency() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -19985,6 +21129,7 @@ fn lock_dynamic_version_path_dependency() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "dynamic", directory = "dynamic" },
             { name = "iniconfig", specifier = ">=2" },
@@ -20140,6 +21285,9 @@ fn lock_dynamic_version_self_extra_hatchling() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/a0/7a/4daaf3b6c08ad7ceffea4634ec206faeff697526421c20f07628c7372156/anyio-4.7.0-py3-none-any.whl", hash = "sha256:ea60c3723ab42ba6fff7e8ccb0488c898ec538ff4df1f1d5e642c3601d07e352", size = 93052 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.10"
@@ -20148,6 +21296,9 @@ fn lock_dynamic_version_self_extra_hatchling() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/76/c6/c88e154df9c4e1a2a66ccf0005a88dfb2650c1dffb6f5ce603dfbd452ce3/idna-3.10-py3-none-any.whl", hash = "sha256:946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3", size = 70442 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -20177,6 +21328,9 @@ fn lock_dynamic_version_self_extra_hatchling() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typing-extensions"
         version = "4.12.2"
@@ -20185,6 +21339,9 @@ fn lock_dynamic_version_self_extra_hatchling() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d", size = 37438 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -20301,6 +21458,9 @@ fn lock_dynamic_version_self_extra_setuptools() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/a0/7a/4daaf3b6c08ad7ceffea4634ec206faeff697526421c20f07628c7372156/anyio-4.7.0-py3-none-any.whl", hash = "sha256:ea60c3723ab42ba6fff7e8ccb0488c898ec538ff4df1f1d5e642c3601d07e352", size = 93052 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.10"
@@ -20309,6 +21469,9 @@ fn lock_dynamic_version_self_extra_setuptools() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/76/c6/c88e154df9c4e1a2a66ccf0005a88dfb2650c1dffb6f5ce603dfbd452ce3/idna-3.10-py3-none-any.whl", hash = "sha256:946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3", size = 70442 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -20338,6 +21501,9 @@ fn lock_dynamic_version_self_extra_setuptools() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typing-extensions"
         version = "4.12.2"
@@ -20346,6 +21512,9 @@ fn lock_dynamic_version_self_extra_setuptools() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d", size = 37438 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -20441,6 +21610,9 @@ fn lock_dynamic_built_cache() -> Result<()> {
         [[package]]
         name = "project"
         source = { editable = "." }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -20611,6 +21783,9 @@ fn lock_shared_build_dependency() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/0a/76/b31dba704487daf0845fc2d246ddb1a141a1dd12ef695d30eb4b0aac51c5/libcst-1.1.0-cp39-cp39-win_amd64.whl", hash = "sha256:d22d1abfe49aa60fc61fa867e10875a9b3024ba5a801112f4d7ba42d8d53242e", size = 2031198 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "libcst"
         version = "1.6.0"
@@ -20660,6 +21835,9 @@ fn lock_shared_build_dependency() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/85/b4/f230eddb5afdd37e96d4de6e5314cdd38b2d8ece145b7a4a523851ab21a3/libcst-1.6.0-cp39-cp39-win_amd64.whl", hash = "sha256:984512829a80f963bfc1803342219a4264a8d4206df0a30eae9bce921357a938", size = 2076934 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "mypy-extensions"
         version = "1.0.0"
@@ -20668,6 +21846,9 @@ fn lock_shared_build_dependency() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/2a/e2/5d3f6ada4297caebe1a2add3b126fe800c96f56dbe5d1988a2cbe0b267aa/mypy_extensions-1.0.0-py3-none-any.whl", hash = "sha256:4392f6c0eb8a5668a69e23d168ffa70f0be9ccfd32b5cc2d26a34ae5b844552d", size = 4695 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -20678,6 +21859,7 @@ fn lock_shared_build_dependency() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "libcst", specifier = ">=1.1.0" }]
 
         [[package]]
@@ -20740,6 +21922,9 @@ fn lock_shared_build_dependency() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/19/87/5124b1c1f2412bb95c59ec481eaf936cd32f0fe2a7b16b97b81c4c017a6a/PyYAML-6.0.2-cp39-cp39-win_amd64.whl", hash = "sha256:39693e1f8320ae4f43943590b49779ffb98acb81f788220ea932a6b6c51004d8", size = 162312 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typing-extensions"
         version = "4.12.2"
@@ -20748,6 +21933,9 @@ fn lock_shared_build_dependency() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d", size = 37438 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "typing-inspect"
@@ -20761,6 +21949,9 @@ fn lock_shared_build_dependency() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/65/f3/107a22063bf27bdccf2024833d3445f4eea42b2e598abfbd46f6a63b6cb0/typing_inspect-0.9.0-py3-none-any.whl", hash = "sha256:9ee6fc59062311ef8547596ab6b955e1b8aa46242d854bfc78f4f6b0eff35f9f", size = 8827 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -20843,6 +22034,9 @@ fn lock_dynamic_to_static() -> Result<()> {
         [[package]]
         name = "project"
         source = { editable = "." }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -20953,6 +22147,9 @@ fn lock_static_to_dynamic() -> Result<()> {
         name = "project"
         version = "0.1.0"
         source = { editable = "." }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -21076,6 +22273,9 @@ fn lock_bump_static_version() -> Result<()> {
         name = "project"
         version = "0.1.0"
         source = { virtual = "." }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -21479,6 +22679,7 @@ fn lock_relative_project() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "typing-extensions" }]
 
         [[package]]
@@ -21489,6 +22690,9 @@ fn lock_relative_project() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -21579,6 +22783,9 @@ fn lock_recursive_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -21718,6 +22925,7 @@ fn lock_no_build_static_metadata() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
 
         [[package]]
@@ -21728,6 +22936,9 @@ fn lock_no_build_static_metadata() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -21840,6 +23051,7 @@ fn lock_self_compatible() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "project" },
             { name = "typing-extensions" },
@@ -21853,6 +23065,9 @@ fn lock_self_compatible() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -21939,6 +23154,7 @@ fn lock_self_exact() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "project", specifier = "==0.1.0" },
             { name = "typing-extensions" },
@@ -21952,6 +23168,9 @@ fn lock_self_exact() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -22085,6 +23304,9 @@ fn lock_self_extra_to_extra_compatible() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -22255,6 +23477,9 @@ fn lock_self_extra_compatible() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -22374,6 +23599,7 @@ fn lock_self_marker_compatible() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "project", marker = "sys_platform == 'win32'" },
             { name = "typing-extensions" },
@@ -22387,6 +23613,9 @@ fn lock_self_marker_compatible() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -22505,6 +23734,7 @@ fn lock_split_on_windows() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "pyqt5-qt5" }]
 
         [[package]]
@@ -22515,6 +23745,9 @@ fn lock_split_on_windows() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/40/dc/96d9d0ba0d13256343b53efffe8729f278e62409ab4c937bb22e70ab98ac/PyQt5_Qt5-5.15.13-py3-none-macosx_10_13_x86_64.whl", hash = "sha256:92575a9e96a27c4ed67c56c7048ded7461a1655d5d21f0e05064664e6e9fcbdf", size = 38771962 },
             { url = "https://files.pythonhosted.org/packages/c9/8b/4441c208c8ca29b50fab6467ebfa32b6401d16c5c915a031a48dc85dfa7a/PyQt5_Qt5-5.15.13-py3-none-macosx_11_0_arm64.whl", hash = "sha256:141859f2ffe04cc6c5db970e2b6ad9f98897805d886a14c52614e3799daab6d6", size = 36663754 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -22612,6 +23845,9 @@ fn lock_arm() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/4c/0c/9c603826b6465e82591e05ca230dfc13376da512b25ccd0894709b054ed0/numpy-1.26.4-cp312-cp312-musllinux_1_1_aarch64.whl", hash = "sha256:ab47dbe5cc8210f55aa58e4805fe224dac469cde56b9f731a4c098b91917159a", size = 13572172 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -22621,6 +23857,7 @@ fn lock_arm() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "numpy" }]
         "###
         );
@@ -22687,6 +23924,9 @@ fn lock_x86_64() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/16/2e/86f24451c2d530c88daf997cb8d6ac622c1d40d19f5a031ed68a4b73a374/numpy-1.26.4-cp312-cp312-win_amd64.whl", hash = "sha256:08beddf13648eb95f8d867350f6a018a4be2e5ad54c8d8caed89ebca558b2818", size = 15517754 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -22696,6 +23936,7 @@ fn lock_x86_64() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "numpy" }]
         "###
         );
@@ -22759,6 +24000,9 @@ fn lock_x86() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/28/4a/46d9e65106879492374999e76eb85f87b15328e06bd1550668f79f7b18c6/numpy-1.26.4-cp312-cp312-win32.whl", hash = "sha256:50193e430acfc1346175fcbdaa28ffec49947a06918b7b92130744e81e640110", size = 5677803 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -22768,6 +24012,7 @@ fn lock_x86() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "numpy" }]
         "###
         );
@@ -22831,6 +24076,9 @@ fn lock_script() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -22840,6 +24088,9 @@ fn lock_script() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sniffio"
         version = "1.3.1"
@@ -22848,6 +24099,9 @@ fn lock_script() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -22970,6 +24224,9 @@ fn lock_script_path() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "child"
         version = "0.1.0"
@@ -22979,6 +24236,7 @@ fn lock_script_path() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
 
         [[package]]
@@ -22990,6 +24248,9 @@ fn lock_script_path() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "iniconfig"
         version = "2.0.0"
@@ -22999,6 +24260,9 @@ fn lock_script_path() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sniffio"
         version = "1.3.1"
@@ -23007,6 +24271,9 @@ fn lock_script_path() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -23170,6 +24437,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/b9/f8/feced7779d755758a52d1f6635d990b8d98dc0a29fa568bbe0625f18fdf3/filelock-3.16.1-py3-none-any.whl", hash = "sha256:2082e5703d51fbf98ea75855d9d5527e33d8ff23099bec374a134febee6946b0", size = 16163 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "fsspec"
         version = "2024.12.0"
@@ -23178,6 +24448,9 @@ fn lock_pytorch_cpu() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/de/86/5486b0188d08aa643e127774a99bac51ffa6cf343e3deb0583956dca5b22/fsspec-2024.12.0-py3-none-any.whl", hash = "sha256:b520aed47ad9804237ff878b504267a3b0b441e97508bd6d2d8774e3db85cee2", size = 183862 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "jinja2"
@@ -23190,6 +24463,9 @@ fn lock_pytorch_cpu() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/31/80/3a54838c3fb461f6fec263ebf3a3a41771bd05190238de3486aae8540c36/jinja2-3.1.4-py3-none-any.whl", hash = "sha256:bc5dd2abb727a5319567b7a813e6a2e7318c39f4f487cfe6c89c6f9c7d25197d", size = 133271 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "markupsafe"
@@ -23229,6 +24505,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/4f/65/6079a46068dfceaeabb5dcad6d674f5f5c61a6fa5673746f42a9f4c233b3/MarkupSafe-3.0.2-cp313-cp313t-win_amd64.whl", hash = "sha256:e444a31f8db13eb18ada366ab3cf45fd4b31e4db1236a4448f68778c1d1a5a2f", size = 15739 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "mpmath"
         version = "1.3.0"
@@ -23238,6 +24517,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl", hash = "sha256:a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c", size = 536198 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "networkx"
         version = "3.4.2"
@@ -23246,6 +24528,9 @@ fn lock_pytorch_cpu() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/b9/54/dd730b32ea14ea797530a4479b2ed46a6fb250f682a9cfb997e968bf0261/networkx-3.4.2-py3-none-any.whl", hash = "sha256:df5d4365b724cf81b8c6a7312509d0c22386097011ad1abe274afd5e9d3bbc5f", size = 1723263 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "numpy"
@@ -23285,6 +24570,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ce/e1/e0d06ec34036c92b43aef206efe99a5f5f04e12c776eab82a36e00c40afc/numpy-2.2.0-cp313-cp313t-win_amd64.whl", hash = "sha256:d35717333b39d1b6bb8433fa758a55f1081543de527171543a2b710551d40881", size = 12692303 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-cublas-cu12"
         version = "12.4.5.8"
@@ -23294,6 +24582,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ae/71/1c91302526c45ab494c23f61c7a84aa568b8c1f9d196efa5993957faf906/nvidia_cublas_cu12-12.4.5.8-py3-none-manylinux2014_x86_64.whl", hash = "sha256:2fc8da60df463fdefa81e323eef2e36489e1c94335b5358bcb38360adf75ac9b", size = 363438805 },
             { url = "https://files.pythonhosted.org/packages/e2/2a/4f27ca96232e8b5269074a72e03b4e0d43aa68c9b965058b1684d07c6ff8/nvidia_cublas_cu12-12.4.5.8-py3-none-win_amd64.whl", hash = "sha256:5a796786da89203a0657eda402bcdcec6180254a8ac22d72213abc42069522dc", size = 396895858 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "nvidia-cuda-cupti-cu12"
@@ -23305,6 +24596,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/f3/79/8cf313ec17c58ccebc965568e5bcb265cdab0a1df99c4e674bb7a3b99bfe/nvidia_cuda_cupti_cu12-12.4.127-py3-none-win_amd64.whl", hash = "sha256:5688d203301ab051449a2b1cb6690fbe90d2b372f411521c86018b950f3d7922", size = 9938035 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-cuda-nvrtc-cu12"
         version = "12.4.127"
@@ -23315,6 +24609,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/7c/30/8c844bfb770f045bcd8b2c83455c5afb45983e1a8abf0c4e5297b481b6a5/nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-win_amd64.whl", hash = "sha256:a961b2f1d5f17b14867c619ceb99ef6fcec12e46612711bcec78eb05068a60ec", size = 19751955 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-cuda-runtime-cu12"
         version = "12.4.127"
@@ -23324,6 +24621,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ea/27/1795d86fe88ef397885f2e580ac37628ed058a92ed2c39dc8eac3adf0619/nvidia_cuda_runtime_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl", hash = "sha256:64403288fa2136ee8e467cdc9c9427e0434110899d07c779f25b5c068934faa5", size = 883737 },
             { url = "https://files.pythonhosted.org/packages/a8/8b/450e93fab75d85a69b50ea2d5fdd4ff44541e0138db16f9cd90123ef4de4/nvidia_cuda_runtime_cu12-12.4.127-py3-none-win_amd64.whl", hash = "sha256:09c2e35f48359752dfa822c09918211844a3d93c100a715d79b59591130c5e1e", size = 878808 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "nvidia-cudnn-cu12"
@@ -23336,6 +24636,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/9f/fd/713452cd72343f682b1c7b9321e23829f00b842ceaedcda96e742ea0b0b3/nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl", hash = "sha256:165764f44ef8c61fcdfdfdbe769d687e06374059fbb388b6c89ecb0e28793a6f", size = 664752741 },
             { url = "https://files.pythonhosted.org/packages/3f/d0/f90ee6956a628f9f04bf467932c0a25e5a7e706a684b896593c06c82f460/nvidia_cudnn_cu12-9.1.0.70-py3-none-win_amd64.whl", hash = "sha256:6278562929433d68365a07a4a1546c237ba2849852c0d4b2262a486e805b977a", size = 679925892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "nvidia-cufft-cu12"
@@ -23350,6 +24653,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/f6/ee/3f3f8e9874f0be5bbba8fb4b62b3de050156d159f8b6edc42d6f1074113b/nvidia_cufft_cu12-11.2.1.3-py3-none-win_amd64.whl", hash = "sha256:d802f4954291101186078ccbe22fc285a902136f974d369540fd4a5333d1440b", size = 210576476 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-curand-cu12"
         version = "10.3.5.147"
@@ -23359,6 +24665,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/8a/6d/44ad094874c6f1b9c654f8ed939590bdc408349f137f9b98a3a23ccec411/nvidia_curand_cu12-10.3.5.147-py3-none-manylinux2014_x86_64.whl", hash = "sha256:a88f583d4e0bb643c49743469964103aa59f7f708d862c3ddb0fc07f851e3b8b", size = 56305206 },
             { url = "https://files.pythonhosted.org/packages/1c/22/2573503d0d4e45673c263a313f79410e110eb562636b0617856fdb2ff5f6/nvidia_curand_cu12-10.3.5.147-py3-none-win_amd64.whl", hash = "sha256:f307cc191f96efe9e8f05a87096abc20d08845a841889ef78cb06924437f6771", size = 55799918 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "nvidia-cusolver-cu12"
@@ -23375,6 +24684,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/f2/be/d435b7b020e854d5d5a682eb5de4328fd62f6182507406f2818280e206e2/nvidia_cusolver_cu12-11.6.1.9-py3-none-win_amd64.whl", hash = "sha256:e77314c9d7b694fcebc84f58989f3aa4fb4cb442f12ca1a9bde50f5e8f6d1b9c", size = 125224015 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-cusparse-cu12"
         version = "12.3.1.170"
@@ -23388,6 +24700,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/a2/e0/3155ca539760a8118ec94cc279b34293309bcd14011fc724f87f31988843/nvidia_cusparse_cu12-12.3.1.170-py3-none-win_amd64.whl", hash = "sha256:9bc90fb087bc7b4c15641521f31c0371e9a612fc2ba12c338d3ae032e6b6797f", size = 204684315 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-nccl-cu12"
         version = "2.21.5"
@@ -23395,6 +24710,9 @@ fn lock_pytorch_cpu() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/df/99/12cd266d6233f47d00daf3a72739872bdc10267d0383508b0b9c84a18bb6/nvidia_nccl_cu12-2.21.5-py3-none-manylinux2014_x86_64.whl", hash = "sha256:8579076d30a8c24988834445f8d633c697d42397e92ffc3f63fa26766d25e0a0", size = 188654414 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "nvidia-nvjitlink-cu12"
@@ -23406,6 +24724,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/81/19/0babc919031bee42620257b9a911c528f05fb2688520dcd9ca59159ffea8/nvidia_nvjitlink_cu12-12.4.127-py3-none-win_amd64.whl", hash = "sha256:fd9020c501d27d135f983c6d3e244b197a7ccad769e34df53a42e276b0e25fa1", size = 95336325 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-nvtx-cu12"
         version = "12.4.127"
@@ -23415,6 +24736,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/87/20/199b8713428322a2f22b722c62b8cc278cc53dffa9705d744484b5035ee9/nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl", hash = "sha256:781e950d9b9f60d8241ccea575b32f5105a5baf4c2351cab5256a24869f12a1a", size = 99144 },
             { url = "https://files.pythonhosted.org/packages/54/1b/f77674fbb73af98843be25803bbd3b9a4f0a96c75b8d33a2854a5c7d2d77/nvidia_nvtx_cu12-12.4.127-py3-none-win_amd64.whl", hash = "sha256:641dccaaa1139f3ffb0d3164b4b84f9d253397e38246a4f2f36728b48566d485", size = 66307 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "pillow"
@@ -23453,6 +24777,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/df/86/25dde85c06c89d7fc5db17940f07aae0a56ac69aa9ccb5eb0f09798862a8/pillow-11.0.0-cp313-cp313t-win_amd64.whl", hash = "sha256:5c39ed17edea3bc69c743a8dd3e9853b7509625c2462532e62baa0732163a904", size = 2572169 },
             { url = "https://files.pythonhosted.org/packages/51/85/9c33f2517add612e17f3381aee7c4072779130c634921a756c97bc29fb49/pillow-11.0.0-cp313-cp313t-win_arm64.whl", hash = "sha256:75acbbeb05b86bc53cbe7b7e6fe00fbcf82ad7c684b3ad82e3d711da9ba287d3", size = 2256828 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -23497,6 +24824,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/55/21/47d163f615df1d30c094f6c8bbb353619274edccf0327b185cc2493c2c33/setuptools-75.6.0-py3-none-any.whl", hash = "sha256:ce74b49e8f7110f9bf04883b730f4765b774ef3ef28f722cce7c273d253aaf7d", size = 1224032 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sympy"
         version = "1.13.1"
@@ -23508,6 +24838,9 @@ fn lock_pytorch_cpu() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/b2/fe/81695a1aa331a842b582453b605175f419fe8540355886031328089d840a/sympy-1.13.1-py3-none-any.whl", hash = "sha256:db36cdc64bf61b9b24578b6f7bab1ecdd2452cf008f34faa33776680c26d66f8", size = 6189177 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "torch"
@@ -23530,6 +24863,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://download.pytorch.org/whl/cpu/torch-2.5.1-cp312-none-macosx_11_0_arm64.whl", hash = "sha256:8c712df61101964eb11910a846514011f0b6f5920c55dbf567bff8a34163d5b1" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "torch"
         version = "2.5.1"
@@ -23549,6 +24885,9 @@ fn lock_pytorch_cpu() -> Result<()> {
         wheels = [
             { url = "https://download.pytorch.org/whl/cu124/torch-2.5.1-cp312-cp312-linux_aarch64.whl", hash = "sha256:302041d457ee169fd925b53da283c13365c6de75c6bb3e84130774b10e2fbb39" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "torch"
@@ -23571,6 +24910,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://download.pytorch.org/whl/cpu/torch-2.5.1%2Bcpu-cp312-cp312-win_amd64.whl", hash = "sha256:a6b720410350765d3d77c01a5ce098a6c45af446284e45e87a98b8a16e7d564d" },
             { url = "https://download.pytorch.org/whl/cpu/torch-2.5.1%2Bcpu-cp313-cp313-linux_x86_64.whl", hash = "sha256:5dbbdf83caa90d0bcaa50e4933ca424889133b35226db79000877d4ec5d9ea37" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "torch"
@@ -23607,6 +24949,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://download.pytorch.org/whl/cu124/torch-2.5.1%2Bcu124-cp313-cp313-linux_x86_64.whl", hash = "sha256:e9bebf91ede89267577911da4b0709ac6113a0cff6a1c2202c046b1ec2a51601" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "torchvision"
         version = "0.20.1"
@@ -23624,6 +24969,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://download.pytorch.org/whl/cpu/torchvision-0.20.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:1a31256ff945d64f006bb306813a7c95a531fe16bfb2535c837dd4c104533d7a" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "torchvision"
         version = "0.20.1"
@@ -23639,6 +24987,9 @@ fn lock_pytorch_cpu() -> Result<()> {
         wheels = [
             { url = "https://download.pytorch.org/whl/cu124/torchvision-0.20.1-cp312-cp312-linux_aarch64.whl", hash = "sha256:3e3289e53d0cb5d1b7f55b3f5912f46a08293c6791585ba2fc32c12cded9f9af" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "torchvision"
@@ -23657,6 +25008,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://download.pytorch.org/whl/cpu/torchvision-0.20.1%2Bcpu-cp312-cp312-win_amd64.whl", hash = "sha256:64832095b9b8b8185f24788f1a531ae96c937bf797cd3474a2ea7511852e5cd7" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "torchvision"
         version = "0.20.1+cu124"
@@ -23674,6 +25028,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://download.pytorch.org/whl/cu124/torchvision-0.20.1%2Bcu124-cp312-cp312-win_amd64.whl", hash = "sha256:0f6c7b3b0e13663fb3359e64f3604c0ab74c2b4809ae6949ace5635a5240f0e5" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "triton"
         version = "3.1.0"
@@ -23685,6 +25042,9 @@ fn lock_pytorch_cpu() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/78/eb/65f5ba83c2a123f6498a3097746607e5b2f16add29e36765305e4ac7fdd8/triton-3.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c8182f42fd8080a7d39d666814fa36c5e30cc00ea7eeeb1a2983dbb4c99a0fdc", size = 209551444 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typing-extensions"
         version = "4.12.2"
@@ -23693,6 +25053,9 @@ fn lock_pytorch_cpu() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d", size = 37438 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -23792,6 +25155,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/89/ec/00d68c4ddfedfe64159999e5f8a98fb8442729a63e2077eb9dcd89623d27/filelock-3.17.0-py3-none-any.whl", hash = "sha256:533dc2f7ba78dc2f0f531fc6c4940addf7b70a481e269a5a3b93be94ffbe8338", size = 16164 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "fsspec"
         version = "2024.12.0"
@@ -23800,6 +25166,9 @@ fn lock_pytorch_preferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/de/86/5486b0188d08aa643e127774a99bac51ffa6cf343e3deb0583956dca5b22/fsspec-2024.12.0-py3-none-any.whl", hash = "sha256:b520aed47ad9804237ff878b504267a3b0b441e97508bd6d2d8774e3db85cee2", size = 183862 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "jinja2"
@@ -23812,6 +25181,9 @@ fn lock_pytorch_preferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/bd/0f/2ba5fbcd631e3e88689309dbe978c5769e883e4b84ebfe7da30b43275c5a/jinja2-3.1.5-py3-none-any.whl", hash = "sha256:aba0f4dc9ed8013c424088f68a5c226f7d6097ed89b246d7749c2ec4175c6adb", size = 134596 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "markupsafe"
@@ -23871,6 +25243,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/4f/65/6079a46068dfceaeabb5dcad6d674f5f5c61a6fa5673746f42a9f4c233b3/MarkupSafe-3.0.2-cp313-cp313t-win_amd64.whl", hash = "sha256:e444a31f8db13eb18ada366ab3cf45fd4b31e4db1236a4448f68778c1d1a5a2f", size = 15739 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "mpmath"
         version = "1.3.0"
@@ -23880,6 +25255,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl", hash = "sha256:a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c", size = 536198 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "networkx"
         version = "3.4.2"
@@ -23888,6 +25266,9 @@ fn lock_pytorch_preferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/b9/54/dd730b32ea14ea797530a4479b2ed46a6fb250f682a9cfb997e968bf0261/networkx-3.4.2-py3-none-any.whl", hash = "sha256:df5d4365b724cf81b8c6a7312509d0c22386097011ad1abe274afd5e9d3bbc5f", size = 1723263 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "nvidia-cublas-cu11"
@@ -23900,6 +25281,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/0b/1d/7a78cd36fd5e3da4021b3ac2c2c8b2651dd72345b7c3ecc0d3e051884f50/nvidia_cublas_cu11-11.11.3.6-py3-none-win_amd64.whl", hash = "sha256:6ab12b1302bef8ac1ff4414edd1c059e57f4833abef9151683fb8f4de25900be", size = 427234740 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-cuda-cupti-cu11"
         version = "11.8.87"
@@ -23910,6 +25294,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/74/42/9f5c5cc084ce6f3073048c4f6806f45ba4c8c73f227c9587215d9c372e05/nvidia_cuda_cupti_cu11-11.8.87-py3-none-manylinux2014_x86_64.whl", hash = "sha256:4191a17913a706b5098681280cd089cd7d8d3df209a6f5cb79384974a96d24f2", size = 13093662 },
             { url = "https://files.pythonhosted.org/packages/9c/b9/371cff81be29e008a69f1681f468a2b428fa4ea03842196c178cb4cf1991/nvidia_cuda_cupti_cu11-11.8.87-py3-none-win_amd64.whl", hash = "sha256:4332d8550ad5f5b673f98d08e4e4f82030cb604c66d8d5ee919399ea01312e58", size = 9952361 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "nvidia-cuda-nvrtc-cu11"
@@ -23922,6 +25309,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c9/19/17745076214b0cc985cfdbabe2b3108f1237704985dab5b748e48432aca1/nvidia_cuda_nvrtc_cu11-11.8.89-py3-none-win_amd64.whl", hash = "sha256:e18a23a8f4064664a6f1c4a64f38c581cbebfb5935280e94a4943ea8ae3791b1", size = 19034935 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-cuda-runtime-cu11"
         version = "11.8.89"
@@ -23932,6 +25322,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/a6/ec/a540f28b31de7bc1ed49eecc72035d4cb77db88ead1d42f7bfa5ae407ac6/nvidia_cuda_runtime_cu11-11.8.89-py3-none-manylinux2014_x86_64.whl", hash = "sha256:92d04069a987e1fbc9213f8376d265df0f7bb42617d44f5eda1f496acea7f2d1", size = 875592 },
             { url = "https://files.pythonhosted.org/packages/48/ae/09f335dfbca630ae213e53d2a9294540620453fe2b37e7489ff05817a525/nvidia_cuda_runtime_cu11-11.8.89-py3-none-win_amd64.whl", hash = "sha256:f60c9fdaed8065b38de8097867240efc5556a8a710007146daeb9082334a6e63", size = 1021163 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "nvidia-cudnn-cu11"
@@ -23944,6 +25337,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/0b/f6/921e080645b9e66fbf7567b5aa1741bcded69862f42f1dce796883c3345c/nvidia_cudnn_cu11-8.7.0.84-py3-none-manylinux1_x86_64.whl", hash = "sha256:b3e062498fbbb1c1930435a6a454c1b41c903e1e65b7063bd2b4021e8285408e", size = 728455279 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-cufft-cu11"
         version = "10.9.0.58"
@@ -23955,6 +25351,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/f8/b4/e432a74f8db0e84f734dc14d36c0e529225132bf7e239da21f55893351a6/nvidia_cufft_cu11-10.9.0.58-py3-none-win_amd64.whl", hash = "sha256:c4d316f17c745ec9c728e30409612eaf77a8404c3733cdf6c9c1569634d1ca03", size = 172237004 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-curand-cu11"
         version = "10.3.0.86"
@@ -23965,6 +25364,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/58/e5/ce5806afc48a6e4e0dddd25316ac60b6fa94fd1791bdbf4ca17bf52696ea/nvidia_curand_cu11-10.3.0.86-py3-none-manylinux2014_x86_64.whl", hash = "sha256:cd4cffbf78bb06580206b4814d5dc696d1161c902aae37b2bba00056832379e6", size = 58124497 },
             { url = "https://files.pythonhosted.org/packages/ae/e0/a68e20f37512c2ff22c1b2707383faec80acc20c39727e4007065ed284ea/nvidia_curand_cu11-10.3.0.86-py3-none-win_amd64.whl", hash = "sha256:8fa8365065fc3e3760d7437b08f164a6bcf8f7124f3b544d2463ded01e6bdc70", size = 57597791 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "nvidia-cusolver-cu11"
@@ -23980,6 +25382,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/1e/94/4fd658d09776307b98411eca09dd77773d8c3bdc484b186a2084038b75e2/nvidia_cusolver_cu11-11.4.1.48-py3-none-win_amd64.whl", hash = "sha256:7efe43b113495a64e2cf9a0b4365bd53b0a82afb2e2cf91e9f993c9ef5e69ee8", size = 125732382 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-cusparse-cu11"
         version = "11.7.5.86"
@@ -23991,6 +25396,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/b8/36/a670e8ca1deccd3c63be4d0286491cf5c6375253f0d948e7cc5167fe1da9/nvidia_cusparse_cu11-11.7.5.86-py3-none-win_amd64.whl", hash = "sha256:a0f6ee81cd91be606fc2f55992d06b09cd4e86d74b6ae5e8dd1631cf7f5a8706", size = 203420667 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-nccl-cu11"
         version = "2.19.3"
@@ -23998,6 +25406,9 @@ fn lock_pytorch_preferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/0e/7d/cc3dbf36c5af39b042d508b7a441ada1fce69bd18c800e5c25dc4e9f8933/nvidia_nccl_cu11-2.19.3-py3-none-manylinux1_x86_64.whl", hash = "sha256:7c58afbeddf7f7c6b7dd7d84a7f4e85462610ee0c656287388b96d89dcf046d5", size = 135288005 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "nvidia-nvtx-cu11"
@@ -24009,6 +25420,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/b5/ad/973a187b137a3d45dc3faac421ef1275fb41fc169fd3889e2d5ceb0daa54/nvidia_nvtx_cu11-11.8.86-py3-none-manylinux2014_x86_64.whl", hash = "sha256:979f5b2aef5da164c5c53c64c85c3dfa61b8b4704f4f963bb568bf98fa8472e8", size = 99130 },
             { url = "https://files.pythonhosted.org/packages/3f/3f/0e1dd2bc4d89f838b86c76956ffa514307d3be4d8b5ee0da4e9d12a8b54b/nvidia_nvtx_cu11-11.8.86-py3-none-win_amd64.whl", hash = "sha256:54031010ee38d774b2991004d88f90bbd7bbc1458a96bbc4b42662756508c252", size = 66297 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -24047,6 +25461,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/99/ff/c87e0622b1dadea79d2fb0b25ade9ed98954c9033722eb707053d310d4f3/sympy-1.13.3-py3-none-any.whl", hash = "sha256:54612cf55a62755ee71824ce692986f23c88ffa77207b30c1368eda4a7060f73", size = 6189483 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "torch"
         version = "2.2.2"
@@ -24073,6 +25490,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://download.pytorch.org/whl/cpu/torch-2.2.2-cp312-none-macosx_10_9_x86_64.whl", hash = "sha256:49508cb377ac965185a5c94e18a7719ad386a35e6f0a5f999f542f6e80f3c5ec" },
             { url = "https://download.pytorch.org/whl/cpu/torch-2.2.2-cp312-none-macosx_11_0_arm64.whl", hash = "sha256:4a1323c7d02b916bd3eba9f34b5dd6c63b265c2d086f9ad5f65033395068a6ae" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "torch"
@@ -24107,6 +25527,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/4a/0e/e4e033371a7cba9da0db5ccb507a9174e41b9c29189a932d01f2f61ecfc0/torch-2.2.2-cp312-none-macosx_11_0_arm64.whl", hash = "sha256:bf9558da7d2bf7463390b3b2a61a6a3dbb0b45b161ee1dd5ec640bf579d479fc", size = 59678388 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "torch"
         version = "2.2.2+cpu"
@@ -24130,6 +25553,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://download.pytorch.org/whl/cpu/torch-2.2.2%2Bcpu-cp312-cp312-linux_x86_64.whl", hash = "sha256:431a747b5a880cf8e1fb6d58db6bfafa6768cbec76517d046854537c03323edf" },
             { url = "https://download.pytorch.org/whl/cpu/torch-2.2.2%2Bcpu-cp312-cp312-win_amd64.whl", hash = "sha256:2b0cf041f878607a361116945f82ce2dba4b7a747151da7619a63cb5fccb72df" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "torch"
@@ -24167,6 +25593,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://download.pytorch.org/whl/cu118/torch-2.2.2%2Bcu118-cp312-cp312-win_amd64.whl", hash = "sha256:2e32a36a5363c7a9acf058e24442e4033a3fb128de4a90cb0f16baf6681c89f7" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "triton"
         version = "2.2.0"
@@ -24180,6 +25609,9 @@ fn lock_pytorch_preferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/0e/49/2e1bbae4542b8f624e409540b4197e37ab22a88e8685e99debe721cc2b50/triton-2.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0af58716e721460a61886668b205963dc4d1e4ac20508cc3f623aef0d70283d5", size = 167933985 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typing-extensions"
         version = "4.12.2"
@@ -24188,6 +25620,9 @@ fn lock_pytorch_preferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d", size = 37438 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });

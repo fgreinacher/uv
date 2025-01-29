@@ -135,6 +135,7 @@ fn wrong_backtracking_basic() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a" },
             { name = "package-b" },
@@ -149,6 +150,9 @@ fn wrong_backtracking_basic() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/wrong_backtracking_basic_a-1.0.0-py3-none-any.whl", hash = "sha256:d9a7ee79b176cd36c9db03e36bc3325856dd4fb061aefc6159eecad6e8776e88" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-b"
         version = "2.0.9"
@@ -160,6 +164,9 @@ fn wrong_backtracking_basic() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/wrong_backtracking_basic_b-2.0.9-py3-none-any.whl", hash = "sha256:bf96af1a69f8c1d1d9c2687cd5d6f023cda56dd77d3f37f3cdd422e2a410541f" },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -262,6 +269,9 @@ fn fork_allows_non_conflicting_non_overlapping_dependencies() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_allows_non_conflicting_non_overlapping_dependencies_a-1.0.0-py3-none-any.whl", hash = "sha256:8111e996c2a4e04c7a7cf91cf6f8338f5195c22ecf2303d899c4ef4e718a8175" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -271,6 +281,7 @@ fn fork_allows_non_conflicting_non_overlapping_dependencies() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a", marker = "sys_platform == 'darwin'", specifier = "<2" },
             { name = "package-a", marker = "sys_platform == 'linux'", specifier = ">=1" },
@@ -374,6 +385,9 @@ fn fork_allows_non_conflicting_repeated_dependencies() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_allows_non_conflicting_repeated_dependencies_a-1.0.0-py3-none-any.whl", hash = "sha256:fc3f6d2fab10d1bb4f52bd9a7de69dc97ed1792506706ca78bdc9e95d6641a6b" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -383,6 +397,7 @@ fn fork_allows_non_conflicting_repeated_dependencies() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a", specifier = "<2" },
             { name = "package-a", specifier = ">=1" },
@@ -481,6 +496,9 @@ fn fork_basic() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_basic_a-1.0.0-py3-none-any.whl", hash = "sha256:9d3af617bb44ae1c8daf19f6d4d118ee8aac7eaf0cc5368d0f405137411291a1" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-a"
         version = "2.0.0"
@@ -493,6 +511,9 @@ fn fork_basic() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_basic_a-2.0.0-py3-none-any.whl", hash = "sha256:3876778dc6e5178b0e456b0d988cb8c2542cb943a45497aff3e198cbec3dfcc9" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -503,6 +524,7 @@ fn fork_basic() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a", marker = "sys_platform == 'darwin'", specifier = "<2" },
             { name = "package-a", marker = "sys_platform == 'linux'", specifier = ">=2" },
@@ -766,6 +788,9 @@ fn fork_filter_sibling_dependencies() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_filter_sibling_dependencies_a-4.3.0-py3-none-any.whl", hash = "sha256:932c128393cd499617d1a5b457b11887d51039284b18e06add4c384ab661148c" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-a"
         version = "4.4.0"
@@ -777,6 +802,9 @@ fn fork_filter_sibling_dependencies() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_filter_sibling_dependencies_a-4.4.0-py3-none-any.whl", hash = "sha256:26989734e8fa720896dbbf900adc64551bf3f0026fb62c3c22b47dc23edd4a4c" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-b"
@@ -790,6 +818,9 @@ fn fork_filter_sibling_dependencies() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_filter_sibling_dependencies_b-1.0.0-py3-none-any.whl", hash = "sha256:bc72ef97f57a77fc7be9dc400be26ae5c344aabddbe39407c05a62e07554cdbf" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-c"
         version = "1.0.0"
@@ -801,6 +832,9 @@ fn fork_filter_sibling_dependencies() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_filter_sibling_dependencies_c-1.0.0-py3-none-any.whl", hash = "sha256:71fc9aec5527839358209ccb927186dd0529e9814a725d86aa17e7a033c59cd4" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-d"
@@ -814,6 +848,9 @@ fn fork_filter_sibling_dependencies() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_filter_sibling_dependencies_d-1.0.0-py3-none-any.whl", hash = "sha256:de669ada03e9f8625e3ac4af637c88de04066a72675c16c3d1757e0e9d5db7a8" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-d"
         version = "2.0.0"
@@ -825,6 +862,9 @@ fn fork_filter_sibling_dependencies() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_filter_sibling_dependencies_d-2.0.0-py3-none-any.whl", hash = "sha256:87c133dcc987137d62c011a41af31e8372ca971393d93f808dffc32e136363c7" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -838,6 +878,7 @@ fn fork_filter_sibling_dependencies() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a", marker = "sys_platform == 'darwin'", specifier = "==4.3.0" },
             { name = "package-a", marker = "sys_platform == 'linux'", specifier = "==4.4.0" },
@@ -936,6 +977,9 @@ fn fork_upgrade() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_upgrade_bar-2.0.0-py3-none-any.whl", hash = "sha256:d8ce562bf363e849fbf4add170a519b5412ab63e378fb4b7ea290183c77616fc" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-foo"
         version = "2.0.0"
@@ -948,6 +992,9 @@ fn fork_upgrade() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_upgrade_foo-2.0.0-py3-none-any.whl", hash = "sha256:f066d0608d24ebdb2c23959810188e2f25947a3b492f1d4402ff203287efaf8a" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -957,6 +1004,7 @@ fn fork_upgrade() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "package-foo" }]
         "###
         );
@@ -1064,6 +1112,9 @@ fn fork_incomplete_markers() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_incomplete_markers_a-1.0.0-py3-none-any.whl", hash = "sha256:779bb805058fc59858e8b9260cd1a40f13f1640631fdea89d9d243691a4f39ca" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-a"
         version = "2.0.0"
@@ -1075,6 +1126,9 @@ fn fork_incomplete_markers() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_incomplete_markers_a-2.0.0-py3-none-any.whl", hash = "sha256:58a4b7dcf929aabf1ed434d9ff8d715929dc3dec02b92cf2b364d5a2206f1f6a" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-b"
@@ -1088,6 +1142,9 @@ fn fork_incomplete_markers() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_incomplete_markers_b-1.0.0-py3-none-any.whl", hash = "sha256:5c2a5f446580787ed7b3673431b112474237ddeaf1c81325bb30b86e7ee76adb" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-c"
         version = "1.0.0"
@@ -1096,6 +1153,9 @@ fn fork_incomplete_markers() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_incomplete_markers_c-1.0.0-py3-none-any.whl", hash = "sha256:03fa287aa4cb78457211cb3df7459b99ba1ee2259aae24bc745eaab45e7eaaee" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -1108,6 +1168,7 @@ fn fork_incomplete_markers() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a", marker = "python_full_version < '3.10'", specifier = "==1" },
             { name = "package-a", marker = "python_full_version >= '3.11'", specifier = "==2" },
@@ -1212,6 +1273,9 @@ fn fork_marker_accrue() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_accrue_a-1.0.0-py3-none-any.whl", hash = "sha256:cba9cb55cca41833a15c9f8eb75045236cf80cad5d663f7fb7ecae18dad79538" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-b"
         version = "1.0.0"
@@ -1224,6 +1288,9 @@ fn fork_marker_accrue() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_accrue_b-1.0.0-py3-none-any.whl", hash = "sha256:c5202800c26be15ecaf5560e09ad1df710778bb9debd3c267be1c76f44fbc0c9" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-c"
         version = "1.0.0"
@@ -1232,6 +1299,9 @@ fn fork_marker_accrue() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_accrue_c-1.0.0-py3-none-any.whl", hash = "sha256:b0c8719d38c91b2a8548bd065b1d2153fbe031b37775ed244e76fe5bdfbb502e" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -1243,6 +1313,7 @@ fn fork_marker_accrue() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a", marker = "implementation_name == 'cpython'", specifier = "==1.0.0" },
             { name = "package-b", marker = "implementation_name == 'pypy'", specifier = "==1.0.0" },
@@ -1428,6 +1499,9 @@ fn fork_marker_inherit_combined_allowed() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_combined_allowed_a-1.0.0-py3-none-any.whl", hash = "sha256:198ae54c02a59734dc009bfcee1148d40f56c605b62f9f1a00467e09ebf2ff07" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-a"
         version = "2.0.0"
@@ -1439,6 +1513,9 @@ fn fork_marker_inherit_combined_allowed() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_combined_allowed_a-2.0.0-py3-none-any.whl", hash = "sha256:61b7d273468584342de4c0185beed5b128797ce95ec9ec4a670fe30f73351cf7" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-b"
@@ -1455,6 +1532,9 @@ fn fork_marker_inherit_combined_allowed() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_combined_allowed_b-1.0.0-py3-none-any.whl", hash = "sha256:e1deba885509945ef087e4f31c7dba3ee436fc8284b360fe207a3c42f2f9e22f" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-b"
         version = "2.0.0"
@@ -1467,6 +1547,9 @@ fn fork_marker_inherit_combined_allowed() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_combined_allowed_b-2.0.0-py3-none-any.whl", hash = "sha256:736d1b59cb46a0b889614bc7557c293de245fe8954e3200e786500ae8e42504b" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-c"
         version = "1.0.0"
@@ -1475,6 +1558,9 @@ fn fork_marker_inherit_combined_allowed() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_combined_allowed_c-1.0.0-py3-none-any.whl", hash = "sha256:6a6b776dedabceb6a6c4f54a5d932076fa3fed1380310491999ca2d31e13b41c" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -1486,6 +1572,7 @@ fn fork_marker_inherit_combined_allowed() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a", marker = "sys_platform == 'darwin'", specifier = "<2" },
             { name = "package-a", marker = "sys_platform == 'linux'", specifier = ">=2" },
@@ -1608,6 +1695,9 @@ fn fork_marker_inherit_combined_disallowed() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_combined_disallowed_a-1.0.0-py3-none-any.whl", hash = "sha256:ee2dc68d5b33c0318183431cebf99ccca63d98601b936e5d3eae804c73f2b154" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-a"
         version = "2.0.0"
@@ -1619,6 +1709,9 @@ fn fork_marker_inherit_combined_disallowed() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_combined_disallowed_a-2.0.0-py3-none-any.whl", hash = "sha256:099db8d3af6c9dfc10589ab0f1e2e6a74276a167afb39322ddaf657791247456" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-b"
@@ -1632,6 +1725,9 @@ fn fork_marker_inherit_combined_disallowed() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_combined_disallowed_b-1.0.0-py3-none-any.whl", hash = "sha256:999b3d0029ea0131272257e2b04c0e673defa6c25be6efc411e04936bce72ef6" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-b"
         version = "2.0.0"
@@ -1644,6 +1740,9 @@ fn fork_marker_inherit_combined_disallowed() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_combined_disallowed_b-2.0.0-py3-none-any.whl", hash = "sha256:2c6aedd257d0ed21bb96f6e0baba8314c001d4078d09413cda147fb6badb39a2" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -1654,6 +1753,7 @@ fn fork_marker_inherit_combined_disallowed() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a", marker = "sys_platform == 'darwin'", specifier = "<2" },
             { name = "package-a", marker = "sys_platform == 'linux'", specifier = ">=2" },
@@ -1777,6 +1877,9 @@ fn fork_marker_inherit_combined() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_combined_a-1.0.0-py3-none-any.whl", hash = "sha256:1150f6d977824bc0260cfb5fcf34816424ed4602d5df316c291b8df3f723c888" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-a"
         version = "2.0.0"
@@ -1788,6 +1891,9 @@ fn fork_marker_inherit_combined() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_combined_a-2.0.0-py3-none-any.whl", hash = "sha256:67e142d749674a27c872db714d50fda083010789da51291e3c30b4daf0e96b3b" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-b"
@@ -1801,6 +1907,9 @@ fn fork_marker_inherit_combined() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_combined_b-1.0.0-py3-none-any.whl", hash = "sha256:d9b50d8a0968d65af338e27d6b2a58eea59c514e47b820752a2c068b5a8333a7" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-b"
         version = "2.0.0"
@@ -1813,6 +1922,9 @@ fn fork_marker_inherit_combined() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_combined_b-2.0.0-py3-none-any.whl", hash = "sha256:ff364fd590d05651579d8bea621b069934470106b9a82ab960fb93dfd88ea038" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -1823,6 +1935,7 @@ fn fork_marker_inherit_combined() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a", marker = "sys_platform == 'darwin'", specifier = "<2" },
             { name = "package-a", marker = "sys_platform == 'linux'", specifier = ">=2" },
@@ -1931,6 +2044,9 @@ fn fork_marker_inherit_isolated() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_isolated_a-1.0.0-py3-none-any.whl", hash = "sha256:6823b88bf6debf2ec6195d82943c2812235a642438f007c0a3c95d745a5b95ba" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-a"
         version = "2.0.0"
@@ -1946,6 +2062,9 @@ fn fork_marker_inherit_isolated() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_isolated_a-2.0.0-py3-none-any.whl", hash = "sha256:16986b43ef61e3f639b61fc9c22ede133864606d3d72716161a59acd64793c02" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-b"
         version = "1.0.0"
@@ -1954,6 +2073,9 @@ fn fork_marker_inherit_isolated() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_isolated_b-1.0.0-py3-none-any.whl", hash = "sha256:c8affc2f13f9bcd08b3d1601a21a1781ea14d52a8cddc708b29428c9c3d53ea5" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -1965,6 +2087,7 @@ fn fork_marker_inherit_isolated() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a", marker = "sys_platform == 'darwin'", specifier = "<2" },
             { name = "package-a", marker = "sys_platform == 'linux'", specifier = ">=2" },
@@ -2082,6 +2205,9 @@ fn fork_marker_inherit_transitive() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_transitive_a-1.0.0-py3-none-any.whl", hash = "sha256:84d650ff1a909198ba82cbe0f697e836d8a570fb71faa6ad4a30c4df332dfde6" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-a"
         version = "2.0.0"
@@ -2093,6 +2219,9 @@ fn fork_marker_inherit_transitive() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_transitive_a-2.0.0-py3-none-any.whl", hash = "sha256:420c4c6b02d22c33f7f8ae9f290acc5b4c372fc2e49c881d259237a31c76dc0b" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-b"
@@ -2106,6 +2235,9 @@ fn fork_marker_inherit_transitive() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_transitive_b-1.0.0-py3-none-any.whl", hash = "sha256:c9738afccc13d7d5bd7be85abf5dc77f88c43c577fb2f90dfa2abf1ffa0c8db6" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-c"
         version = "1.0.0"
@@ -2114,6 +2246,9 @@ fn fork_marker_inherit_transitive() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_transitive_c-1.0.0-py3-none-any.whl", hash = "sha256:ad2cbb0582ec6f4dc9549d1726d2aae66cd1fdf0e355acc70cd720cf65ae4d86" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -2125,6 +2260,7 @@ fn fork_marker_inherit_transitive() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a", marker = "sys_platform == 'darwin'", specifier = "<2" },
             { name = "package-a", marker = "sys_platform == 'linux'", specifier = ">=2" },
@@ -2235,6 +2371,9 @@ fn fork_marker_inherit() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_a-1.0.0-py3-none-any.whl", hash = "sha256:16447932477c5feaa874b4e7510023c6f732578cec07158bc0e872af887a77d6" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-a"
         version = "2.0.0"
@@ -2247,6 +2386,9 @@ fn fork_marker_inherit() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_inherit_a-2.0.0-py3-none-any.whl", hash = "sha256:d650b6acf8f68d85e210ceb3e7802fbe84aad2b918b06a72dee534fe5474852b" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -2257,6 +2399,7 @@ fn fork_marker_inherit() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a", marker = "sys_platform == 'darwin'", specifier = "<2" },
             { name = "package-a", marker = "sys_platform == 'linux'", specifier = ">=2" },
@@ -2373,6 +2516,9 @@ fn fork_marker_limited_inherit() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_limited_inherit_a-1.0.0-py3-none-any.whl", hash = "sha256:0dcb9659eeb891701535005a2afd7c579f566d3908e96137db74129924ae6a7e" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-a"
         version = "2.0.0"
@@ -2384,6 +2530,9 @@ fn fork_marker_limited_inherit() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_limited_inherit_a-2.0.0-py3-none-any.whl", hash = "sha256:10957fddbd5611e0db154744a01d588c7105e26fd5f6a8150956ca9542d844c5" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-b"
@@ -2397,6 +2546,9 @@ fn fork_marker_limited_inherit() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_limited_inherit_b-1.0.0-py3-none-any.whl", hash = "sha256:17365faaf25dba08be579867f219f914a0ff3298441f8d7b6201625a253333ec" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-c"
         version = "1.0.0"
@@ -2405,6 +2557,9 @@ fn fork_marker_limited_inherit() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_limited_inherit_c-1.0.0-py3-none-any.whl", hash = "sha256:877a87a4987ad795ddaded3e7266ed7defdd3cfbe07a29500cb6047637db4065" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -2417,6 +2572,7 @@ fn fork_marker_limited_inherit() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a", marker = "sys_platform == 'darwin'", specifier = "<2" },
             { name = "package-a", marker = "sys_platform == 'linux'", specifier = ">=2" },
@@ -2525,6 +2681,9 @@ fn fork_marker_selection() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_selection_a-0.1.0-py3-none-any.whl", hash = "sha256:a3b9d6e46cc226d20994cc60653fd59d81d96527749f971a6f59ef8cbcbc7c01" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-b"
         version = "1.0.0"
@@ -2536,6 +2695,9 @@ fn fork_marker_selection() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_selection_b-1.0.0-py3-none-any.whl", hash = "sha256:5eb8c7fc25dfe94c8a3b71bc09eadb8cd4c7e55b974cee851b848c3856d6a4f9" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-b"
@@ -2549,6 +2711,9 @@ fn fork_marker_selection() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_selection_b-2.0.0-py3-none-any.whl", hash = "sha256:163fbcd238a66243064d41bd383657a63e45155f63bf92668c23af5245307380" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -2560,6 +2725,7 @@ fn fork_marker_selection() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a" },
             { name = "package-b", marker = "sys_platform == 'darwin'", specifier = "<2" },
@@ -2683,6 +2849,9 @@ fn fork_marker_track() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_track_a-1.3.1-py3-none-any.whl", hash = "sha256:d9dc6a64400a041199df2d37182582ff7cc986bac486da273d814627e9b86648" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-b"
         version = "2.7"
@@ -2694,6 +2863,9 @@ fn fork_marker_track() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_track_b-2.7-py3-none-any.whl", hash = "sha256:544eb2b567d2293c47da724af91fec59c2d3e06675617d29068864ec3a4e390f" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-b"
@@ -2707,6 +2879,9 @@ fn fork_marker_track() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_track_b-2.8-py3-none-any.whl", hash = "sha256:5aba691ce804ee39b2464c7757f8680786a1468e152ee845ff841c37f8112e21" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-c"
         version = "1.10"
@@ -2715,6 +2890,9 @@ fn fork_marker_track() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_marker_track_c-1.10-py3-none-any.whl", hash = "sha256:cedcb8fbcdd9fbde4eea76612e57536c8b56507a9d7f7a92e483cb56b18c57a3" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -2727,6 +2905,7 @@ fn fork_marker_track() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a" },
             { name = "package-b", marker = "sys_platform == 'darwin'", specifier = "<2.8" },
@@ -2830,6 +3009,9 @@ fn fork_non_fork_marker_transitive() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_non_fork_marker_transitive_a-1.0.0-py3-none-any.whl", hash = "sha256:6c49aef823d3544d795c05497ca2dbd5c419cad4454e4d41b8f4860be45bd4bf" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-b"
         version = "1.0.0"
@@ -2842,6 +3024,9 @@ fn fork_non_fork_marker_transitive() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_non_fork_marker_transitive_b-1.0.0-py3-none-any.whl", hash = "sha256:6f301799cb51d920c7bef0120d5914f8315758ddc9f856b88783efae706dac16" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-c"
         version = "2.0.0"
@@ -2850,6 +3035,9 @@ fn fork_non_fork_marker_transitive() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_non_fork_marker_transitive_c-2.0.0-py3-none-any.whl", hash = "sha256:2b72d6af81967e1c55f30d920d6a7b913fce6ad0a0658ec79972a3d1a054e85f" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -2861,6 +3049,7 @@ fn fork_non_fork_marker_transitive() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a", specifier = "==1.0.0" },
             { name = "package-b", specifier = "==1.0.0" },
@@ -3131,6 +3320,9 @@ fn fork_overlapping_markers_basic() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_overlapping_markers_basic_a-1.2.0-py3-none-any.whl", hash = "sha256:04293ed42eb3620c9ddf56e380a8408a30733d5d38f321a35c024d03e7116083" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -3140,6 +3332,7 @@ fn fork_overlapping_markers_basic() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a", marker = "python_full_version < '3.10'", specifier = ">=1.0.0" },
             { name = "package-a", marker = "python_full_version >= '3.10'", specifier = ">=1.1.0" },
@@ -3303,6 +3496,9 @@ fn preferences_dependent_forking_bistable() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_bistable_cleaver-1.0.0-py3-none-any.whl", hash = "sha256:552a061bf303fc4103ff91adb03864391a041f9bdcb9b2f8a552b232efce633b" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-fork-if-not-forked"
         version = "2.0.0"
@@ -3314,6 +3510,9 @@ fn preferences_dependent_forking_bistable() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_bistable_fork_if_not_forked-2.0.0-py3-none-any.whl", hash = "sha256:a3e0a53d855ef38b9bbe2c6de67a1dd5eefc65c40e02b5282319cabf59bac740" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-fork-if-not-forked"
@@ -3327,6 +3526,9 @@ fn preferences_dependent_forking_bistable() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_bistable_fork_if_not_forked-3.0.0-py3-none-any.whl", hash = "sha256:45343fd8a37969d5ace1fe0d235341573b1dc84eea099d92f479d41a21e206fa" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-fork-if-not-forked-proxy"
         version = "1.0.0"
@@ -3338,6 +3540,9 @@ fn preferences_dependent_forking_bistable() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_bistable_fork_if_not_forked_proxy-1.0.0-py3-none-any.whl", hash = "sha256:0f6bd3726cd7aa245751f08e176caa797a5de986f020b7d0b8767756eea77d26" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-reject-cleaver1"
@@ -3351,6 +3556,9 @@ fn preferences_dependent_forking_bistable() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_bistable_reject_cleaver1-1.0.0-py3-none-any.whl", hash = "sha256:bda045df120e617d369b8be48e7a489c57968ee2b75e181969593fbc2a789519" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-reject-cleaver1"
         version = "2.0.0"
@@ -3362,6 +3570,9 @@ fn preferences_dependent_forking_bistable() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_bistable_reject_cleaver1-2.0.0-py3-none-any.whl", hash = "sha256:104923522767e447fb2ff3e2cfc730f5d2d4b2040f89a33d1abeb9863ed169ac" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-reject-cleaver1-proxy"
@@ -3375,6 +3586,9 @@ fn preferences_dependent_forking_bistable() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_bistable_reject_cleaver1_proxy-1.0.0-py3-none-any.whl", hash = "sha256:08ace26d0f4a74275dd38803fd67101eaf2cb400441fc8d479461ced31a947c1" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -3384,6 +3598,7 @@ fn preferences_dependent_forking_bistable() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "package-cleaver" }]
         "###
         );
@@ -3682,6 +3897,9 @@ fn preferences_dependent_forking_tristable() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_tristable_bar-1.0.0-py3-none-any.whl", hash = "sha256:a590cb59852676a12e3537efe2c812c0640a32408a2ea7f6e5611c7190683865" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-bar"
         version = "2.0.0"
@@ -3693,6 +3911,9 @@ fn preferences_dependent_forking_tristable() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_tristable_bar-2.0.0-py3-none-any.whl", hash = "sha256:80195408d22da78f3d6ac3cc955840b5fcb2a76d774120e2aa007c7e7cbc2b4e" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-c"
@@ -3706,6 +3927,9 @@ fn preferences_dependent_forking_tristable() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_tristable_c-2.0.0-py3-none-any.whl", hash = "sha256:aaaddb9a24c0827169bd66d4b1b1965ceb375bebdb60047e2d66a05d363df2e3" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-c"
         version = "3.0.0"
@@ -3717,6 +3941,9 @@ fn preferences_dependent_forking_tristable() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_tristable_c-3.0.0-py3-none-any.whl", hash = "sha256:c048df9ab2c29bf914684add607dccca9ed7d035608cb92ef789216a15544e8b" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-cleaver"
@@ -3731,6 +3958,9 @@ fn preferences_dependent_forking_tristable() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_tristable_cleaver-1.0.0-py3-none-any.whl", hash = "sha256:fb33bd10e4c6a237e7d0488e7ba1c5ee794eb01a1813ff80695bbfc4036f01b7" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-d"
         version = "1.0.0"
@@ -3742,6 +3972,9 @@ fn preferences_dependent_forking_tristable() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_tristable_d-1.0.0-py3-none-any.whl", hash = "sha256:f34e37e7164316c9b9ed3022d1ff378b3dcd895db6e339894f53d2b27a5d6ba0" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-foo"
@@ -3757,6 +3990,9 @@ fn preferences_dependent_forking_tristable() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_tristable_foo-1.0.0-py3-none-any.whl", hash = "sha256:524dfd846c31a55bb6d6a0d0cec80d42c0a87c78aabbe0f1d5426c60493bd41b" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-reject-cleaver-1"
         version = "1.0.0"
@@ -3770,6 +4006,9 @@ fn preferences_dependent_forking_tristable() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_tristable_reject_cleaver_1-1.0.0-py3-none-any.whl", hash = "sha256:b5e5203994245c2b983dd94595281a03ac38c05e14f0a8792d13763f69aa43a8" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-unrelated-dep2"
         version = "1.0.0"
@@ -3781,6 +4020,9 @@ fn preferences_dependent_forking_tristable() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_tristable_unrelated_dep2-1.0.0-py3-none-any.whl", hash = "sha256:b36bc1e6f0140fdbf03575eb6bb0873c298b1d44dd7955412909ba9c2650a250" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-unrelated-dep2"
@@ -3794,6 +4036,9 @@ fn preferences_dependent_forking_tristable() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_tristable_unrelated_dep2-2.0.0-py3-none-any.whl", hash = "sha256:5fc6d9c0fee066b33df862f31057c8cc2c0c5662ef9949337407e0131aa46e7f" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -3806,6 +4051,7 @@ fn preferences_dependent_forking_tristable() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-bar" },
             { name = "package-cleaver" },
@@ -3961,6 +4207,9 @@ fn preferences_dependent_forking() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_bar-1.0.0-py3-none-any.whl", hash = "sha256:3cdaac4b0ba330f902d0628c0b1d6e62692f52255d02718d04f46ade7c8ad6a6" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-bar"
         version = "2.0.0"
@@ -3972,6 +4221,9 @@ fn preferences_dependent_forking() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_bar-2.0.0-py3-none-any.whl", hash = "sha256:24fd0534fec4053f4cac960244943ef13d1bad26bbb5fffe6944a8cf898f26f0" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-cleaver"
@@ -3986,6 +4238,9 @@ fn preferences_dependent_forking() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_cleaver-1.0.0-py3-none-any.whl", hash = "sha256:855467570c9da8e92ce37d0ebd0653cfa50d5d88b9540beca94feaa37a539dc3" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-foo"
         version = "1.0.0"
@@ -3994,6 +4249,9 @@ fn preferences_dependent_forking() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/preferences_dependent_forking_foo-1.0.0-py3-none-any.whl", hash = "sha256:85348e8df4892b9f297560c16abcf231828f538dc07339ed121197a00a0626a5" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -4007,6 +4265,7 @@ fn preferences_dependent_forking() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-bar" },
             { name = "package-cleaver" },
@@ -4144,6 +4403,9 @@ fn fork_remaining_universe_partitioning() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_remaining_universe_partitioning_a-1.0.0-py3-none-any.whl", hash = "sha256:d72d45c02de21048507987503d67ff7b579cd58b8f58003fdf7800bc450b2b1d" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-a"
         version = "2.0.0"
@@ -4155,6 +4417,9 @@ fn fork_remaining_universe_partitioning() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_remaining_universe_partitioning_a-2.0.0-py3-none-any.whl", hash = "sha256:db8e9cdacc9d755db5ce38bb1fd884c5cb047c3f3e1753e7a9cd46aed13757ae" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-b"
@@ -4168,6 +4433,9 @@ fn fork_remaining_universe_partitioning() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_remaining_universe_partitioning_b-1.0.0-py3-none-any.whl", hash = "sha256:24ecd35e335149ed5de3ed495aa3715c31385d34cde7f9e0db5d168099e74f51" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-b"
         version = "2.0.0"
@@ -4180,6 +4448,9 @@ fn fork_remaining_universe_partitioning() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_remaining_universe_partitioning_b-2.0.0-py3-none-any.whl", hash = "sha256:4c90283190759f076d67f0b4683efd061af5ab2ce5007b35c7dd42836ceaebdf" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -4190,6 +4461,7 @@ fn fork_remaining_universe_partitioning() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a", marker = "sys_platform == 'illumos'", specifier = "<2" },
             { name = "package-a", marker = "sys_platform == 'windows'", specifier = ">=2" },
@@ -4277,6 +4549,7 @@ fn fork_requires_python_full_prerelease() -> Result<()> {
         source = { virtual = "." }
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "package-a", marker = "python_full_version == '3.9'", specifier = "==1.0.0" }]
         "###
         );
@@ -4361,6 +4634,7 @@ fn fork_requires_python_full() -> Result<()> {
         source = { virtual = "." }
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "package-a", marker = "python_full_version == '3.9'", specifier = "==1.0.0" }]
         "###
         );
@@ -4452,6 +4726,9 @@ fn fork_requires_python_patch_overlap() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/fork_requires_python_patch_overlap_a-1.0.0-py3-none-any.whl", hash = "sha256:43a750ba4eaab749d608d70e94d3d51e083cc21f5a52ac99b5967b26486d5ef1" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -4461,6 +4738,7 @@ fn fork_requires_python_patch_overlap() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "package-a", marker = "python_full_version == '3.10.*'", specifier = "==1.0.0" }]
         "###
         );
@@ -4542,6 +4820,7 @@ fn fork_requires_python() -> Result<()> {
         source = { virtual = "." }
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "package-a", marker = "python_full_version == '3.9.*'", specifier = "==1.0.0" }]
         "###
         );
@@ -4625,6 +4904,7 @@ fn requires_python_wheels() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "package-a", specifier = "==1.0.0" }]
 
         [[package]]
@@ -4636,6 +4916,9 @@ fn requires_python_wheels() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/requires_python_wheels_a-1.0.0-cp310-cp310-any.whl", hash = "sha256:b979494a0d7dc825b84d6c516ac407143915f6d2840d229ee2a36b3d06deb61d" },
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/requires_python_wheels_a-1.0.0-cp311-cp311-any.whl", hash = "sha256:b979494a0d7dc825b84d6c516ac407143915f6d2840d229ee2a36b3d06deb61d" },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -4721,6 +5004,7 @@ fn unreachable_package() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "package-a", marker = "sys_platform == 'win32'", specifier = "==1.0.0" }]
 
         [[package]]
@@ -4731,6 +5015,9 @@ fn unreachable_package() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/unreachable_package_a-1.0.0-py3-none-any.whl", hash = "sha256:cc472ded9f3b260e6cda0e633fa407a13607e190422cb455f02beebd32d6751f" },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -4824,6 +5111,7 @@ fn unreachable_wheels() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "package-a", marker = "sys_platform == 'win32'", specifier = "==1.0.0" },
             { name = "package-b", marker = "sys_platform == 'linux'", specifier = "==1.0.0" },
@@ -4839,6 +5127,9 @@ fn unreachable_wheels() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/unreachable_wheels_a-1.0.0-cp312-cp312-win_amd64.whl", hash = "sha256:e9fb30c5eb114114f9031d0ad2238614c2dcce203c5992848305ccda8f38a53e" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-b"
         version = "1.0.0"
@@ -4849,6 +5140,9 @@ fn unreachable_wheels() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/unreachable_wheels_b-1.0.0-cp312-cp312-musllinux_1_1_armv7l.whl", hash = "sha256:a3de2212ca86f1137324965899ce7f48640ed8db94578f4078d641520b77e13e" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-c"
         version = "1.0.0"
@@ -4857,6 +5151,9 @@ fn unreachable_wheels() -> Result<()> {
         wheels = [
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/unreachable_wheels_c-1.0.0-cp312-cp312-macosx_14_0_x86_64.whl", hash = "sha256:4b846c5b1646b04828a2bef6c9d180ff7cfd725866013dcec8933de7fb5f9e8d" },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -4950,6 +5247,7 @@ fn specific_architecture() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "package-a" }]
 
         [[package]]
@@ -4966,6 +5264,9 @@ fn specific_architecture() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/specific_architecture_a-1.0.0-py3-none-any.whl", hash = "sha256:cd2f9894093805af0749592e8239d62e7a724476a74c4cb65da30bc6a3900046" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-b"
         version = "1.0.0"
@@ -4976,6 +5277,9 @@ fn specific_architecture() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/specific_architecture_b-1.0.0-cp313-cp313-macosx_10_9_x86_64.whl", hash = "sha256:4ce70a68440d4aaa31cc1c6174b83b741e9b8f3074ad0f3ef41c572795378999" },
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/specific_architecture_b-1.0.0-cp313-cp313-manylinux2010_x86_64.whl", hash = "sha256:4ce70a68440d4aaa31cc1c6174b83b741e9b8f3074ad0f3ef41c572795378999" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "package-c"
@@ -4988,6 +5292,9 @@ fn specific_architecture() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/specific_architecture_c-1.0.0-cp313-cp313-manylinux2010_aarch64.whl", hash = "sha256:b028c88fe496724cea4a7d95eb789a000b7f000067f95c922b09461be2746a3d" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "package-d"
         version = "1.0.0"
@@ -4997,6 +5304,9 @@ fn specific_architecture() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/specific_architecture_d-1.0.0-cp313-cp313-freebsd_13_x86_64.whl", hash = "sha256:842864c1348694fab33199eb05921602c2abfc77844a81085a55db02edd30da4" },
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/specific_architecture_d-1.0.0-cp313-cp313-manylinux2010_i686.whl", hash = "sha256:842864c1348694fab33199eb05921602c2abfc77844a81085a55db02edd30da4" },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });

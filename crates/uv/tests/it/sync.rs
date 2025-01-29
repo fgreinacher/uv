@@ -1088,6 +1088,9 @@ fn sync_relative_wheel() -> Result<()> {
                 { filename = "ok-1.0.0-py3-none-any.whl", hash = "sha256:79f0b33e6ce1e09eaa1784c8eee275dfe84d215d9c65c652f07c18e85fdaac5f" },
             ]
 
+            [package.metadata]
+            provides-extras = []
+
             [[package]]
             name = "relative-wheel"
             version = "0.1.0"
@@ -1097,6 +1100,7 @@ fn sync_relative_wheel() -> Result<()> {
             ]
 
             [package.metadata]
+            provides-extras = []
             requires-dist = [{ name = "ok", path = "wheels/ok-1.0.0-py3-none-any.whl" }]
             "###
             );
@@ -2216,6 +2220,7 @@ fn sync_group_legacy_non_project_member() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig", specifier = ">=1" }]
 
         [[package]]
@@ -2227,6 +2232,9 @@ fn sync_group_legacy_non_project_member() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typing-extensions"
         version = "4.10.0"
@@ -2235,6 +2243,9 @@ fn sync_group_legacy_non_project_member() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -2315,6 +2326,9 @@ fn sync_group_self() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "iniconfig"
         version = "2.0.0"
@@ -2323,6 +2337,9 @@ fn sync_group_self() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -2368,6 +2385,9 @@ fn sync_group_self() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -2801,6 +2821,9 @@ fn convert_to_virtual() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -2810,6 +2833,7 @@ fn convert_to_virtual() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
         "###
         );
@@ -2928,6 +2952,9 @@ fn convert_to_package() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -2937,6 +2964,7 @@ fn convert_to_package() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig" }]
         "###
         );
@@ -4130,6 +4158,9 @@ fn sync_dynamic_extra() -> Result<()> {
                 { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
             ]
 
+            [package.metadata]
+            provides-extras = []
+
             [[package]]
             name = "project"
             version = "0.1.0"
@@ -4158,6 +4189,9 @@ fn sync_dynamic_extra() -> Result<()> {
             wheels = [
                 { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
             ]
+
+            [package.metadata]
+            provides-extras = []
             "###
             );
         }
@@ -5331,6 +5365,7 @@ fn sync_stale_egg_info() -> Result<()> {
             ]
 
             [package.metadata]
+            provides-extras = []
             requires-dist = [
                 { name = "member", git = "https://github.com/astral-sh/uv-stale-egg-info-test.git?subdirectory=member" },
                 { name = "root", git = "https://github.com/astral-sh/uv-stale-egg-info-test.git" },
@@ -5344,6 +5379,9 @@ fn sync_stale_egg_info() -> Result<()> {
                 { name = "setuptools" },
             ]
 
+            [package.metadata]
+            provides-extras = []
+
             [[package]]
             name = "root"
             version = "0.1.dev5+gfea1041"
@@ -5351,6 +5389,9 @@ fn sync_stale_egg_info() -> Result<()> {
             dependencies = [
                 { name = "member" },
             ]
+
+            [package.metadata]
+            provides-extras = []
 
             [[package]]
             name = "setuptools"
@@ -5360,6 +5401,9 @@ fn sync_stale_egg_info() -> Result<()> {
             wheels = [
                 { url = "https://files.pythonhosted.org/packages/92/e1/1c8bb3420105e70bdf357d57dd5567202b4ef8d27f810e98bb962d950834/setuptools-69.2.0-py3-none-any.whl", hash = "sha256:c21c49fb1042386df081cb5d86759792ab89efca84cf114889191cd09aacc80c", size = 821485 },
             ]
+
+            [package.metadata]
+            provides-extras = []
             "###
             );
         }
@@ -5437,6 +5481,7 @@ fn sync_git_repeated_member_static_metadata() -> Result<()> {
             ]
 
             [package.metadata]
+            provides-extras = []
             requires-dist = [
                 { name = "uv-git-workspace-in-root", git = "https://github.com/astral-sh/workspace-in-root-test.git" },
                 { name = "workspace-member-in-subdir", git = "https://github.com/astral-sh/workspace-in-root-test.git?subdirectory=workspace-member-in-subdir" },
@@ -5447,6 +5492,9 @@ fn sync_git_repeated_member_static_metadata() -> Result<()> {
             version = "0.1.0"
             source = { git = "https://github.com/astral-sh/workspace-in-root-test.git#d3ab48d2338296d47e28dbb2fb327c5e2ac4ac68" }
 
+            [package.metadata]
+            provides-extras = []
+
             [[package]]
             name = "workspace-member-in-subdir"
             version = "0.1.0"
@@ -5454,6 +5502,9 @@ fn sync_git_repeated_member_static_metadata() -> Result<()> {
             dependencies = [
                 { name = "uv-git-workspace-in-root" },
             ]
+
+            [package.metadata]
+            provides-extras = []
             "###
             );
         }
@@ -5529,6 +5580,9 @@ fn sync_git_repeated_member_dynamic_metadata() -> Result<()> {
                 { name = "iniconfig" },
             ]
 
+            [package.metadata]
+            provides-extras = []
+
             [[package]]
             name = "foo"
             version = "0.1.0"
@@ -5539,6 +5593,7 @@ fn sync_git_repeated_member_dynamic_metadata() -> Result<()> {
             ]
 
             [package.metadata]
+            provides-extras = []
             requires-dist = [
                 { name = "dependency", git = "https://github.com/astral-sh/uv-dynamic-metadata-test.git?subdirectory=dependency" },
                 { name = "package", git = "https://github.com/astral-sh/uv-dynamic-metadata-test.git" },
@@ -5553,6 +5608,9 @@ fn sync_git_repeated_member_dynamic_metadata() -> Result<()> {
                 { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
             ]
 
+            [package.metadata]
+            provides-extras = []
+
             [[package]]
             name = "package"
             version = "0.1.0"
@@ -5562,6 +5620,9 @@ fn sync_git_repeated_member_dynamic_metadata() -> Result<()> {
                 { name = "typing-extensions" },
             ]
 
+            [package.metadata]
+            provides-extras = []
+
             [[package]]
             name = "typing-extensions"
             version = "4.10.0"
@@ -5570,6 +5631,9 @@ fn sync_git_repeated_member_dynamic_metadata() -> Result<()> {
             wheels = [
                 { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
             ]
+
+            [package.metadata]
+            provides-extras = []
             "###
             );
         }
@@ -5643,6 +5707,9 @@ fn sync_git_repeated_member_backwards_path() -> Result<()> {
             version = "0.1.0"
             source = { git = "https://github.com/astral-sh/uv-backwards-path-test?subdirectory=dependency#4bcc7fcd2e548c2ab7ba6b97b1c4e3ababccc7a9" }
 
+            [package.metadata]
+            provides-extras = []
+
             [[package]]
             name = "foo"
             version = "0.1.0"
@@ -5653,6 +5720,7 @@ fn sync_git_repeated_member_backwards_path() -> Result<()> {
             ]
 
             [package.metadata]
+            provides-extras = []
             requires-dist = [
                 { name = "dependency", git = "https://github.com/astral-sh/uv-backwards-path-test?subdirectory=dependency" },
                 { name = "package", git = "https://github.com/astral-sh/uv-backwards-path-test?subdirectory=root" },
@@ -5665,6 +5733,9 @@ fn sync_git_repeated_member_backwards_path() -> Result<()> {
             dependencies = [
                 { name = "dependency" },
             ]
+
+            [package.metadata]
+            provides-extras = []
             "###
             );
         }
@@ -5828,12 +5899,16 @@ fn sync_git_path_dependency() -> Result<()> {
             ]
 
             [package.metadata]
+            provides-extras = []
             requires-dist = [{ name = "package2", git = "https://github.com/astral-sh/uv-path-dependency-test.git?subdirectory=package2" }]
 
             [[package]]
             name = "package1"
             version = "0.1.0"
             source = { git = "https://github.com/astral-sh/uv-path-dependency-test.git?subdirectory=package1#28781b32cf1f260cdb2c8040628079eb265202bd" }
+
+            [package.metadata]
+            provides-extras = []
 
             [[package]]
             name = "package2"
@@ -5842,6 +5917,9 @@ fn sync_git_path_dependency() -> Result<()> {
             dependencies = [
                 { name = "package1" },
             ]
+
+            [package.metadata]
+            provides-extras = []
             "###
             );
         }
@@ -5936,6 +6014,9 @@ fn sync_build_tag() -> Result<()> {
             { path = "build_tag-1.0.0-5-py2.py3-none-any.whl" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -5945,6 +6026,7 @@ fn sync_build_tag() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "build-tag" }]
         "###
         );

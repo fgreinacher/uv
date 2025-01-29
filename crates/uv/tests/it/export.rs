@@ -541,6 +541,9 @@ fn dependency_conflicting_markers() -> Result<()> {
                 { url = "https://files.pythonhosted.org/packages/71/52/39d20e03abd0ac9159c162ec24b93fbcaa111e8400308f2465432495ca2b/async_generator-1.10-py3-none-any.whl", hash = "sha256:01c7bf666359b4967d2cda0000cc2e4af16a0ae098cbffcb8472fb9e8ad6585b", size = 18857 },
             ]
 
+            [package.metadata]
+            provides-extras = []
+
             [[package]]
             name = "attrs"
             version = "23.2.0"
@@ -549,6 +552,9 @@ fn dependency_conflicting_markers() -> Result<()> {
             wheels = [
                 { url = "https://files.pythonhosted.org/packages/e0/44/827b2a91a5816512fcaf3cc4ebc465ccd5d598c45cefa6703fcf4a79018f/attrs-23.2.0-py3-none-any.whl", hash = "sha256:99b87a485a5820b23b879f04c2305b44b951b502fd64be915879d77a7e8fc6f1", size = 60752 },
             ]
+
+            [package.metadata]
+            provides-extras = []
 
             [[package]]
             name = "cffi"
@@ -563,6 +569,9 @@ fn dependency_conflicting_markers() -> Result<()> {
                 { url = "https://files.pythonhosted.org/packages/e9/63/e285470a4880a4f36edabe4810057bd4b562c6ddcc165eacf9c3c7210b40/cffi-1.16.0-cp312-cp312-win_amd64.whl", hash = "sha256:68678abf380b42ce21a5f2abde8efee05c114c2fdb2e9eef2efdb0257fba1235", size = 181956 },
             ]
 
+            [package.metadata]
+            provides-extras = []
+
             [[package]]
             name = "idna"
             version = "3.6"
@@ -571,6 +580,9 @@ fn dependency_conflicting_markers() -> Result<()> {
             wheels = [
                 { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
             ]
+
+            [package.metadata]
+            provides-extras = []
 
             [[package]]
             name = "outcome"
@@ -584,6 +596,9 @@ fn dependency_conflicting_markers() -> Result<()> {
                 { url = "https://files.pythonhosted.org/packages/55/8b/5ab7257531a5d830fc8000c476e63c935488d74609b50f9384a643ec0a62/outcome-1.3.0.post0-py2.py3-none-any.whl", hash = "sha256:e771c5ce06d1415e356078d3bdd68523f284b4ce5419828922b6871e65eda82b", size = 10692 },
             ]
 
+            [package.metadata]
+            provides-extras = []
+
             [[package]]
             name = "project"
             version = "0.1.0"
@@ -594,6 +609,7 @@ fn dependency_conflicting_markers() -> Result<()> {
             ]
 
             [package.metadata]
+            provides-extras = []
             requires-dist = [
                 { name = "trio", marker = "sys_platform == 'darwin'", specifier = "==0.25.0" },
                 { name = "trio", marker = "sys_platform == 'win32'", specifier = "==0.10.0" },
@@ -608,6 +624,9 @@ fn dependency_conflicting_markers() -> Result<()> {
                 { url = "https://files.pythonhosted.org/packages/62/d5/5f610ebe421e85889f2e55e33b7f9a6795bd982198517d912eb1c76e1a53/pycparser-2.21-py2.py3-none-any.whl", hash = "sha256:8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9", size = 118697 },
             ]
 
+            [package.metadata]
+            provides-extras = []
+
             [[package]]
             name = "sniffio"
             version = "1.3.1"
@@ -617,6 +636,9 @@ fn dependency_conflicting_markers() -> Result<()> {
                 { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
             ]
 
+            [package.metadata]
+            provides-extras = []
+
             [[package]]
             name = "sortedcontainers"
             version = "2.4.0"
@@ -625,6 +647,9 @@ fn dependency_conflicting_markers() -> Result<()> {
             wheels = [
                 { url = "https://files.pythonhosted.org/packages/32/46/9cb0e58b2deb7f82b84065f37f3bffeb12413f947f9388e4cac22c4621ce/sortedcontainers-2.4.0-py2.py3-none-any.whl", hash = "sha256:a163dcaede0f1c021485e957a39245190e74249897e2ae4b2aa38595db237ee0", size = 29575 },
             ]
+
+            [package.metadata]
+            provides-extras = []
 
             [[package]]
             name = "trio"
@@ -644,6 +669,9 @@ fn dependency_conflicting_markers() -> Result<()> {
             ]
             sdist = { url = "https://files.pythonhosted.org/packages/e6/20/37be7b5f47db6a9fbf905b5de5386e5b7193c45d07becb750db6f03cd117/trio-0.10.0.tar.gz", hash = "sha256:d323cc15f6406d15954af91e5e34af2001cc24163fdde29e3f88a227a1b53ab0", size = 402511 }
 
+            [package.metadata]
+            provides-extras = []
+
             [[package]]
             name = "trio"
             version = "0.25.0"
@@ -662,6 +690,9 @@ fn dependency_conflicting_markers() -> Result<()> {
             wheels = [
                 { url = "https://files.pythonhosted.org/packages/17/c9/f86f89f14d52f9f2f652ce24cb2f60141a51d087db1563f3fba94ba07346/trio-0.25.0-py3-none-any.whl", hash = "sha256:e6458efe29cc543e557a91e614e2b51710eba2961669329ce9c862d50c6e8e81", size = 467161 },
             ]
+
+            [package.metadata]
+            provides-extras = []
             "###
             );
         }
@@ -1253,6 +1284,9 @@ fn non_project_fork() -> Result<()> {
                 { url = "https://files.pythonhosted.org/packages/8a/19/10fe682e962efd1610aa41376399fc3f3e002425449b02d0fb04749bb712/anyio-2.0.0-py3-none-any.whl", hash = "sha256:0b8375c8fc665236cb4d143ea13e849eb9e074d727b1b5c27d88aba44ca8c547", size = 62675 },
             ]
 
+            [package.metadata]
+            provides-extras = []
+
             [[package]]
             name = "anyio"
             version = "3.0.0"
@@ -1270,6 +1304,9 @@ fn non_project_fork() -> Result<()> {
                 { url = "https://files.pythonhosted.org/packages/3b/49/ebee263b69fe243bd1fd0a88bc6bb0f7732bf1794ba3273cb446351f9482/anyio-3.0.0-py3-none-any.whl", hash = "sha256:e71c3d9d72291d12056c0265d07c6bbedf92332f78573e278aeb116f24f30395", size = 72182 },
             ]
 
+            [package.metadata]
+            provides-extras = []
+
             [[package]]
             name = "child"
             version = "0.1.0"
@@ -1280,6 +1317,7 @@ fn non_project_fork() -> Result<()> {
             ]
 
             [package.metadata]
+            provides-extras = []
             requires-dist = [
                 { name = "anyio", marker = "sys_platform == 'linux'", specifier = "==3.0.0" },
                 { name = "anyio", marker = "sys_platform == 'win32'", specifier = "==2.0.0" },
@@ -1294,6 +1332,9 @@ fn non_project_fork() -> Result<()> {
                 { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
             ]
 
+            [package.metadata]
+            provides-extras = []
+
             [[package]]
             name = "sniffio"
             version = "1.3.1"
@@ -1302,6 +1343,9 @@ fn non_project_fork() -> Result<()> {
             wheels = [
                 { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
             ]
+
+            [package.metadata]
+            provides-extras = []
             "###
             );
         }
@@ -2147,6 +2191,9 @@ fn script() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/8a/19/10fe682e962efd1610aa41376399fc3f3e002425449b02d0fb04749bb712/anyio-2.0.0-py3-none-any.whl", hash = "sha256:0b8375c8fc665236cb4d143ea13e849eb9e074d727b1b5c27d88aba44ca8c547", size = 62675 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "anyio"
         version = "3.0.0"
@@ -2163,6 +2210,9 @@ fn script() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/3b/49/ebee263b69fe243bd1fd0a88bc6bb0f7732bf1794ba3273cb446351f9482/anyio-3.0.0-py3-none-any.whl", hash = "sha256:e71c3d9d72291d12056c0265d07c6bbedf92332f78573e278aeb116f24f30395", size = 72182 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -2172,6 +2222,9 @@ fn script() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sniffio"
         version = "1.3.1"
@@ -2180,6 +2233,9 @@ fn script() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });

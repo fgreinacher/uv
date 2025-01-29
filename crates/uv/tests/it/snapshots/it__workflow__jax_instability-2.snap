@@ -26,6 +26,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/2d/0a/679461c511447ffaf176567d5c496d1de27cbe34a87df6677d7171b2fbd4/importlib_metadata-7.1.0-py3-none-any.whl", hash = "sha256:30962b96c0c223483ed6cc7280e7f0199feb01a0e40cfae4d4450fc6fab1f570", size = 24409 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "jax"
 version = "0.4.17"
@@ -41,6 +44,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/48/b4/63d896b5dd5595ccb
 wheels = [
     { url = "https://files.pythonhosted.org/packages/fb/b5/c1222696f99a51fe932243924d97c8ce89e654a0c571670cbdd3cc6fef83/jax-0.4.17-py3-none-any.whl", hash = "sha256:c3ab72ea2f1c5d8ccf2561e79f6562fb2964629f3e55b3ac1c11c48b64c20336", size = 1652065 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "ml-dtypes"
@@ -68,6 +74,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/86/29/b389f235add26220bc7b7f100362f4e3a84e14f7c837abd34a11347df1b0/ml_dtypes-0.3.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:91f8783fd1f2c23fd3b9ee5ad66b785dafa58ba3cdb050c4458021fa4d1eb226", size = 2158181 },
     { url = "https://files.pythonhosted.org/packages/38/3c/5d058a50340759423b25cb99f930cb3691fc30ebe86d53fdf1bff55c2d71/ml_dtypes-0.3.2-cp39-cp39-win_amd64.whl", hash = "sha256:7ba8e1fafc7fff3e643f453bffa7d082df1678a73286ce8187d3e825e776eb94", size = 127704 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "numpy"
@@ -112,6 +121,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/f4/5f/fafd8c51235f60d49f7a88e2275e13971e90555b67da52dd6416caec32fe/numpy-1.26.4-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:7e50d0a0cc3189f9cb0aeb3a6a6af18c16f59f004b866cd2be1c14b36134a4a0", size = 15709730 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "opt-einsum"
 version = "3.3.0"
@@ -123,6 +135,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/7d/bf/9257e53a0e7715bc1
 wheels = [
     { url = "https://files.pythonhosted.org/packages/bc/19/404708a7e54ad2798907210462fd950c3442ea51acc8790f3da48d2bee8b/opt_einsum-3.3.0-py3-none-any.whl", hash = "sha256:2455e59e3947d3c275477df7f5205b30635e266fe6dc300e3d9f9646bfcea147", size = 65486 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "scipy"
@@ -159,6 +174,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/92/f6/eb15f6086c82e62d98ae9f8644c518003e34c03b2ac25683ea932bb30047/scipy-1.12.0-cp39-cp39-win_amd64.whl", hash = "sha256:b360f1b6b2f742781299514e99ff560d1fe9bd1bff2712894b52abe528d1fd1e", size = 46211895 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "uv-lock-instability"
 version = "0.1.0"
@@ -168,6 +186,7 @@ dependencies = [
 ]
 
 [package.metadata]
+provides-extras = []
 requires-dist = [{ name = "jax", specifier = "==0.4.17" }]
 
 [[package]]
@@ -178,3 +197,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/3e/ef/65da662da6f9991e8
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c2/0a/ba9d0ee9536d3ef73a3448e931776e658b36f128d344e175bc32b092a8bf/zipp-3.18.1-py3-none-any.whl", hash = "sha256:206f5a15f2af3dbaee80769fb7dc6f249695e940acca08dfb2a4769fe61e538b", size = 8247 },
 ]
+
+[package.metadata]
+provides-extras = []

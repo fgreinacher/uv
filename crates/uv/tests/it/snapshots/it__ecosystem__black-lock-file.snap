@@ -25,6 +25,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/8b/b4/0983e94060405eb51f23be493e3f5c28003f7ebc5efcd0803c1cb23ea407/aiohappyeyeballs-2.3.5-py3-none-any.whl", hash = "sha256:4d6dea59215537dbc746e93e779caea8178c866856a721c9c660d7a5a7b8be03", size = 12139 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "aiohttp"
 version = "3.10.1"
@@ -117,6 +120,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/c2/9c/68da5e6ee6d201cf246e86b5da17024d7e11456478047bae046cde86acd5/aiohttp-3.10.1-cp39-cp39-win_amd64.whl", hash = "sha256:5951c328f9ac42d7bce7a6ded535879bc9ae13032818d036749631fa27777905", size = 376212 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "aiosignal"
 version = "1.3.1"
@@ -129,6 +135,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/76/ac/a7305707cb852b7e16ff80eaf5692309bde30e2b1100a1fcacdc8f731d97/aiosignal-1.3.1-py3-none-any.whl", hash = "sha256:f8376fb07dd1e86a584e4fcdec80b36b7f81aac666ebc724e2c090300dd83b17", size = 7617 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "appnope"
 version = "0.1.4"
@@ -137,6 +146,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/35/5d/752690df9ef5b76e1
 wheels = [
     { url = "https://files.pythonhosted.org/packages/81/29/5ecc3a15d5a33e31b26c11426c45c501e439cb865d0bff96315d86443b78/appnope-0.1.4-py2.py3-none-any.whl", hash = "sha256:502575ee11cd7a28c0205f379b525beefebab9d161b7c964670864014ed7213c", size = 4321 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "asttokens"
@@ -150,6 +162,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/45/86/4736ac618d82a20d87d2f92ae19441ebc7ac9e7a581d7e58bbe79233b24a/asttokens-2.4.1-py2.py3-none-any.whl", hash = "sha256:051ed49c3dcae8913ea7cd08e46a606dba30b79993209636c4875bc1d637bc24", size = 27764 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "async-timeout"
 version = "4.0.3"
@@ -158,6 +173,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/87/d6/21b30a550dafea84b
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a7/fa/e01228c2938de91d47b307831c62ab9e4001e747789d0b05baf779a6488c/async_timeout-4.0.3-py3-none-any.whl", hash = "sha256:7405140ff1230c310e51dc27b3145b9092d659ce68ff733fb0cefe3ee42be028", size = 5721 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "attrs"
@@ -168,6 +186,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/6a/21/5b6702a7f963e95456c0de2d495f67bf5fd62840ac655dc451586d23d39a/attrs-24.2.0-py3-none-any.whl", hash = "sha256:81921eb96de3191c8258c199618104dd27ac608d9366f5e35d011eae1867ede2", size = 63001 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "backcall"
 version = "0.2.0"
@@ -176,6 +197,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/a2/40/764a663805d84deee
 wheels = [
     { url = "https://files.pythonhosted.org/packages/4c/1c/ff6546b6c12603d8dd1070aa3c3d273ad4c07f5771689a7b69a550e8c951/backcall-0.2.0-py2.py3-none-any.whl", hash = "sha256:fbbce6a29f263178a1f7915c1940bde0ec2b2a967566fe1c65c1dfb7422bd255", size = 11157 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "black"
@@ -237,6 +261,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/00/2e/d53fa4befbf2cfa713304affc7ca780ce4fc1fd8710527771b58311a3229/click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28", size = 97941 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "colorama"
 version = "0.4.6"
@@ -245,6 +272,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "decorator"
@@ -255,6 +285,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/d5/50/83c593b07763e1161326b3b8c6686f0f4b0f24d5526546bee538c89837d6/decorator-5.1.1-py3-none-any.whl", hash = "sha256:b8c3f85900b9dc423225913c5aace94729fe1fa9763b38939a95226f02d37186", size = 9073 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "exceptiongroup"
 version = "1.2.2"
@@ -264,6 +297,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/02/cc/b7e31358aac6ed1ef2bb790a9746ac2c69bcb3c8588b41616914eb106eaf/exceptiongroup-1.2.2-py3-none-any.whl", hash = "sha256:3111b9d131c238bec2f8f516e123e14ba243563fb135d3fe885990585aa7795b", size = 16453 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "executing"
 version = "2.0.1"
@@ -272,6 +308,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/08/41/85d2d28466fca9373
 wheels = [
     { url = "https://files.pythonhosted.org/packages/80/03/6ea8b1b2a5ab40a7a60dc464d3daa7aa546e0a74d74a9f8ff551ea7905db/executing-2.0.1-py2.py3-none-any.whl", hash = "sha256:eac49ca94516ccc753f9fb5ce82603156e590b27525a8bc32cce8ae302eb61bc", size = 24922 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "frozenlist"
@@ -357,6 +396,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/83/10/466fe96dae1bff622021ee687f68e5524d6392b0a2f80d05001cd3a451ba/frozenlist-1.4.1-py3-none-any.whl", hash = "sha256:04ced3e6a46b4cfffe20f9ae482818e34eba9b5fb0ce4056e4cc9b6e212d09b7", size = 11552 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "idna"
 version = "3.7"
@@ -365,6 +407,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb078
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e5/3e/741d8c82801c347547f8a2a06aa57dbb1992be9e948df2ea0eda2c8b79e8/idna-3.7-py3-none-any.whl", hash = "sha256:82fee1fc78add43492d3a1898bfa6d8a904cc97d8427f683ed8e798d07761aa0", size = 66836 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "ipython"
@@ -394,6 +439,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/8d/97/8fe103906cd81bc42d3b0175b5534a9f67dccae47d6451131cf8d0d70bb2/ipython-8.12.3-py3-none-any.whl", hash = "sha256:b0340d46a933d27c657b211a329d0be23793c36595acf9e6ef4164bc01a1804c", size = 798307 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "ipython"
 version = "8.18.1"
@@ -419,6 +467,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/b1/b9/3ba6c45a6df813c09
 wheels = [
     { url = "https://files.pythonhosted.org/packages/47/6b/d9fdcdef2eb6a23f391251fde8781c38d42acd82abe84d054cb74f7863b0/ipython-8.18.1-py3-none-any.whl", hash = "sha256:e8267419d72d81955ec1177f8a29aaa90ac80ad647499201119e2f05e99aa397", size = 808161 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "ipython"
@@ -446,6 +497,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/73/48/4d2818054671bb272d1b12ca65748a4145dc602a463683b5c21b260becee/ipython-8.26.0-py3-none-any.whl", hash = "sha256:e6b347c27bdf9c32ee9d31ae85defc525755a1869f14057e900675b9e8d6e6ff", size = 817939 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "jedi"
 version = "0.19.1"
@@ -458,6 +512,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/20/9f/bc63f0f0737ad7a60800bfd472a4836661adae21f9c2535f3957b1e54ceb/jedi-0.19.1-py2.py3-none-any.whl", hash = "sha256:e983c654fe5c02867aef4cdfce5a2fbb4a50adc0af145f70504238f18ef5e7e0", size = 1569361 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "matplotlib-inline"
 version = "0.1.7"
@@ -469,6 +526,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/99/5b/a36a337438a14116b
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8f/8e/9ad090d3553c280a8060fbf6e24dc1c0c29704ee7d1c372f0c174aa59285/matplotlib_inline-0.1.7-py3-none-any.whl", hash = "sha256:df192d39a4ff8f21b1895d72e6a13f5fcc5099f00fa84384e0ea28c2cc0653ca", size = 9899 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "multidict"
@@ -554,6 +614,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/fa/a2/17e1e23c6be0a916219c5292f509360c345b5fa6beeb50d743203c27532c/multidict-6.0.5-py3-none-any.whl", hash = "sha256:0d63c74e3d7ab26de115c49bffc92cc77ed23395303d496eae515d4204a625e7", size = 9729 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "mypy-extensions"
 version = "1.0.0"
@@ -562,6 +625,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/98/a4/1ab47638b92648243
 wheels = [
     { url = "https://files.pythonhosted.org/packages/2a/e2/5d3f6ada4297caebe1a2add3b126fe800c96f56dbe5d1988a2cbe0b267aa/mypy_extensions-1.0.0-py3-none-any.whl", hash = "sha256:4392f6c0eb8a5668a69e23d168ffa70f0be9ccfd32b5cc2d26a34ae5b844552d", size = 4695 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "packaging"
@@ -572,6 +638,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/08/aa/cc0199a5f0ad350994d660967a8efb233fe0416e4639146c089643407ce6/packaging-24.1-py3-none-any.whl", hash = "sha256:5b8f2217dbdbd2f7f384c41c628544e6d52f2d0f53c6d0c3ea61aa5d1d7ff124", size = 53985 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "parso"
 version = "0.8.4"
@@ -581,6 +650,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/c6/ac/dac4a63f978e4dcb3c6d3a78c4d8e0192a113d288502a1216950c41b1027/parso-0.8.4-py2.py3-none-any.whl", hash = "sha256:a418670a20291dacd2dddc80c377c5c3791378ee1e8d12bffc35420643d43f18", size = 103650 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "pathspec"
 version = "0.12.1"
@@ -589,6 +661,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/ca/bc/f35b8446f4531a7cb
 wheels = [
     { url = "https://files.pythonhosted.org/packages/cc/20/ff623b09d963f88bfde16306a54e12ee5ea43e9b597108672ff3a408aad6/pathspec-0.12.1-py3-none-any.whl", hash = "sha256:a0d503e138a4c123b27490a4f7beda6a01c6f288df0e4a8b79c7eb0dc7b4cc08", size = 31191 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "pexpect"
@@ -602,6 +677,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/9e/c3/059298687310d527a58bb01f3b1965787ee3b40dce76752eda8b44e9a2c5/pexpect-4.9.0-py2.py3-none-any.whl", hash = "sha256:7236d1e080e4936be2dc3e326cec0af72acf9212a7e1d060210e70a47e253523", size = 63772 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "pickleshare"
 version = "0.7.5"
@@ -611,6 +689,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/9a/41/220f49aaea88bc6fa6cba8d05ecf24676326156c23b991e80b3f2fc24c77/pickleshare-0.7.5-py2.py3-none-any.whl", hash = "sha256:9649af414d74d4df115d5d718f82acb59c9d418196b7b4290ed47a12ce62df56", size = 6877 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "platformdirs"
 version = "4.2.2"
@@ -619,6 +700,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/f5/52/0763d1d976d5c262d
 wheels = [
     { url = "https://files.pythonhosted.org/packages/68/13/2aa1f0e1364feb2c9ef45302f387ac0bd81484e9c9a4c5688a322fbdfd08/platformdirs-4.2.2-py3-none-any.whl", hash = "sha256:2d7a1657e36a80ea911db832a8a6ece5ee53d8de21edd5cc5879af6530b1bfee", size = 18146 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "prompt-toolkit"
@@ -632,6 +716,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/e8/23/22750c4b768f09386d1c3cc4337953e8936f48a888fa6dddfb669b2c9088/prompt_toolkit-3.0.47-py3-none-any.whl", hash = "sha256:0d7bfa67001d5e39d02c224b663abc33687405033a8c422d0d675a5a13361d10", size = 386411 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "ptyprocess"
 version = "0.7.0"
@@ -640,6 +727,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/20/e5/16ff212c1e452235a
 wheels = [
     { url = "https://files.pythonhosted.org/packages/22/a6/858897256d0deac81a172289110f31629fc4cee19b6f01283303e18c8db3/ptyprocess-0.7.0-py2.py3-none-any.whl", hash = "sha256:4b41f3967fce3af57cc7e94b888626c18bf37a083e3651ca8feeb66d492fef35", size = 13993 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "pure-eval"
@@ -650,6 +740,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/8e/37/efad0257dc6e593a18957422533ff0f87ede7c9c6ea010a2177d738fb82f/pure_eval-0.2.3-py3-none-any.whl", hash = "sha256:1db8e35b67b3d218d818ae653e27f06c3aa420901fa7b081ca98cbedc874e0d0", size = 11842 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "pygments"
 version = "2.18.0"
@@ -659,6 +752,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/f7/3f/01c8b82017c199075f8f788d0d906b9ffbbc5a47dc9918a945e13d5a2bda/pygments-2.18.0-py3-none-any.whl", hash = "sha256:b8e6aca0523f3ab76fee51799c488e38782ac06eafcf95e7ba832985c8e7b13a", size = 1205513 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "six"
 version = "1.16.0"
@@ -667,6 +763,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f1
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254", size = 11053 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "stack-data"
@@ -682,6 +781,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/f1/7b/ce1eafaf1a76852e2ec9b22edecf1daa58175c090266e9f6c64afcd81d91/stack_data-0.6.3-py3-none-any.whl", hash = "sha256:d5558e0c25a4cb0853cddad3d77da9891a08cb85dd9f9f91b9f8cd66e511e695", size = 24521 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "tokenize-rt"
 version = "6.0.0"
@@ -690,6 +792,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/7d/09/6257dabdeab5097d7
 wheels = [
     { url = "https://files.pythonhosted.org/packages/5c/c2/44486862562c6902778ccf88001ad5ea3f8da5c030c638cac8be72f65b40/tokenize_rt-6.0.0-py2.py3-none-any.whl", hash = "sha256:d4ff7ded2873512938b4f8cbb98c9b07118f01d30ac585a30d7a88353ca36d22", size = 5869 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "tomli"
@@ -700,6 +805,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc", size = 12757 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "traitlets"
 version = "5.14.3"
@@ -709,6 +817,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/00/c0/8f5d070730d7836adc9c9b6408dec68c6ced86b304a9b26a14df072a6e8c/traitlets-5.14.3-py3-none-any.whl", hash = "sha256:b74e89e397b1ed28cc831db7aea759ba6640cb3de13090ca145426688ff1ac4f", size = 85359 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "typing-extensions"
 version = "4.12.2"
@@ -717,6 +828,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/df/db/f35a00659bc03fec3
 wheels = [
     { url = "https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d", size = 37438 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "uvloop"
@@ -756,6 +870,9 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/12/9d/f1d263d49f1909914bcec5d5608d2f819c109b08bf06e67a2ff072e82d81/uvloop-0.19.0-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:2df95fca285a9f5bfe730e51945ffe2fa71ccbfdde3b0da5772b4ee4f2e770d5", size = 4189373 },
 ]
 
+[package.metadata]
+provides-extras = []
+
 [[package]]
 name = "wcwidth"
 version = "0.2.13"
@@ -764,6 +881,9 @@ sdist = { url = "https://files.pythonhosted.org/packages/6c/63/53559446a878410fc
 wheels = [
     { url = "https://files.pythonhosted.org/packages/fd/84/fd2ba7aafacbad3c4201d395674fc6348826569da3c0937e75505ead3528/wcwidth-0.2.13-py2.py3-none-any.whl", hash = "sha256:3da69048e4540d84af32131829ff948f1e022c1c6bdb8d6102117aac784f6859", size = 34166 },
 ]
+
+[package.metadata]
+provides-extras = []
 
 [[package]]
 name = "yarl"
@@ -852,3 +972,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/a4/e0/5b4376d7361fe09a46dbb206131e8d85b1cb845da03c212a620d5b6b98d8/yarl-1.9.4-cp39-cp39-win_amd64.whl", hash = "sha256:824d6c50492add5da9374875ce72db7a0733b29c2394890aef23d533106e2b15", size = 76935 },
     { url = "https://files.pythonhosted.org/packages/4d/05/4d79198ae568a92159de0f89e710a8d19e3fa267b719a236582eee921f4a/yarl-1.9.4-py3-none-any.whl", hash = "sha256:928cecb0ef9d5a7946eb6ff58417ad2fe9375762382f1bf5c55e61645f2c43ad", size = 31638 },
 ]
+
+[package.metadata]
+provides-extras = []

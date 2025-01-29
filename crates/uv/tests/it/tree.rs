@@ -1255,6 +1255,9 @@ fn script() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ba/06/a07f096c664aeb9f01624f858c3add0a4e913d6c96257acb4fce61e7de14/certifi-2024.2.2-py3-none-any.whl", hash = "sha256:dc383c07b76109f368f6106eee2b593b04a011ea4d55f652c6ca24a754d1cdd1", size = 163774 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "charset-normalizer"
         version = "3.3.2"
@@ -1294,6 +1297,9 @@ fn script() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/28/76/e6222113b83e3622caa4bb41032d0b1bf785250607392e1b778aca0b8a7d/charset_normalizer-3.3.2-py3-none-any.whl", hash = "sha256:3e4d1f6587322d2788836a99c69062fbb091331ec940e02d12d179c1d53e25fc", size = 48543 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -1302,6 +1308,9 @@ fn script() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "markdown-it-py"
@@ -1315,6 +1324,9 @@ fn script() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/42/d7/1ec15b46af6af88f19b8e5ffea08fa375d433c998b8a7639e76935c14f1f/markdown_it_py-3.0.0-py3-none-any.whl", hash = "sha256:355216845c60bd96232cd8d8c40e8f9765cc86f46880e43a8fd22dc1a1a8cab1", size = 87528 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "mdurl"
         version = "0.1.2"
@@ -1324,6 +1336,9 @@ fn script() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8", size = 9979 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "pygments"
         version = "2.17.2"
@@ -1332,6 +1347,9 @@ fn script() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/97/9c/372fef8377a6e340b1704768d20daaded98bf13282b5327beb2e2fe2c7ef/pygments-2.17.2-py3-none-any.whl", hash = "sha256:b27c2826c47d0f3219f29554824c30c5e8945175d888647acd804ddd04af846c", size = 1179756 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "requests"
@@ -1348,6 +1366,9 @@ fn script() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/70/8e/0e2d847013cb52cd35b38c009bb167a1a26b2ce6cd6965bf26b47bc0bf44/requests-2.31.0-py3-none-any.whl", hash = "sha256:58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f", size = 62574 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "rich"
         version = "13.7.1"
@@ -1361,6 +1382,9 @@ fn script() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/87/67/a37f6214d0e9fe57f6ae54b2956d550ca8365857f42a1ce0392bb21d9410/rich-13.7.1-py3-none-any.whl", hash = "sha256:4edbae314f59eb482f54e9e30bf00d33350aaa94f4bfcd4e9e3110e64d0d7222", size = 240681 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "urllib3"
         version = "2.2.1"
@@ -1369,6 +1393,9 @@ fn script() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/a2/73/a68704750a7679d0b6d3ad7aa8d4da8e14e151ae82e6fee774e6e0d05ec8/urllib3-2.2.1-py3-none-any.whl", hash = "sha256:450b20ec296a467077128bff42b73080516e71b56ff59a60a02bef2232c4fa9d", size = 121067 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });

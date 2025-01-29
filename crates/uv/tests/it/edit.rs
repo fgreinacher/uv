@@ -93,6 +93,9 @@ fn add_registry() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/68/fe/7ce1926952c8a403b35029e194555558514b365ad77d75125f521a2bec62/anyio-3.7.0-py3-none-any.whl", hash = "sha256:eddca883c4175f14df8aedce21054bfca3adb70ffe76a9f607aef9d7fa2ea7f0", size = 80873 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -101,6 +104,9 @@ fn add_registry() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -111,6 +117,7 @@ fn add_registry() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio", specifier = "==3.7.0" }]
 
         [[package]]
@@ -121,6 +128,9 @@ fn add_registry() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -260,6 +270,9 @@ fn add_git() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/68/fe/7ce1926952c8a403b35029e194555558514b365ad77d75125f521a2bec62/anyio-3.7.0-py3-none-any.whl", hash = "sha256:eddca883c4175f14df8aedce21054bfca3adb70ffe76a9f607aef9d7fa2ea7f0", size = 80873 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -268,6 +281,9 @@ fn add_git() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -279,6 +295,7 @@ fn add_git() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "anyio", specifier = "==3.7.0" },
             { name = "uv-public-pypackage", git = "https://github.com/astral-test/uv-public-pypackage?tag=0.0.1" },
@@ -293,10 +310,16 @@ fn add_git() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "uv-public-pypackage"
         version = "0.1.0"
         source = { git = "https://github.com/astral-test/uv-public-pypackage?tag=0.0.1#0dacfd662c64cb4ceb16e6cf65a157a8b715b979" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -395,12 +418,16 @@ fn add_git_private_source() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "uv-private-pypackage", git = "https://github.com/astral-test/uv-private-pypackage" }]
 
         [[package]]
         name = "uv-private-pypackage"
         version = "0.1.0"
         source = { git = "https://github.com/astral-test/uv-private-pypackage#d780faf0ac91257d4d5a4f0c5a0e4509608c0071" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -501,12 +528,16 @@ fn add_git_private_raw() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "uv-private-pypackage", git = "https://github.com/astral-test/uv-private-pypackage" }]
 
         [[package]]
         name = "uv-private-pypackage"
         version = "0.1.0"
         source = { git = "https://github.com/astral-test/uv-private-pypackage#d780faf0ac91257d4d5a4f0c5a0e4509608c0071" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -725,6 +756,9 @@ fn add_git_raw() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/68/fe/7ce1926952c8a403b35029e194555558514b365ad77d75125f521a2bec62/anyio-3.7.0-py3-none-any.whl", hash = "sha256:eddca883c4175f14df8aedce21054bfca3adb70ffe76a9f607aef9d7fa2ea7f0", size = 80873 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -733,6 +767,9 @@ fn add_git_raw() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -744,6 +781,7 @@ fn add_git_raw() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "anyio", specifier = "==3.7.0" },
             { name = "uv-public-pypackage", git = "https://github.com/astral-test/uv-public-pypackage?rev=0.0.1" },
@@ -758,10 +796,16 @@ fn add_git_raw() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "uv-public-pypackage"
         version = "0.1.0"
         source = { git = "https://github.com/astral-test/uv-public-pypackage?rev=0.0.1#0dacfd662c64cb4ceb16e6cf65a157a8b715b979" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -985,12 +1029,16 @@ fn add_unnamed() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "uv-public-pypackage", git = "https://github.com/astral-test/uv-public-pypackage?tag=0.0.1" }]
 
         [[package]]
         name = "uv-public-pypackage"
         version = "0.1.0"
         source = { git = "https://github.com/astral-test/uv-public-pypackage?tag=0.0.1#0dacfd662c64cb4ceb16e6cf65a157a8b715b979" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -1093,6 +1141,9 @@ fn add_remove_dev() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/68/fe/7ce1926952c8a403b35029e194555558514b365ad77d75125f521a2bec62/anyio-3.7.0-py3-none-any.whl", hash = "sha256:eddca883c4175f14df8aedce21054bfca3adb70ffe76a9f607aef9d7fa2ea7f0", size = 80873 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -1101,6 +1152,9 @@ fn add_remove_dev() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -1113,6 +1167,7 @@ fn add_remove_dev() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
 
         [package.metadata.requires-dev]
         dev = [{ name = "anyio", specifier = "==3.7.0" }]
@@ -1125,6 +1180,9 @@ fn add_remove_dev() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -1314,6 +1372,9 @@ fn add_remove_optional() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/68/fe/7ce1926952c8a403b35029e194555558514b365ad77d75125f521a2bec62/anyio-3.7.0-py3-none-any.whl", hash = "sha256:eddca883c4175f14df8aedce21054bfca3adb70ffe76a9f607aef9d7fa2ea7f0", size = 80873 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -1322,6 +1383,9 @@ fn add_remove_optional() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -1345,6 +1409,9 @@ fn add_remove_optional() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -1679,12 +1746,16 @@ fn add_remove_workspace() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "child2", editable = "child2" }]
 
         [[package]]
         name = "child2"
         version = "0.1.0"
         source = { editable = "child2" }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -2310,6 +2381,7 @@ fn add_workspace_editable() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "child2", editable = "child2" }]
 
         [[package]]
@@ -2317,10 +2389,16 @@ fn add_workspace_editable() -> Result<()> {
         version = "0.1.0"
         source = { editable = "child2" }
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "parent"
         version = "0.1.0"
         source = { virtual = "." }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -2429,6 +2507,9 @@ fn add_workspace_path() -> Result<()> {
         version = "0.1.0"
         source = { editable = "child" }
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "parent"
         version = "0.1.0"
@@ -2438,6 +2519,7 @@ fn add_workspace_path() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "child", editable = "child" }]
         "###
         );
@@ -2546,6 +2628,9 @@ fn add_path() -> Result<()> {
         version = "0.1.0"
         source = { directory = "packages/child" }
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "parent"
         version = "0.1.0"
@@ -2555,6 +2640,7 @@ fn add_path() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "child", directory = "packages/child" }]
         "###
         );
@@ -2757,6 +2843,9 @@ fn update() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ba/06/a07f096c664aeb9f01624f858c3add0a4e913d6c96257acb4fce61e7de14/certifi-2024.2.2-py3-none-any.whl", hash = "sha256:dc383c07b76109f368f6106eee2b593b04a011ea4d55f652c6ca24a754d1cdd1", size = 163774 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "chardet"
         version = "5.2.0"
@@ -2765,6 +2854,9 @@ fn update() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/38/6f/f5fbc992a329ee4e0f288c1fe0e2ad9485ed064cac731ed2fe47dcc38cbf/chardet-5.2.0-py3-none-any.whl", hash = "sha256:e1cf59446890a00105fe7b7912492ea04b6e6f06d4b742b2c788469e34c82970", size = 199385 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "charset-normalizer"
@@ -2790,6 +2882,9 @@ fn update() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/28/76/e6222113b83e3622caa4bb41032d0b1bf785250607392e1b778aca0b8a7d/charset_normalizer-3.3.2-py3-none-any.whl", hash = "sha256:3e4d1f6587322d2788836a99c69062fbb091331ec940e02d12d179c1d53e25fc", size = 48543 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -2798,6 +2893,9 @@ fn update() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -2808,6 +2906,7 @@ fn update() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [
             { name = "requests", extras = ["security"], git = "https://github.com/psf/requests?tag=v2.32.3" },
             { name = "requests", extras = ["socks", "use-chardet-on-py3"], marker = "python_full_version >= '3.8'", git = "https://github.com/psf/requests?tag=v2.32.3" },
@@ -2821,6 +2920,9 @@ fn update() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/8d/59/b4572118e098ac8e46e399a1dd0f2d85403ce8bbaad9ec79373ed6badaf9/PySocks-1.7.1-py3-none-any.whl", hash = "sha256:2725bd0a9925919b9b51739eea5f9e2bae91e83288108a9ad338b2e3a4435ee5", size = 16725 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "requests"
@@ -2841,6 +2943,9 @@ fn update() -> Result<()> {
             { name = "chardet" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "urllib3"
         version = "2.2.1"
@@ -2849,6 +2954,9 @@ fn update() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/a2/73/a68704750a7679d0b6d3ad7aa8d4da8e14e151ae82e6fee774e6e0d05ec8/urllib3-2.2.1-py3-none-any.whl", hash = "sha256:450b20ec296a467077128bff42b73080516e71b56ff59a60a02bef2232c4fa9d", size = 121067 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -3452,6 +3560,9 @@ fn add_inexact() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -3461,6 +3572,7 @@ fn add_inexact() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig", specifier = "==2.0.0" }]
         "###
         );
@@ -3586,6 +3698,9 @@ fn remove_registry() -> Result<()> {
         name = "project"
         version = "0.1.0"
         source = { editable = "." }
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -4278,6 +4393,9 @@ fn add_lower_bound_optional() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -4286,6 +4404,9 @@ fn add_lower_bound_optional() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -4309,6 +4430,9 @@ fn add_lower_bound_optional() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -4392,6 +4516,9 @@ fn add_lower_bound_local() -> Result<()> {
             { url = "https://astral-sh.github.io/packse/PACKSE_VERSION/files/local_simple_a-1.2.3+foo-py3-none-any.whl", hash = "sha256:6f30e2e709b3e171cd734bb58705229a582587c29e0a7041227435583c7224cc" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -4401,6 +4528,7 @@ fn add_lower_bound_local() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "local-simple-a", specifier = ">=1.2.3" }]
         "###
         );
@@ -4500,6 +4628,9 @@ fn add_non_project() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -5463,6 +5594,9 @@ fn add_remove_script_lock() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ba/06/a07f096c664aeb9f01624f858c3add0a4e913d6c96257acb4fce61e7de14/certifi-2024.2.2-py3-none-any.whl", hash = "sha256:dc383c07b76109f368f6106eee2b593b04a011ea4d55f652c6ca24a754d1cdd1", size = 163774 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "charset-normalizer"
         version = "3.3.2"
@@ -5502,6 +5636,9 @@ fn add_remove_script_lock() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/28/76/e6222113b83e3622caa4bb41032d0b1bf785250607392e1b778aca0b8a7d/charset_normalizer-3.3.2-py3-none-any.whl", hash = "sha256:3e4d1f6587322d2788836a99c69062fbb091331ec940e02d12d179c1d53e25fc", size = 48543 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -5510,6 +5647,9 @@ fn add_remove_script_lock() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "markdown-it-py"
@@ -5523,6 +5663,9 @@ fn add_remove_script_lock() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/42/d7/1ec15b46af6af88f19b8e5ffea08fa375d433c998b8a7639e76935c14f1f/markdown_it_py-3.0.0-py3-none-any.whl", hash = "sha256:355216845c60bd96232cd8d8c40e8f9765cc86f46880e43a8fd22dc1a1a8cab1", size = 87528 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "mdurl"
         version = "0.1.2"
@@ -5532,6 +5675,9 @@ fn add_remove_script_lock() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8", size = 9979 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "pygments"
         version = "2.17.2"
@@ -5540,6 +5686,9 @@ fn add_remove_script_lock() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/97/9c/372fef8377a6e340b1704768d20daaded98bf13282b5327beb2e2fe2c7ef/pygments-2.17.2-py3-none-any.whl", hash = "sha256:b27c2826c47d0f3219f29554824c30c5e8945175d888647acd804ddd04af846c", size = 1179756 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "requests"
@@ -5556,6 +5705,9 @@ fn add_remove_script_lock() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/70/8e/0e2d847013cb52cd35b38c009bb167a1a26b2ce6cd6965bf26b47bc0bf44/requests-2.31.0-py3-none-any.whl", hash = "sha256:58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f", size = 62574 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "rich"
         version = "13.7.1"
@@ -5569,6 +5721,9 @@ fn add_remove_script_lock() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/87/67/a37f6214d0e9fe57f6ae54b2956d550ca8365857f42a1ce0392bb21d9410/rich-13.7.1-py3-none-any.whl", hash = "sha256:4edbae314f59eb482f54e9e30bf00d33350aaa94f4bfcd4e9e3110e64d0d7222", size = 240681 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "urllib3"
         version = "2.2.1"
@@ -5577,6 +5732,9 @@ fn add_remove_script_lock() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/a2/73/a68704750a7679d0b6d3ad7aa8d4da8e14e151ae82e6fee774e6e0d05ec8/urllib3-2.2.1-py3-none-any.whl", hash = "sha256:450b20ec296a467077128bff42b73080516e71b56ff59a60a02bef2232c4fa9d", size = 121067 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -6814,6 +6972,9 @@ fn add_warn_index_url() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -6823,6 +6984,7 @@ fn add_warn_index_url() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "idna", specifier = ">=3.6" }]
         "###
         );
@@ -6915,6 +7077,9 @@ fn add_no_warn_index_url() -> Result<()> {
             { url = "https://test-files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -6924,6 +7089,7 @@ fn add_no_warn_index_url() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig", specifier = ">=2.0.0" }]
         "###
         );
@@ -7007,6 +7173,9 @@ fn add_index() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -7016,6 +7185,7 @@ fn add_index() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig", specifier = "==2.0.0" }]
         "###
         );
@@ -7570,6 +7740,9 @@ fn add_default_index_url() -> Result<()> {
             { url = "https://test-files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -7579,6 +7752,7 @@ fn add_default_index_url() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig", specifier = ">=2.0.0" }]
         "###
         );
@@ -7742,6 +7916,9 @@ fn add_index_credentials() -> Result<()> {
             { url = "https://pypi-proxy.fly.dev/basic-auth/files/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -7751,6 +7928,7 @@ fn add_index_credentials() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig", specifier = "==2.0.0" }]
         "###
         );
@@ -7837,6 +8015,9 @@ fn existing_index_credentials() -> Result<()> {
             { url = "https://pypi-proxy.fly.dev/basic-auth/files/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -7846,6 +8027,7 @@ fn existing_index_credentials() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig", specifier = "==2.0.0" }]
         "###
         );
@@ -7938,6 +8120,9 @@ fn add_group_comment() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "myproject"
         version = "0.1.0"
@@ -7953,6 +8138,7 @@ fn add_group_comment() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
 
         [package.metadata.requires-dev]
         dev = [
@@ -7970,6 +8156,9 @@ fn add_group_comment() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typing-extensions"
         version = "4.10.0"
@@ -7978,6 +8167,9 @@ fn add_group_comment() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -8071,6 +8263,9 @@ fn add_index_comments() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl", hash = "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374", size = 5892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -8080,6 +8275,7 @@ fn add_index_comments() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "iniconfig", specifier = "==2.0.0" }]
         "###
         );
@@ -8376,6 +8572,9 @@ fn add_direct_url_subdirectory() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -8384,6 +8583,9 @@ fn add_direct_url_subdirectory() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -8394,6 +8596,7 @@ fn add_direct_url_subdirectory() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "root", url = "https://github.com/user-attachments/files/18216295/subdirectory-test.tar.gz", subdirectory = "packages/root" }]
 
         [[package]]
@@ -8406,6 +8609,7 @@ fn add_direct_url_subdirectory() -> Result<()> {
         sdist = { hash = "sha256:24b55efee28d08ad3cdc58903e359e820601baa6a4a4b3424311541ebcfb09d3" }
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio" }]
 
         [[package]]
@@ -8416,6 +8620,9 @@ fn add_direct_url_subdirectory() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -8514,6 +8721,9 @@ fn add_direct_url_subdirectory_raw() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -8522,6 +8732,9 @@ fn add_direct_url_subdirectory_raw() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -8532,6 +8745,7 @@ fn add_direct_url_subdirectory_raw() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "root", url = "https://github.com/user-attachments/files/18216295/subdirectory-test.tar.gz", subdirectory = "packages/root" }]
 
         [[package]]
@@ -8544,6 +8758,7 @@ fn add_direct_url_subdirectory_raw() -> Result<()> {
         sdist = { hash = "sha256:24b55efee28d08ad3cdc58903e359e820601baa6a4a4b3424311541ebcfb09d3" }
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio" }]
 
         [[package]]
@@ -8554,6 +8769,9 @@ fn add_direct_url_subdirectory_raw() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });

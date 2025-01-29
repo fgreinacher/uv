@@ -130,6 +130,9 @@ fn extra_basic() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/20/4d/a7046ae1a1a4cc4e9bbed194c387086f06b25038be596543d026946330c9/sortedcontainers-2.3.0-py2.py3-none-any.whl", hash = "sha256:37257a32add0a3ee490bb170b599e93095eed89a55da91fa9f48753ea12fd73f", size = 29479 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sortedcontainers"
         version = "2.4.0"
@@ -138,6 +141,9 @@ fn extra_basic() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/32/46/9cb0e58b2deb7f82b84065f37f3bffeb12413f947f9388e4cac22c4621ce/sortedcontainers-2.4.0-py2.py3-none-any.whl", hash = "sha256:a163dcaede0f1c021485e957a39245190e74249897e2ae4b2aa38595db237ee0", size = 29575 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -328,6 +334,9 @@ fn extra_basic_three_extras() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/0c/75/4f79725a6ad966f1985d96c5aeda0b27d00c23afa14e8566efcdee1380ad/sortedcontainers-2.2.0-py2.py3-none-any.whl", hash = "sha256:f0694fbe8d090fab0fbabbfecad04756fbbb35dc3c0f89e0f6965396fe815d25", size = 29386 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sortedcontainers"
         version = "2.3.0"
@@ -337,6 +346,9 @@ fn extra_basic_three_extras() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/20/4d/a7046ae1a1a4cc4e9bbed194c387086f06b25038be596543d026946330c9/sortedcontainers-2.3.0-py2.py3-none-any.whl", hash = "sha256:37257a32add0a3ee490bb170b599e93095eed89a55da91fa9f48753ea12fd73f", size = 29479 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sortedcontainers"
         version = "2.4.0"
@@ -345,6 +357,9 @@ fn extra_basic_three_extras() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/32/46/9cb0e58b2deb7f82b84065f37f3bffeb12413f947f9388e4cac22c4621ce/sortedcontainers-2.4.0-py2.py3-none-any.whl", hash = "sha256:a163dcaede0f1c021485e957a39245190e74249897e2ae4b2aa38595db237ee0", size = 29575 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -784,6 +799,9 @@ fn extra_multiple_independent() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/85/4f/d010eca6914703d8e6be222165d02c3e708ed909cdb2b7af3743667f302e/anyio-4.1.0-py3-none-any.whl", hash = "sha256:56a415fbc462291813a94528a779597226619c8e78af7de0507333f700011e5f", size = 83924 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "anyio"
         version = "4.2.0"
@@ -797,6 +815,9 @@ fn extra_multiple_independent() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/bf/cd/d6d9bb1dadf73e7af02d18225cbd2c93f8552e13130484f1c8dcfece292b/anyio-4.2.0-py3-none-any.whl", hash = "sha256:745843b39e829e108e518c489b31dc757de7d2131d53fac32bd8df268227bfee", size = 85481 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -805,6 +826,9 @@ fn extra_multiple_independent() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -843,6 +867,9 @@ fn extra_multiple_independent() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sortedcontainers"
         version = "2.3.0"
@@ -852,6 +879,9 @@ fn extra_multiple_independent() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/20/4d/a7046ae1a1a4cc4e9bbed194c387086f06b25038be596543d026946330c9/sortedcontainers-2.3.0-py2.py3-none-any.whl", hash = "sha256:37257a32add0a3ee490bb170b599e93095eed89a55da91fa9f48753ea12fd73f", size = 29479 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sortedcontainers"
         version = "2.4.0"
@@ -860,6 +890,9 @@ fn extra_multiple_independent() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/32/46/9cb0e58b2deb7f82b84065f37f3bffeb12413f947f9388e4cac22c4621ce/sortedcontainers-2.4.0-py2.py3-none-any.whl", hash = "sha256:a163dcaede0f1c021485e957a39245190e74249897e2ae4b2aa38595db237ee0", size = 29575 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -946,6 +979,9 @@ fn extra_config_change_ignore_lockfile() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/20/4d/a7046ae1a1a4cc4e9bbed194c387086f06b25038be596543d026946330c9/sortedcontainers-2.3.0-py2.py3-none-any.whl", hash = "sha256:37257a32add0a3ee490bb170b599e93095eed89a55da91fa9f48753ea12fd73f", size = 29479 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sortedcontainers"
         version = "2.4.0"
@@ -954,6 +990,9 @@ fn extra_config_change_ignore_lockfile() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/32/46/9cb0e58b2deb7f82b84065f37f3bffeb12413f947f9388e4cac22c4621ce/sortedcontainers-2.4.0-py2.py3-none-any.whl", hash = "sha256:a163dcaede0f1c021485e957a39245190e74249897e2ae4b2aa38595db237ee0", size = 29575 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -1745,6 +1784,7 @@ fn group_basic() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
 
         [package.metadata.requires-dev]
         group1 = [{ name = "sortedcontainers", specifier = "==2.3.0" }]
@@ -1759,6 +1799,9 @@ fn group_basic() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/20/4d/a7046ae1a1a4cc4e9bbed194c387086f06b25038be596543d026946330c9/sortedcontainers-2.3.0-py2.py3-none-any.whl", hash = "sha256:37257a32add0a3ee490bb170b599e93095eed89a55da91fa9f48753ea12fd73f", size = 29479 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sortedcontainers"
         version = "2.4.0"
@@ -1767,6 +1810,9 @@ fn group_basic() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/32/46/9cb0e58b2deb7f82b84065f37f3bffeb12413f947f9388e4cac22c4621ce/sortedcontainers-2.4.0-py2.py3-none-any.whl", hash = "sha256:a163dcaede0f1c021485e957a39245190e74249897e2ae4b2aa38595db237ee0", size = 29575 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -1899,6 +1945,7 @@ fn group_default() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
 
         [package.metadata.requires-dev]
         group1 = [{ name = "sortedcontainers", specifier = "==2.3.0" }]
@@ -1913,6 +1960,9 @@ fn group_default() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/20/4d/a7046ae1a1a4cc4e9bbed194c387086f06b25038be596543d026946330c9/sortedcontainers-2.3.0-py2.py3-none-any.whl", hash = "sha256:37257a32add0a3ee490bb170b599e93095eed89a55da91fa9f48753ea12fd73f", size = 29479 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sortedcontainers"
         version = "2.4.0"
@@ -1921,6 +1971,9 @@ fn group_default() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/32/46/9cb0e58b2deb7f82b84065f37f3bffeb12413f947f9388e4cac22c4621ce/sortedcontainers-2.4.0-py2.py3-none-any.whl", hash = "sha256:a163dcaede0f1c021485e957a39245190e74249897e2ae4b2aa38595db237ee0", size = 29575 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -2127,6 +2180,9 @@ fn mixed() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/20/4d/a7046ae1a1a4cc4e9bbed194c387086f06b25038be596543d026946330c9/sortedcontainers-2.3.0-py2.py3-none-any.whl", hash = "sha256:37257a32add0a3ee490bb170b599e93095eed89a55da91fa9f48753ea12fd73f", size = 29479 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sortedcontainers"
         version = "2.4.0"
@@ -2135,6 +2191,9 @@ fn mixed() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/32/46/9cb0e58b2deb7f82b84065f37f3bffeb12413f947f9388e4cac22c4621ce/sortedcontainers-2.4.0-py2.py3-none-any.whl", hash = "sha256:a163dcaede0f1c021485e957a39245190e74249897e2ae4b2aa38595db237ee0", size = 29575 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -2276,6 +2335,9 @@ fn multiple_sources_index_disjoint_extras() -> Result<()> {
             { url = "https://download.pytorch.org/whl/Jinja2-3.1.2-py3-none-any.whl", hash = "sha256:6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "jinja2"
         version = "3.1.3"
@@ -2286,6 +2348,9 @@ fn multiple_sources_index_disjoint_extras() -> Result<()> {
         wheels = [
             { url = "https://download.pytorch.org/whl/Jinja2-3.1.3-py3-none-any.whl", hash = "sha256:7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "markupsafe"
@@ -2304,6 +2369,9 @@ fn multiple_sources_index_disjoint_extras() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/96/0c/620c1fb3661858c0e37eb3cbffd8c6f732a67cd97296f725789679801b31/MarkupSafe-2.1.5-cp312-cp312-win32.whl", hash = "sha256:8590b4ae07a35970728874632fed7bd57b26b0102df2d2b233b6d9d82f6c62ad", size = 16572 },
             { url = "https://files.pythonhosted.org/packages/3f/14/c3554d512d5f9100a95e737502f4a2323a1959f6d0d01e0d0997b35f7b10/MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl", hash = "sha256:823b65d8706e32ad2df51ed89496147a42a2a6e01c13cfb6ffb8b1e92bc910bb", size = 17127 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -2422,6 +2490,9 @@ fn multiple_sources_index_disjoint_groups() -> Result<()> {
             { url = "https://download.pytorch.org/whl/Jinja2-3.1.2-py3-none-any.whl", hash = "sha256:6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "jinja2"
         version = "3.1.3"
@@ -2432,6 +2503,9 @@ fn multiple_sources_index_disjoint_groups() -> Result<()> {
         wheels = [
             { url = "https://download.pytorch.org/whl/Jinja2-3.1.3-py3-none-any.whl", hash = "sha256:7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "markupsafe"
@@ -2451,6 +2525,9 @@ fn multiple_sources_index_disjoint_groups() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/3f/14/c3554d512d5f9100a95e737502f4a2323a1959f6d0d01e0d0997b35f7b10/MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl", hash = "sha256:823b65d8706e32ad2df51ed89496147a42a2a6e01c13cfb6ffb8b1e92bc910bb", size = 17127 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "project"
         version = "0.1.0"
@@ -2465,6 +2542,7 @@ fn multiple_sources_index_disjoint_groups() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
 
         [package.metadata.requires-dev]
         cu118 = [{ name = "jinja2", specifier = "==3.1.2", index = "https://download.pytorch.org/whl/cu118", conflict = { package = "project", group = "cu118" } }]
@@ -2565,6 +2643,9 @@ fn multiple_sources_index_disjoint_extras_with_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ed/20/bc79bc575ba2e2a7f70e8a1155618bb1301eaa5132a8271373a6903f73f8/babel-2.16.0-py3-none-any.whl", hash = "sha256:368b5b98b37c06b7daf6696391c3240c938b37767d4584413e8438c5c435fa8b", size = 9587599 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "jinja2"
         version = "3.1.2"
@@ -2581,6 +2662,9 @@ fn multiple_sources_index_disjoint_extras_with_extra() -> Result<()> {
             { name = "babel" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "jinja2"
         version = "3.1.3"
@@ -2596,6 +2680,9 @@ fn multiple_sources_index_disjoint_extras_with_extra() -> Result<()> {
         i18n = [
             { name = "babel" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "markupsafe"
@@ -2614,6 +2701,9 @@ fn multiple_sources_index_disjoint_extras_with_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/96/0c/620c1fb3661858c0e37eb3cbffd8c6f732a67cd97296f725789679801b31/MarkupSafe-2.1.5-cp312-cp312-win32.whl", hash = "sha256:8590b4ae07a35970728874632fed7bd57b26b0102df2d2b233b6d9d82f6c62ad", size = 16572 },
             { url = "https://files.pythonhosted.org/packages/3f/14/c3554d512d5f9100a95e737502f4a2323a1959f6d0d01e0d0997b35f7b10/MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl", hash = "sha256:823b65d8706e32ad2df51ed89496147a42a2a6e01c13cfb6ffb8b1e92bc910bb", size = 17127 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -2741,6 +2831,9 @@ fn multiple_sources_index_disjoint_extras_with_marker() -> Result<()> {
             { url = "https://download.pytorch.org/whl/Jinja2-3.1.2-py3-none-any.whl", hash = "sha256:6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "jinja2"
         version = "3.1.2"
@@ -2756,6 +2849,9 @@ fn multiple_sources_index_disjoint_extras_with_marker() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/bc/c3/f068337a370801f372f2f8f6bad74a5c140f6fda3d9de154052708dd3c65/Jinja2-3.1.2-py3-none-any.whl", hash = "sha256:6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61", size = 133101 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "jinja2"
         version = "3.1.3"
@@ -2766,6 +2862,9 @@ fn multiple_sources_index_disjoint_extras_with_marker() -> Result<()> {
         wheels = [
             { url = "https://download.pytorch.org/whl/Jinja2-3.1.3-py3-none-any.whl", hash = "sha256:7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "markupsafe"
@@ -2784,6 +2883,9 @@ fn multiple_sources_index_disjoint_extras_with_marker() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/96/0c/620c1fb3661858c0e37eb3cbffd8c6f732a67cd97296f725789679801b31/MarkupSafe-2.1.5-cp312-cp312-win32.whl", hash = "sha256:8590b4ae07a35970728874632fed7bd57b26b0102df2d2b233b6d9d82f6c62ad", size = 16572 },
             { url = "https://files.pythonhosted.org/packages/3f/14/c3554d512d5f9100a95e737502f4a2323a1959f6d0d01e0d0997b35f7b10/MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl", hash = "sha256:823b65d8706e32ad2df51ed89496147a42a2a6e01c13cfb6ffb8b1e92bc910bb", size = 17127 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -3057,6 +3159,9 @@ fn shared_optional_dependency_extra1() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.5"
@@ -3066,6 +3171,9 @@ fn shared_optional_dependency_extra1() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ea/65/9c7a31be86861d43da3d4f8661f677b38120320540773a04979ad6fa9ecd/idna-3.5-py3-none-any.whl", hash = "sha256:79b8f0ac92d2351be5f6122356c9a592c96d81c9a79e4b488bf2a6a15f88057a", size = 61566 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -3074,6 +3182,9 @@ fn shared_optional_dependency_extra1() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -3107,6 +3218,9 @@ fn shared_optional_dependency_extra1() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -3196,6 +3310,9 @@ fn shared_optional_dependency_group1() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.5"
@@ -3205,6 +3322,9 @@ fn shared_optional_dependency_group1() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ea/65/9c7a31be86861d43da3d4f8661f677b38120320540773a04979ad6fa9ecd/idna-3.5-py3-none-any.whl", hash = "sha256:79b8f0ac92d2351be5f6122356c9a592c96d81c9a79e4b488bf2a6a15f88057a", size = 61566 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -3213,6 +3333,9 @@ fn shared_optional_dependency_group1() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -3231,6 +3354,7 @@ fn shared_optional_dependency_group1() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
 
         [package.metadata.requires-dev]
         bar = [{ name = "idna", specifier = "==3.6" }]
@@ -3245,6 +3369,9 @@ fn shared_optional_dependency_group1() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -3336,6 +3463,9 @@ fn shared_optional_dependency_mixed1() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.5"
@@ -3345,6 +3475,9 @@ fn shared_optional_dependency_mixed1() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ea/65/9c7a31be86861d43da3d4f8661f677b38120320540773a04979ad6fa9ecd/idna-3.5-py3-none-any.whl", hash = "sha256:79b8f0ac92d2351be5f6122356c9a592c96d81c9a79e4b488bf2a6a15f88057a", size = 61566 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -3353,6 +3486,9 @@ fn shared_optional_dependency_mixed1() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -3388,6 +3524,9 @@ fn shared_optional_dependency_mixed1() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -3480,6 +3619,9 @@ fn shared_optional_dependency_extra2() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.5"
@@ -3489,6 +3631,9 @@ fn shared_optional_dependency_extra2() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ea/65/9c7a31be86861d43da3d4f8661f677b38120320540773a04979ad6fa9ecd/idna-3.5-py3-none-any.whl", hash = "sha256:79b8f0ac92d2351be5f6122356c9a592c96d81c9a79e4b488bf2a6a15f88057a", size = 61566 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -3497,6 +3642,9 @@ fn shared_optional_dependency_extra2() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -3530,6 +3678,9 @@ fn shared_optional_dependency_extra2() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -3620,6 +3771,9 @@ fn shared_optional_dependency_group2() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.5"
@@ -3629,6 +3783,9 @@ fn shared_optional_dependency_group2() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ea/65/9c7a31be86861d43da3d4f8661f677b38120320540773a04979ad6fa9ecd/idna-3.5-py3-none-any.whl", hash = "sha256:79b8f0ac92d2351be5f6122356c9a592c96d81c9a79e4b488bf2a6a15f88057a", size = 61566 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -3637,6 +3794,9 @@ fn shared_optional_dependency_group2() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -3654,6 +3814,7 @@ fn shared_optional_dependency_group2() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
 
         [package.metadata.requires-dev]
         bar = [
@@ -3673,6 +3834,9 @@ fn shared_optional_dependency_group2() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -3765,6 +3929,9 @@ fn shared_optional_dependency_mixed2() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.5"
@@ -3774,6 +3941,9 @@ fn shared_optional_dependency_mixed2() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ea/65/9c7a31be86861d43da3d4f8661f677b38120320540773a04979ad6fa9ecd/idna-3.5-py3-none-any.whl", hash = "sha256:79b8f0ac92d2351be5f6122356c9a592c96d81c9a79e4b488bf2a6a15f88057a", size = 61566 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -3782,6 +3952,9 @@ fn shared_optional_dependency_mixed2() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -3821,6 +3994,9 @@ fn shared_optional_dependency_mixed2() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -3908,6 +4084,9 @@ fn shared_dependency_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.5"
@@ -3917,6 +4096,9 @@ fn shared_dependency_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ea/65/9c7a31be86861d43da3d4f8661f677b38120320540773a04979ad6fa9ecd/idna-3.5-py3-none-any.whl", hash = "sha256:79b8f0ac92d2351be5f6122356c9a592c96d81c9a79e4b488bf2a6a15f88057a", size = 61566 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -3925,6 +4107,9 @@ fn shared_dependency_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -3958,6 +4143,9 @@ fn shared_dependency_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -4082,6 +4270,9 @@ fn shared_dependency_group() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.5"
@@ -4091,6 +4282,9 @@ fn shared_dependency_group() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ea/65/9c7a31be86861d43da3d4f8661f677b38120320540773a04979ad6fa9ecd/idna-3.5-py3-none-any.whl", hash = "sha256:79b8f0ac92d2351be5f6122356c9a592c96d81c9a79e4b488bf2a6a15f88057a", size = 61566 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -4099,6 +4293,9 @@ fn shared_dependency_group() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -4117,6 +4314,7 @@ fn shared_dependency_group() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = []
         requires-dist = [{ name = "anyio" }]
 
         [package.metadata.requires-dev]
@@ -4131,6 +4329,9 @@ fn shared_dependency_group() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -4257,6 +4458,9 @@ fn shared_dependency_mixed() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.5"
@@ -4266,6 +4470,9 @@ fn shared_dependency_mixed() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ea/65/9c7a31be86861d43da3d4f8661f677b38120320540773a04979ad6fa9ecd/idna-3.5-py3-none-any.whl", hash = "sha256:79b8f0ac92d2351be5f6122356c9a592c96d81c9a79e4b488bf2a6a15f88057a", size = 61566 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -4274,6 +4481,9 @@ fn shared_dependency_mixed() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -4311,6 +4521,9 @@ fn shared_dependency_mixed() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -4474,6 +4687,9 @@ conflicts = [
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.4"
@@ -4482,6 +4698,9 @@ conflicts = [
         wheels = [
             { url = "https://files.pythonhosted.org/packages/fc/34/3030de6f1370931b9dbb4dad48f6ab1015ab1d32447850b9fc94e60097be/idna-3.4-py3-none-any.whl", hash = "sha256:90b77e79eaa3eba6de819a0c442c0b4ceefc341a7a2ab77d7562bf49f425c5c2", size = 61538 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "idna"
@@ -4492,6 +4711,9 @@ conflicts = [
             { url = "https://files.pythonhosted.org/packages/ea/65/9c7a31be86861d43da3d4f8661f677b38120320540773a04979ad6fa9ecd/idna-3.5-py3-none-any.whl", hash = "sha256:79b8f0ac92d2351be5f6122356c9a592c96d81c9a79e4b488bf2a6a15f88057a", size = 61566 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -4500,6 +4722,9 @@ conflicts = [
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -4551,6 +4776,9 @@ conflicts = [
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -4651,6 +4879,9 @@ fn jinja_no_conflict_markers1() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ed/20/bc79bc575ba2e2a7f70e8a1155618bb1301eaa5132a8271373a6903f73f8/babel-2.16.0-py3-none-any.whl", hash = "sha256:368b5b98b37c06b7daf6696391c3240c938b37767d4584413e8438c5c435fa8b", size = 9587599 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "jinja2"
         version = "3.1.2"
@@ -4667,6 +4898,9 @@ fn jinja_no_conflict_markers1() -> Result<()> {
             { name = "babel" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "jinja2"
         version = "3.1.3"
@@ -4682,6 +4916,9 @@ fn jinja_no_conflict_markers1() -> Result<()> {
         i18n = [
             { name = "babel" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "markupsafe"
@@ -4700,6 +4937,9 @@ fn jinja_no_conflict_markers1() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/96/0c/620c1fb3661858c0e37eb3cbffd8c6f732a67cd97296f725789679801b31/MarkupSafe-2.1.5-cp312-cp312-win32.whl", hash = "sha256:8590b4ae07a35970728874632fed7bd57b26b0102df2d2b233b6d9d82f6c62ad", size = 16572 },
             { url = "https://files.pythonhosted.org/packages/3f/14/c3554d512d5f9100a95e737502f4a2323a1959f6d0d01e0d0997b35f7b10/MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl", hash = "sha256:823b65d8706e32ad2df51ed89496147a42a2a6e01c13cfb6ffb8b1e92bc910bb", size = 17127 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -4825,6 +5065,9 @@ fn jinja_no_conflict_markers2() -> Result<()> {
             { url = "https://download.pytorch.org/whl/Jinja2-3.1.2-py3-none-any.whl", hash = "sha256:6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "jinja2"
         version = "3.1.2"
@@ -4840,6 +5083,9 @@ fn jinja_no_conflict_markers2() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/bc/c3/f068337a370801f372f2f8f6bad74a5c140f6fda3d9de154052708dd3c65/Jinja2-3.1.2-py3-none-any.whl", hash = "sha256:6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61", size = 133101 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "jinja2"
         version = "3.1.3"
@@ -4850,6 +5096,9 @@ fn jinja_no_conflict_markers2() -> Result<()> {
         wheels = [
             { url = "https://download.pytorch.org/whl/Jinja2-3.1.3-py3-none-any.whl", hash = "sha256:7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "markupsafe"
@@ -4868,6 +5117,9 @@ fn jinja_no_conflict_markers2() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/96/0c/620c1fb3661858c0e37eb3cbffd8c6f732a67cd97296f725789679801b31/MarkupSafe-2.1.5-cp312-cp312-win32.whl", hash = "sha256:8590b4ae07a35970728874632fed7bd57b26b0102df2d2b233b6d9d82f6c62ad", size = 16572 },
             { url = "https://files.pythonhosted.org/packages/3f/14/c3554d512d5f9100a95e737502f4a2323a1959f6d0d01e0d0997b35f7b10/MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl", hash = "sha256:823b65d8706e32ad2df51ed89496147a42a2a6e01c13cfb6ffb8b1e92bc910bb", size = 17127 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "project"
@@ -4976,6 +5228,9 @@ fn collision_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.5"
@@ -4985,6 +5240,9 @@ fn collision_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ea/65/9c7a31be86861d43da3d4f8661f677b38120320540773a04979ad6fa9ecd/idna-3.5-py3-none-any.whl", hash = "sha256:79b8f0ac92d2351be5f6122356c9a592c96d81c9a79e4b488bf2a6a15f88057a", size = 61566 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -4993,6 +5251,9 @@ fn collision_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "pkg"
@@ -5031,6 +5292,9 @@ fn collision_extra() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sortedcontainers"
         version = "2.4.0"
@@ -5039,6 +5303,9 @@ fn collision_extra() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/32/46/9cb0e58b2deb7f82b84065f37f3bffeb12413f947f9388e4cac22c4621ce/sortedcontainers-2.4.0-py2.py3-none-any.whl", hash = "sha256:a163dcaede0f1c021485e957a39245190e74249897e2ae4b2aa38595db237ee0", size = 29575 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -5210,6 +5477,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c4/a6/73b02f52206f7bc3600a702726bd75b0cda229a23c4a7ea6189bbd9ae528/a2wsgi-1.10.4-py3-none-any.whl", hash = "sha256:f17da93bf5952e0b0938c87f261c52b7305ddfab1ff3c70dd10b4b76db3851d3", size = 16812 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "aiohttp"
         version = "3.9.3"
@@ -5240,6 +5510,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/bf/db1fc240d89cde43fd7bb11c1c3f9156dd184881a527ad8b0f9e8f4d434a/aiohttp-3.9.3-cp312-cp312-win_amd64.whl", hash = "sha256:b791a3143681a520c0a17e26ae7465f1b6f99461a28019d1a2f425236e6eedb5", size = 363433 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "aiosignal"
         version = "1.3.1"
@@ -5251,6 +5524,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/76/ac/a7305707cb852b7e16ff80eaf5692309bde30e2b1100a1fcacdc8f731d97/aiosignal-1.3.1-py3-none-any.whl", hash = "sha256:f8376fb07dd1e86a584e4fcdec80b36b7f81aac666ebc724e2c090300dd83b17", size = 7617 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "alembic"
@@ -5266,6 +5542,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/7f/50/9fb3a5c80df6eb6516693270621676980acd6d5a9a7efdbfa273f8d616c7/alembic-1.13.1-py3-none-any.whl", hash = "sha256:2edcc97bed0bd3272611ce3a98d98279e9c209e7186e43e75bbb1b2bdfdbcc43", size = 233424 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "annotated-types"
         version = "0.6.0"
@@ -5274,6 +5553,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/28/78/d31230046e58c207284c6b2c4e8d96e6d3cb4e52354721b944d3e1ee4aa5/annotated_types-0.6.0-py3-none-any.whl", hash = "sha256:0641064de18ba7a25dee8f96403ebc39113d0cb953a01429249d5c7564666a43", size = 12360 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "anyio"
@@ -5287,6 +5569,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8", size = 85584 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "apache-airflow"
@@ -5357,6 +5642,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/94/3a/3d050e3decaf7c1064e6e0e5e06f5f9be6c7476b438f8d25e458421e2e13/apache_airflow-2.5.0-py3-none-any.whl", hash = "sha256:fb2c2768e3a233e60b110431b907045256a224cffaf01fa475ccef3db8d6edd3", size = 6627918 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "apache-airflow"
@@ -5432,6 +5720,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/1b/c3/4d4a4050ddc8f9be1ce54c87ec0655cae462eab767474380c9bd19654372/apache_airflow-2.6.0-py3-none-any.whl", hash = "sha256:a7375b1b738f129462e70eb5a1bb95f604862fcb6437047ee159e5b885739402", size = 12085556 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "apache-airflow-providers-common-sql"
         version = "1.8.1"
@@ -5444,6 +5735,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/d9/57/2475919a62d6c4715b3e1f381a8e239dc592b8e1ce4ca7038218a52a5413/apache_airflow_providers_common_sql-1.8.1-py3-none-any.whl", hash = "sha256:16a76a8fad3c9ecd51ac0d386790be4ceacfd7c5cd7768e3f51ea90c89f9d29a", size = 39574 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "apache-airflow-providers-common-sql"
@@ -5459,6 +5753,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/91/60/a5db60c6272f390375e10d5cb38c2f053049a64fce43d396efee8328525a/apache_airflow_providers_common_sql-1.11.1-py3-none-any.whl", hash = "sha256:eb8531b9eedcfdcdd972f12a0bffadc289ade9c3587a5bb5bd146f3240d5eb02", size = 45257 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "apache-airflow-providers-ftp"
         version = "3.6.1"
@@ -5471,6 +5768,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/db/ae/8b2dd4de000b8483766838e06c2ee0005c10177620e0e97b5b3e9061b5ef/apache_airflow_providers_ftp-3.6.1-py3-none-any.whl", hash = "sha256:17442f0dfb0fec6995b7193c31cff3eb0cdc8f99004158980fd447bd39ddb331", size = 18901 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "apache-airflow-providers-ftp"
         version = "3.7.0"
@@ -5482,6 +5782,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/93/09/bdaf595d71e0f2292346a55199ae522bd39eddd32b45b2ad875528e80e9e/apache_airflow_providers_ftp-3.7.0-py3-none-any.whl", hash = "sha256:817936fa2f9f5d7f00f50bfe0dfdf83a3ffbcd863cb92b862a2ab5a40da1b8c4", size = 19219 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "apache-airflow-providers-http"
@@ -5499,6 +5802,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/81/12/14de3bc493a512a916c15950cf0502a6243c4d4c1dd4c6d4fb905bdfb58a/apache_airflow_providers_http-4.7.0-py3-none-any.whl", hash = "sha256:839a456d705a35f2801f687b3daf0545632bde2e44142c44bc76ce36fd0b5678", size = 25521 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "apache-airflow-providers-http"
         version = "4.10.0"
@@ -5515,6 +5821,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/51/53/3238ae94666f90ca2ca4c40edd803cd3fd45cabb8f05ace73656003a748d/apache_airflow_providers_http-4.10.0-py3-none-any.whl", hash = "sha256:3c9af9a64954973a3bc31d33adf145b9b4273e5194603bee86c4fad6c51d872f", size = 27231 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "apache-airflow-providers-imap"
         version = "3.4.0"
@@ -5527,6 +5836,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/81/f1/fd276f800b5790ec046b0fdeadc758055e4ba58474e6f1c9877ddeb08f75/apache_airflow_providers_imap-3.4.0-py3-none-any.whl", hash = "sha256:4972793b0dbb25d5372fe1bf174329958075985c0beca013459ec89fcbbca620", size = 17047 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "apache-airflow-providers-imap"
         version = "3.5.0"
@@ -5538,6 +5850,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/40/b3/7100ae60ab07679aa7a7f471f4747e2360f3d36c1e4b1fd79a81352d14cb/apache_airflow_providers_imap-3.5.0-py3-none-any.whl", hash = "sha256:f5f26c662cff27a532c6a7c3ed0a8bc9c7fcae14634424e82e85150e631a2adb", size = 17289 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "apache-airflow-providers-sqlite"
@@ -5552,6 +5867,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e1/30/95f0c4a6b3ba7f1a2a6a9f0f3f6e0cb0de812851ffd1765981eec3d305b6/apache_airflow_providers_sqlite-3.5.0-py3-none-any.whl", hash = "sha256:7baba67c9ddf75b31d8197e22ca491c2e1cf9e4c6306c1788c150b5457c3a182", size = 13687 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "apache-airflow-providers-sqlite"
         version = "3.7.1"
@@ -5564,6 +5882,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/5c/19/dc768e8294358794350c605ec307c1a6f14e12ef037b52c132b24d415eca/apache_airflow_providers_sqlite-3.7.1-py3-none-any.whl", hash = "sha256:49af9ce1012e2d52ef89dc5d5832ff9bc245330635aa4f011590dc19113a380f", size = 13977 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "apispec"
@@ -5579,6 +5900,9 @@ fn extra_inferences() -> Result<()> {
             { name = "pyyaml", marker = "extra == 'extra-3-pkg-x1'" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "apispec"
         version = "5.2.2"
@@ -5593,6 +5917,9 @@ fn extra_inferences() -> Result<()> {
             { name = "pyyaml" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "argcomplete"
         version = "3.2.3"
@@ -5601,6 +5928,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/88/8c/61021c45428ad2ef6131c6068d14f7f0968767e972e427cd87bd25c9ea7b/argcomplete-3.2.3-py3-none-any.whl", hash = "sha256:c12355e0494c76a2a7b73e3a59b09024ca0ba1e279fb9ed6c1b82d5b74b6a70c", size = 42580 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "asgiref"
@@ -5611,6 +5941,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/39/e3/893e8757be2612e6c266d9bb58ad2e3651524b5b40cf56761e985a28b13e/asgiref-3.8.1-py3-none-any.whl", hash = "sha256:3e1e3ecc849832fe52ccf2cb6686b7a55f82bb1d6aee72a58826471390335e47", size = 23828 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "attrs"
         version = "23.2.0"
@@ -5619,6 +5952,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e0/44/827b2a91a5816512fcaf3cc4ebc465ccd5d598c45cefa6703fcf4a79018f/attrs-23.2.0-py3-none-any.whl", hash = "sha256:99b87a485a5820b23b879f04c2305b44b951b502fd64be915879d77a7e8fc6f1", size = 60752 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "babel"
@@ -5629,6 +5965,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/0d/35/4196b21041e29a42dc4f05866d0c94fa26c9da88ce12c38c2265e42c82fb/Babel-2.14.0-py3-none-any.whl", hash = "sha256:efb1a25b7118e67ce3a259bed20545c29cb68be8ad2c784c83689981b7a57287", size = 11034798 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "blinker"
         version = "1.7.0"
@@ -5638,6 +5977,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/fa/2a/7f3714cbc6356a0efec525ce7a0613d581072ed6eb53eb7b9754f33db807/blinker-1.7.0-py3-none-any.whl", hash = "sha256:c3f865d4d54db7abc53758a01601cf343fe55b84c1de4e3fa910e420b438d5b9", size = 13068 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "cachelib"
         version = "0.9.0"
@@ -5646,6 +5988,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/93/70/58e525451478055b0fd2859b22226888a6985d404fe65e014fc4893d3b75/cachelib-0.9.0-py3-none-any.whl", hash = "sha256:811ceeb1209d2fe51cd2b62810bd1eccf70feba5c52641532498be5c675493b3", size = 15716 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "cattrs"
@@ -5659,6 +6004,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/b3/0d/cd4a4071c7f38385dc5ba91286723b4d1090b87815db48216212c6c6c30e/cattrs-23.2.3-py3-none-any.whl", hash = "sha256:0341994d94971052e9ee70662542699a3162ea1e0c62f7ce1b4a57f563685108", size = 57474 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "certifi"
         version = "2024.2.2"
@@ -5667,6 +6015,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ba/06/a07f096c664aeb9f01624f858c3add0a4e913d6c96257acb4fce61e7de14/certifi-2024.2.2-py3-none-any.whl", hash = "sha256:dc383c07b76109f368f6106eee2b593b04a011ea4d55f652c6ca24a754d1cdd1", size = 163774 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "cffi"
@@ -5688,6 +6039,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c9/6e/751437067affe7ac0944b1ad4856ec11650da77f0dd8f305fae1117ef7bb/cffi-1.16.0-cp312-cp312-win32.whl", hash = "sha256:b2ca4e77f9f47c55c194982e10f058db063937845bb2b7a86c84a6cfe0aefa8b", size = 173564 },
             { url = "https://files.pythonhosted.org/packages/e9/63/e285470a4880a4f36edabe4810057bd4b562c6ddcc165eacf9c3c7210b40/cffi-1.16.0-cp312-cp312-win_amd64.whl", hash = "sha256:68678abf380b42ce21a5f2abde8efee05c114c2fdb2e9eef2efdb0257fba1235", size = 181956 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "charset-normalizer"
@@ -5713,6 +6067,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/28/76/e6222113b83e3622caa4bb41032d0b1bf785250607392e1b778aca0b8a7d/charset_normalizer-3.3.2-py3-none-any.whl", hash = "sha256:3e4d1f6587322d2788836a99c69062fbb091331ec940e02d12d179c1d53e25fc", size = 48543 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "click"
         version = "8.1.7"
@@ -5725,6 +6082,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/00/2e/d53fa4befbf2cfa713304affc7ca780ce4fc1fd8710527771b58311a3229/click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28", size = 97941 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "colorama"
         version = "0.4.6"
@@ -5733,6 +6093,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "colorlog"
@@ -5746,6 +6109,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/51/62/61449c6bb74c2a3953c415b2cdb488e4f0518ac67b35e2b03a6d543035ca/colorlog-4.8.0-py2.py3-none-any.whl", hash = "sha256:3dd15cb27e8119a24c1a7b5c93f9f3b455855e0f73993b1c25921b2f646f1dcd", size = 10023 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "configupdater"
         version = "3.2"
@@ -5754,6 +6120,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e7/f0/b59cb7613d9d0f866b6ff247c5953ad78363c27ff5d684a2a98899ab8220/ConfigUpdater-3.2-py2.py3-none-any.whl", hash = "sha256:0f65a041627d7693840b4dd743581db4c441c97195298a29d075f91b79539df2", size = 34688 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "connexion"
@@ -5786,6 +6155,9 @@ fn extra_inferences() -> Result<()> {
             { name = "swagger-ui-bundle", marker = "extra == 'extra-3-pkg-x1'" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "cron-descriptor"
         version = "1.4.3"
@@ -5794,6 +6166,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e0/18/136b0073305038d1317f3442f614a698ce686830a2810bbe7e875311e09f/cron_descriptor-1.4.3-py3-none-any.whl", hash = "sha256:a67ba21804983b1427ed7f3e1ec27ee77bf24c652b0430239c268c5ddfbf9dc0", size = 49799 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "croniter"
@@ -5807,6 +6182,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/75/b4/a0b97aa934f623fe2342a3c681c70b46f398e91788498802d6147f8f3ff1/croniter-2.0.3-py2.py3-none-any.whl", hash = "sha256:84dc95b2eb6760144cc01eca65a6b9cc1619c93b2dc37d8a27f4319b3eb740de", size = 20009 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "cryptography"
@@ -5842,6 +6220,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e3/14/13acd84f2a8303d9410ba2e24534a9d90c2817583636a91c4f314224768d/cryptography-42.0.5-cp39-abi3-win_amd64.whl", hash = "sha256:a011a644f6d7d03736214d38832e030d8268bcff4a41f728e6030325fea3e400", size = 2891129 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "deprecated"
         version = "1.2.14"
@@ -5854,6 +6235,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/20/8d/778b7d51b981a96554f29136cd59ca7880bf58094338085bcf2a979a0e6a/Deprecated-1.2.14-py2.py3-none-any.whl", hash = "sha256:6fac8b097794a90302bdbb17b9b815e732d3c4720583ff1b198499d78470466c", size = 9561 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "dill"
         version = "0.3.8"
@@ -5862,6 +6246,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c9/7a/cef76fd8438a42f96db64ddaa85280485a9c395e7df3db8158cfec1eee34/dill-0.3.8-py3-none-any.whl", hash = "sha256:c36ca9ffb54365bdd2f8eb3eff7d2a21237f8452b57ace88b1ac615b7e815bd7", size = 116252 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "dnspython"
@@ -5872,6 +6259,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/87/a1/8c5287991ddb8d3e4662f71356d9656d91ab3a36618c3dd11b280df0d255/dnspython-2.6.1-py3-none-any.whl", hash = "sha256:5ef3b9680161f6fa89daf8ad451b5f1a33b18ae8a1c6778cdf4b43f08c0a6e50", size = 307696 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "docutils"
         version = "0.20.1"
@@ -5880,6 +6270,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/26/87/f238c0670b94533ac0353a4e2a1a771a0cc73277b88bff23d3ae35a256c1/docutils-0.20.1-py3-none-any.whl", hash = "sha256:96f387a2c5562db4476f09f13bbab2192e764cac08ebbf3a34a95d9b1e4a59d6", size = 572666 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "email-validator"
@@ -5893,6 +6286,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ba/ec/adc595d04e795b04bb0028fc6b067713fdb4a7e8cec44b428f7144fc432e/email_validator-1.3.1-py2.py3-none-any.whl", hash = "sha256:49a72f5fa6ed26be1c964f0567d931d10bf3fdeeacdf97bc26ef1cd2a44e0bda", size = 22715 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "flask"
@@ -5913,6 +6309,9 @@ fn extra_inferences() -> Result<()> {
         async = [
             { name = "asgiref" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "flask-appbuilder"
@@ -5944,6 +6343,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/3b/28/9acebe45a02908193b28668867b8e948e747e37cb95937ee5f0281d71e27/Flask_AppBuilder-4.1.4-py3-none-any.whl", hash = "sha256:682e18fab43ccec8f4aac696f090ae45326b0ee1f3ad9608896111ff8405a7a4", size = 1779178 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "flask-appbuilder"
@@ -5977,6 +6379,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/86/a2/1fe19bc4baff75a3ae014f4367e77bbd08391f5fd3275f598c58b8cb61e1/Flask_AppBuilder-4.3.0-py3-none-any.whl", hash = "sha256:597975dc6ce983a18d3110e0643d0aae38656b5d36ea74be27eb89c2da686ca7", size = 2480081 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "flask-babel"
         version = "2.0.0"
@@ -5992,6 +6397,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ab/3e/02331179ffab8b79e0383606a028b6a60fb1b4419b84935edd43223406a0/Flask_Babel-2.0.0-py3-none-any.whl", hash = "sha256:e6820a052a8d344e178cdd36dd4bb8aea09b4bda3d5f9fa9f008df2c7f2f5468", size = 9345 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "flask-caching"
         version = "2.1.0"
@@ -6004,6 +6412,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/49/99/e279e06a1a0147763bda92359b3fa5eab8566e032407e539eb851cdfb4bc/Flask_Caching-2.1.0-py3-none-any.whl", hash = "sha256:f02645a629a8c89800d96dc8f690a574a0d49dcd66c7536badc6d362ba46b716", size = 28768 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "flask-jwt-extended"
@@ -6018,6 +6429,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/be/f7/b5415a5ec78666408cd9af9e8163e2953374808d222625cff33f64adfd2a/Flask_JWT_Extended-4.6.0-py2.py3-none-any.whl", hash = "sha256:63a28fc9731bcc6c4b8815b6f954b5904caa534fc2ae9b93b1d3ef12930dca95", size = 22676 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "flask-limiter"
@@ -6035,6 +6449,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/99/a1/c10e95494cf00029501dbd40669b367e91ed1c15d68cb0eb57269a22f3a0/Flask_Limiter-3.5.1-py3-none-any.whl", hash = "sha256:d40526719994197da180caa870ba01e722ed6a70a75790021638dbf29aae82ee", size = 28508 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "flask-login"
         version = "0.6.3"
@@ -6047,6 +6464,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/59/f5/67e9cc5c2036f58115f9fe0f00d203cf6780c3ff8ae0e705e7a9d9e8ff9e/Flask_Login-0.6.3-py3-none-any.whl", hash = "sha256:849b25b82a436bf830a054e74214074af59097171562ab10bfa999e6b78aae5d", size = 17303 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "flask-session"
@@ -6061,6 +6481,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/f5/f0/fec9b98f9222ab1000be1ad8062d756c4fe11a2a69d5599fbe71fd9943f1/flask_session-0.7.0-py3-none-any.whl", hash = "sha256:b1d4a1ce560aa82c06f25b46a105a13e9cd43776987d6ae7d9fea2cbfc7b4bc4", size = 22205 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "flask-sqlalchemy"
         version = "2.5.1"
@@ -6073,6 +6496,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/26/2c/9088b6bd95bca539230bbe9ad446737ed391aab9a83aff403e18dded3e75/Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl", hash = "sha256:f12c3d4cc5cc7fdcc148b9527ea05671718c3ea45d50c7e732cceb33f574b390", size = 17716 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "flask-wtf"
@@ -6087,6 +6513,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/02/2b/0f0cf68a2f052ea3dbb8b6c8c2a7e8aea5e6df7410f5e289437fefbeb461/flask_wtf-1.2.1-py3-none-any.whl", hash = "sha256:fa6793f2fb7e812e0fe9743b282118e581fb1b6c45d414b8af05e659bd653287", size = 12725 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "frozenlist"
@@ -6112,6 +6541,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/83/10/466fe96dae1bff622021ee687f68e5524d6392b0a2f80d05001cd3a451ba/frozenlist-1.4.1-py3-none-any.whl", hash = "sha256:04ced3e6a46b4cfffe20f9ae482818e34eba9b5fb0ce4056e4cc9b6e212d09b7", size = 11552 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "graphviz"
         version = "0.20.3"
@@ -6120,6 +6552,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/00/be/d59db2d1d52697c6adc9eacaf50e8965b6345cc143f671e1ed068818d5cf/graphviz-0.20.3-py3-none-any.whl", hash = "sha256:81f848f2904515d8cd359cc611faba817598d2feaac4027b266aa3eda7b3dde5", size = 47126 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "greenlet"
@@ -6138,6 +6573,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/53/80/3d94d5999b4179d91bcc93745d1b0815b073d61be79dd546b840d17adb18/greenlet-3.0.3-cp312-cp312-win_amd64.whl", hash = "sha256:bba5387a6975598857d86de9eac14210a49d554a77eb8261cc68b7d082f78ce2", size = 293635 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "gunicorn"
         version = "21.2.0"
@@ -6150,6 +6588,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/0e/2a/c3a878eccb100ccddf45c50b6b8db8cf3301a6adede6e31d48e8531cab13/gunicorn-21.2.0-py3-none-any.whl", hash = "sha256:3213aa5e8c24949e792bcacfc176fef362e7aac80b76c56f6b5122bf350722f0", size = 80176 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "h11"
         version = "0.14.0"
@@ -6158,6 +6599,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/95/04/ff642e65ad6b90db43e668d70ffb6736436c7ce41fcc549f4e9472234127/h11-0.14.0-py3-none-any.whl", hash = "sha256:e3fe4ac4b851c468cc8363d500db52c2ead036020723024a109d37346efaa761", size = 58259 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "httpcore"
@@ -6171,6 +6615,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/2c/93/13f25f2f78646bab97aee7680821e30bd85b2ff0fc45d5fdf5393b79716d/httpcore-1.0.4-py3-none-any.whl", hash = "sha256:ac418c1db41bade2ad53ae2f3834a3a0f5ae76b56cf5aa497d2d033384fc7d73", size = 77850 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "httpx"
@@ -6188,6 +6635,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/41/7b/ddacf6dcebb42466abd03f368782142baa82e08fc0c1f8eaa05b4bae87d5/httpx-0.27.0-py3-none-any.whl", hash = "sha256:71d5465162c13681bff01ad59b2cc68dd838ea1f10e51574bac27103f00c91a5", size = 75590 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -6196,6 +6646,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "importlib-resources"
@@ -6206,6 +6659,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/75/06/4df55e1b7b112d183f65db9503bff189e97179b256e1ea450a3c365241e0/importlib_resources-6.4.0-py3-none-any.whl", hash = "sha256:50d10f043df931902d4194ea07ec57960f66a80449ff867bfe782b4c486ba78c", size = 38168 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "inflection"
         version = "0.5.1"
@@ -6215,6 +6671,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/59/91/aa6bde563e0085a02a435aa99b49ef75b0a4b062635e606dab23ce18d720/inflection-0.5.1-py2.py3-none-any.whl", hash = "sha256:f38b2b640938a4f35ade69ac3d053042959b62a0f1076a5bbaa1b9526605a8a2", size = 9454 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "itsdangerous"
         version = "2.1.2"
@@ -6223,6 +6682,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/68/5f/447e04e828f47465eeab35b5d408b7ebaaaee207f48b7136c5a7267a30ae/itsdangerous-2.1.2-py3-none-any.whl", hash = "sha256:2c2349112351b88699d8d4b6b075022c0808887cb7ad10069318a8b0bc88db44", size = 15749 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "jinja2"
@@ -6235,6 +6697,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/30/6d/6de6be2d02603ab56e72997708809e8a5b0fbfee080735109b40a3564843/Jinja2-3.1.3-py3-none-any.whl", hash = "sha256:7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa", size = 133236 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "jsonschema"
@@ -6251,6 +6716,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/39/9d/b035d024c62c85f2e2d4806a59ca7b8520307f34e0932fbc8cc75fe7b2d9/jsonschema-4.21.1-py3-none-any.whl", hash = "sha256:7996507afae316306f9e2290407761157c6f78002dcf7419acb99822143d1c6f", size = 85527 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "jsonschema-specifications"
         version = "2023.12.[X]"
@@ -6262,6 +6730,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/ee/07/44bd408781594c4d0a027666ef27fab1e441b109dc3b76b4f836f8fd04fe/jsonschema_specifications-2023.12.[X]-py3-none-any.whl", hash = "sha256:87e4fdf3a94858b8a2ba2778d9ba57d8a9cafca7c7489c46ba0d30a8bc6a9c3c", size = 18482 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "lazy-object-proxy"
@@ -6279,6 +6750,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/31/8b/94dc8d58704ab87b39faed6f2fc0090b9d90e2e2aa2bbec35c79f3d2a054/lazy_object_proxy-1.10.0-pp310.pp311.pp312.pp38.pp39-none-any.whl", hash = "sha256:80fa48bd89c8f2f456fc0765c11c23bf5af827febacd2f523ca5bc1893fcc09d", size = 16405 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "limits"
         version = "3.10.1"
@@ -6294,6 +6768,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/56/90/cf9d158b7329dde86674c30fcfc2b5aea68d37d0d09e208724fd70c8e43e/limits-3.10.1-py3-none-any.whl", hash = "sha256:446242f5a6f7b8c7744e286a70793264ed81bca97860f94b821347284d14fbe9", size = 45159 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "linkify-it-py"
         version = "2.0.3"
@@ -6306,6 +6783,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/04/1e/b832de447dee8b582cac175871d2f6c3d5077cc56d5575cadba1fd1cccfa/linkify_it_py-2.0.3-py3-none-any.whl", hash = "sha256:6bcbc417b0ac14323382aef5c5192c0075bf8a9d6b41820a2b66371eac6b6d79", size = 19820 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "lockfile"
         version = "0.12.2"
@@ -6314,6 +6794,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c8/22/9460e311f340cb62d26a38c419b1381b8593b0bb6b5d1f056938b086d362/lockfile-0.12.2-py2.py3-none-any.whl", hash = "sha256:6c3cb24f344923d30b2785d5ad75182c8ea7ac1b6171b08657258ec7429d50fa", size = 13564 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "mako"
@@ -6327,6 +6810,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/2b/8d/9f11d0b9ac521febb806e7f30dc5982d0f4f5821217712c59005fbc5c1e3/Mako-1.3.2-py3-none-any.whl", hash = "sha256:32a99d70754dfce237019d17ffe4a282d2d3351b9c476e90d8a60e63f133b80c", size = 78667 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "markdown"
         version = "3.6"
@@ -6335,6 +6821,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/fc/b3/0c0c994fe49cd661084f8d5dc06562af53818cc0abefaca35bdc894577c3/Markdown-3.6-py3-none-any.whl", hash = "sha256:48f276f4d8cfb8ce6527c8f79e2ee29708508bf4d40aa410fbc3b4ee832c850f", size = 105381 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "markdown-it-py"
@@ -6347,6 +6836,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/42/d7/1ec15b46af6af88f19b8e5ffea08fa375d433c998b8a7639e76935c14f1f/markdown_it_py-3.0.0-py3-none-any.whl", hash = "sha256:355216845c60bd96232cd8d8c40e8f9765cc86f46880e43a8fd22dc1a1a8cab1", size = 87528 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "markupsafe"
@@ -6366,6 +6858,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/3f/14/c3554d512d5f9100a95e737502f4a2323a1959f6d0d01e0d0997b35f7b10/MarkupSafe-2.1.5-cp312-cp312-win_amd64.whl", hash = "sha256:823b65d8706e32ad2df51ed89496147a42a2a6e01c13cfb6ffb8b1e92bc910bb", size = 17127 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "marshmallow"
         version = "3.21.1"
@@ -6377,6 +6872,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/38/04/37055b7013dfaaf66e3a9a51e46857cc9be151476a891b995fa70da7e139/marshmallow-3.21.1-py3-none-any.whl", hash = "sha256:f085493f79efb0644f270a9bf2892843142d80d7174bbbd2f3713f2a589dc633", size = 49362 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "marshmallow-enum"
@@ -6390,6 +6888,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c6/59/ef3a3dc499be447098d4a89399beb869f813fee1b5a57d5d79dee2c1bf51/marshmallow_enum-1.5.1-py2.py3-none-any.whl", hash = "sha256:57161ab3dbfde4f57adeb12090f39592e992b9c86d206d02f6bd03ebec60f072", size = 4186 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "marshmallow-oneofschema"
         version = "3.1.1"
@@ -6401,6 +6902,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/5c/81/3ef15337c19d3e3432945aad738081a5f54c16885277c7dff300b5f85b24/marshmallow_oneofschema-3.1.1-py3-none-any.whl", hash = "sha256:ff4cb2a488785ee8edd521a765682c2c80c78b9dc48894124531bdfa1ec9303b", size = 5726 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "marshmallow-sqlalchemy"
@@ -6415,6 +6919,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/d1/84/1f4d7393d04f2ae0d4098791d1901a713f45ba70ff6f3c35ff2f7fd81f7b/marshmallow_sqlalchemy-0.26.1-py2.py3-none-any.whl", hash = "sha256:ba7493eeb8669a3bf00d8f906b657feaa87a740ae9e4ecf829cfd6ddf763d276", size = 15639 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "mdit-py-plugins"
         version = "0.4.0"
@@ -6427,6 +6934,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/e5/3c/fe85f19699a7b40c8f9ce8ecee7e269b9b3c94099306df6f9891bdefeedd/mdit_py_plugins-0.4.0-py3-none-any.whl", hash = "sha256:b51b3bb70691f57f974e257e367107857a93b36f322a9e6d44ca5bf28ec2def9", size = 54080 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "mdurl"
         version = "0.1.2"
@@ -6436,6 +6946,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8", size = 9979 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "more-itertools"
         version = "10.2.0"
@@ -6444,6 +6957,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/50/e2/8e10e465ee3987bb7c9ab69efb91d867d93959095f4807db102d07995d94/more_itertools-10.2.0-py3-none-any.whl", hash = "sha256:686b06abe565edfab151cb8fd385a05651e1fdf8f0a14191e4439283421f8684", size = 57015 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "msgspec"
@@ -6459,6 +6975,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ce/0b/d4cc1b09f8dfcc6cc4cc9739c13a86e093fe70257b941ea9feb15df22996/msgspec-0.18.6-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:d70cb3d00d9f4de14d0b31d38dfe60c88ae16f3182988246a9861259c6722af6", size = 217113 },
             { url = "https://files.pythonhosted.org/packages/3f/76/30d8f152299f65c85c46a2cbeaf95ad1d18516b5ce730acdaef696d4cfe6/msgspec-0.18.6-cp312-cp312-win_amd64.whl", hash = "sha256:1003c20bfe9c6114cc16ea5db9c5466e49fae3d7f5e2e59cb70693190ad34da0", size = 187184 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "multidict"
@@ -6484,6 +7003,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/fa/a2/17e1e23c6be0a916219c5292f509360c345b5fa6beeb50d743203c27532c/multidict-6.0.5-py3-none-any.whl", hash = "sha256:0d63c74e3d7ab26de115c49bffc92cc77ed23395303d496eae515d4204a625e7", size = 9729 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "ordered-set"
         version = "4.1.0"
@@ -6492,6 +7014,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/33/55/af02708f230eb77084a299d7b08175cff006dea4f2721074b92cdb0296c0/ordered_set-4.1.0-py3-none-any.whl", hash = "sha256:046e1132c71fcf3330438a539928932caf51ddbc582496833e23de611de14562", size = 7634 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "packaging"
@@ -6502,6 +7027,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/49/df/1fceb2f8900f8639e278b056416d49134fb8d84c5942ffaa01ad34782422/packaging-24.0-py3-none-any.whl", hash = "sha256:2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5", size = 53488 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "pathspec"
         version = "0.9.0"
@@ -6510,6 +7038,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/42/ba/a9d64c7bcbc7e3e8e5f93a52721b377e994c22d16196e2b0f1236774353a/pathspec-0.9.0-py2.py3-none-any.whl", hash = "sha256:7d15c4ddb0b5c802d161efc417ec1a2558ea2653c2e8ad9c19098201dc1c993a", size = 31165 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "pendulum"
@@ -6533,6 +7064,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/9a/91/fcd992eb36b77ab43f2cf44307b72c01a6fbb27f55c1bb2d4af30e9a6cb7/pendulum-3.0.0-cp312-none-win_amd64.whl", hash = "sha256:78f8f4e7efe5066aca24a7a57511b9c2119f5c2b5eb81c46ff9222ce11e0a7a5", size = 293456 },
             { url = "https://files.pythonhosted.org/packages/3b/60/ba8aa296ca6d76603d58146b4a222cd99e7da33831158b8c00240a896a56/pendulum-3.0.0-cp312-none-win_arm64.whl", hash = "sha256:28f49d8d1e32aae9c284a90b6bb3873eee15ec6e1d9042edd611b22a94ac462f", size = 288054 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "pkg"
@@ -6567,6 +7101,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/a5/5b/0cc789b59e8cc1bf288b38111d002d8c5917123194d45b29dcdac64723cc/pluggy-1.4.0-py3-none-any.whl", hash = "sha256:7db9f7b503d67d1c5b95f59773ebb58a8c1c288129a88665838012cfb07b8981", size = 20120 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "prison"
         version = "0.2.1"
@@ -6578,6 +7115,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f1/bd/e55e14cd213174100be0353824f2add41e8996c6f32081888897e8ec48b5/prison-0.2.1-py2.py3-none-any.whl", hash = "sha256:f90bab63fca497aa0819a852f64fb21a4e181ed9f6114deaa5dc04001a7555c5", size = 5794 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "psutil"
@@ -6593,6 +7133,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/05/33/2d74d588408caedd065c2497bdb5ef83ce6082db01289a1e1147f6639802/psutil-5.9.8-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:d16bbddf0693323b8c6123dd804100241da461e41d6e332fb0ba6058f630f8c8", size = 249898 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "pycparser"
         version = "2.21"
@@ -6601,6 +7144,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/62/d5/5f610ebe421e85889f2e55e33b7f9a6795bd982198517d912eb1c76e1a53/pycparser-2.21-py2.py3-none-any.whl", hash = "sha256:8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9", size = 118697 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "pydantic"
@@ -6615,6 +7161,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e5/f3/8296f550276194a58c5500d55b19a27ae0a5a3a51ffef66710c58544b32d/pydantic-2.6.4-py3-none-any.whl", hash = "sha256:cc46fce86607580867bdc3361ad462bab9c222ef042d3da86f2fb333e1d916c5", size = 394911 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "pydantic-core"
@@ -6640,6 +7189,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/42/cb/c44678e6f3b517bd89beebc2bd0afc440674b9820d008ef3d0fac482476a/pydantic_core-2.16.3-cp312-none-win_arm64.whl", hash = "sha256:ec08be75bb268473677edb83ba71e7e74b43c008e4a7b1907c6d57e940bf34b6", size = 1848305 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "pygments"
         version = "2.17.2"
@@ -6649,6 +7201,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/97/9c/372fef8377a6e340b1704768d20daaded98bf13282b5327beb2e2fe2c7ef/pygments-2.17.2-py3-none-any.whl", hash = "sha256:b27c2826c47d0f3219f29554824c30c5e8945175d888647acd804ddd04af846c", size = 1179756 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "pyjwt"
         version = "2.8.0"
@@ -6657,6 +7212,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/2b/4f/e04a8067c7c96c364cef7ef73906504e2f40d690811c021e1a1901473a19/PyJWT-2.8.0-py3-none-any.whl", hash = "sha256:59127c392cc44c2da5bb3192169a91f429924e17aff6534d70fdc02ab3e04320", size = 22591 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "python-daemon"
@@ -6672,6 +7230,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/83/7f/feffd97af851e2a837b5ca9bfbe570002c45397734724e4abfd4c62fdd0d/python_daemon-3.0.1-py3-none-any.whl", hash = "sha256:42bb848a3260a027fa71ad47ecd959e471327cb34da5965962edd5926229f341", size = 31872 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "python-dateutil"
         version = "2.9.0.post0"
@@ -6684,6 +7245,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl", hash = "sha256:a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427", size = 229892 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "python-multipart"
         version = "0.0.9"
@@ -6692,6 +7256,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/3d/47/444768600d9e0ebc82f8e347775d24aef8f6348cf00e9fa0e81910814e6d/python_multipart-0.0.9-py3-none-any.whl", hash = "sha256:97ca7b8ea7b05f977dc3849c3ba99d51689822fab725c3703af7c866a0c2b215", size = 22299 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "python-nvd3"
@@ -6702,6 +7269,9 @@ fn extra_inferences() -> Result<()> {
             { name = "python-slugify" },
         ]
         sdist = { url = "https://files.pythonhosted.org/packages/0b/aa/97165daa6e319409c5c2582e62736a7353bda3c90d90fdcb0b11e116dd2d/python-nvd3-0.15.0.tar.gz", hash = "sha256:fbd75ff47e0ef255b4aa4f3a8b10dc8b4024aa5a9a7abed5b2406bd3cb817715", size = 31954 }
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "python-slugify"
@@ -6715,6 +7285,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/a4/62/02da182e544a51a5c3ccf4b03ab79df279f9c60c5e82d5e8bec7ca26ac11/python_slugify-8.0.4-py2.py3-none-any.whl", hash = "sha256:276540b79961052b66b7d116620b36518847f52d5fd9e3a70164fc8c50faa6b8", size = 10051 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "pytz"
         version = "2024.1"
@@ -6723,6 +7296,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/9c/3d/a121f284241f08268b21359bd425f7d4825cffc5ac5cd0e1b3d82ffd2b10/pytz-2024.1-py2.py3-none-any.whl", hash = "sha256:328171f4e3623139da4983451950b28e95ac706e13f3f2630a879749e7a8b319", size = 505474 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "pyyaml"
@@ -6739,6 +7315,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/2b/9f/fbade56564ad486809c27b322d0f7e6a89c01f6b4fe208402e90d4443a99/PyYAML-6.0.1-cp312-cp312-win_amd64.whl", hash = "sha256:0d3304d8c0adc42be59c5f8a4d9e3d7379e6955ad754aa9d6ab7a398b59dd1df", size = 138675 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "quickpath-airflow-operator"
         version = "1.0.2"
@@ -6752,6 +7331,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/54/6f/5a61a1cd52804e492de2dae368cde66b08438aceb81fcf11e152fa855eec/quickpath_airflow_operator-1.0.2-py3-none-any.whl", hash = "sha256:09967f8afd28c01c46856fbe8141e64dd42b14865c3b9a537861cfe0f441675e", size = 6388 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "referencing"
         version = "0.34.0"
@@ -6764,6 +7346,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/42/8e/ae1de7b12223986e949bdb886c004de7c304b6fa94de5b87c926c1099656/referencing-0.34.0-py3-none-any.whl", hash = "sha256:d53ae300ceddd3169f1ffa9caf2cb7b769e92657e4fafb23d34b93679116dfd4", size = 26661 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "requests"
@@ -6780,6 +7365,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/70/8e/0e2d847013cb52cd35b38c009bb167a1a26b2ce6cd6965bf26b47bc0bf44/requests-2.31.0-py3-none-any.whl", hash = "sha256:58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f", size = 62574 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "requests-toolbelt"
         version = "1.0.0"
@@ -6792,6 +7380,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/3f/51/d4db610ef29373b879047326cbf6fa98b6c1969d6f6dc423279de2b1be2c/requests_toolbelt-1.0.0-py2.py3-none-any.whl", hash = "sha256:cccfdd665f0a24fcf4726e690f65639d272bb0637b9b92dfd91a5568ccf6bd06", size = 54481 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "rfc3339-validator"
         version = "0.1.4"
@@ -6803,6 +7394,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/7b/44/4e421b96b67b2daff264473f7465db72fbdf36a07e05494f50300cc7b0c6/rfc3339_validator-0.1.4-py2.py3-none-any.whl", hash = "sha256:24f6ec1eda14ef823da9e36ec7113124b39c04d50a4d3d3a3c2859577e7791fa", size = 3490 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "rich"
@@ -6817,6 +7411,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/87/67/a37f6214d0e9fe57f6ae54b2956d550ca8365857f42a1ce0392bb21d9410/rich-13.7.1-py3-none-any.whl", hash = "sha256:4edbae314f59eb482f54e9e30bf00d33350aaa94f4bfcd4e9e3110e64d0d7222", size = 240681 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "rich-argparse"
         version = "1.4.0"
@@ -6828,6 +7425,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c2/f6/19c1208dd565f13ff6062db31006b6ddf4c68c1946d5ee7bc0fec0592f1d/rich_argparse-1.4.0-py3-none-any.whl", hash = "sha256:68b263d3628d07b1d27cfe6ad896da2f5a5583ee2ba226aeeb24459840023b38", size = 19948 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "rpds-py"
@@ -6850,6 +7450,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/14/8c/e69f5636f4ab6ee0855aef3b16e6c97f8b636e9e04fa5a4bcc75126acb13/rpds_py-0.18.0-cp312-none-win_amd64.whl", hash = "sha256:e003b002ec72c8d5a3e3da2989c7d6065b47d9eaa70cd8808b5384fbb970f4ec", size = 206344 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "setproctitle"
         version = "1.3.3"
@@ -6870,6 +7473,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/90/e8/ece468e93e99d3b2826e9649f6d03e80f071d451e20c742f201f77d1bea1/setproctitle-1.3.3-cp312-cp312-win_amd64.whl", hash = "sha256:f38d48abc121263f3b62943f84cbaede05749047e428409c2c199664feb6abc7", size = 11809 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "setuptools"
         version = "69.2.0"
@@ -6878,6 +7484,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/92/e1/1c8bb3420105e70bdf357d57dd5567202b4ef8d27f810e98bb962d950834/setuptools-69.2.0-py3-none-any.whl", hash = "sha256:c21c49fb1042386df081cb5d86759792ab89efca84cf114889191cd09aacc80c", size = 821485 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "six"
@@ -6888,6 +7497,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254", size = 11053 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sniffio"
         version = "1.3.1"
@@ -6896,6 +7508,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2", size = 10235 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "sqlalchemy"
@@ -6913,6 +7528,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/49/62/d0e4502e27eaa10da35243d5241c3be3ed3974d607281e3b4ccc065d9853/SQLAlchemy-1.4.52-cp312-cp312-win_amd64.whl", hash = "sha256:f12aaf94f4d9679ca475975578739e12cc5b461172e04d66f7a3c39dd14ffc64", size = 1591783 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sqlalchemy-jsonfield"
         version = "1.0.2"
@@ -6924,6 +7542,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/fd/67/d75d119e70863e0519c8eec5fc66714d34ad1ee9e5e73bf4fc8e3d259fac/SQLAlchemy_JSONField-1.0.2-py3-none-any.whl", hash = "sha256:b2945fa1e60b07d5764a7c73b18da427948b35dd4c07c0e94939001dc2dacf77", size = 10217 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "sqlalchemy-utils"
@@ -6937,6 +7558,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/d5/f0/dc4757b83ac1ab853cf222df8535ed73973e0c203d983982ba7b8bc60508/SQLAlchemy_Utils-0.41.2-py3-none-any.whl", hash = "sha256:85cf3842da2bf060760f955f8467b87983fb2e30f1764fd0e24a48307dc8ec6e", size = 93083 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sqlparse"
         version = "0.4.4"
@@ -6945,6 +7569,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/98/5a/66d7c9305baa9f11857f247d4ba761402cea75db6058ff850ed7128957b7/sqlparse-0.4.4-py3-none-any.whl", hash = "sha256:5430a4fe2ac7d0f93e66f1efc6e1338a41884b7ddf2a350cedd20ccc4d9d28f3", size = 41183 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "starlette"
@@ -6958,6 +7585,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/fd/18/31fa32ed6c68ba66220204ef0be798c349d0a20c1901f9d4a794e08c76d8/starlette-0.37.2-py3-none-any.whl", hash = "sha256:6fe59f29268538e5d0d182f2791a479a0c64638e6935d1c6989e63fb2699c6ee", size = 71908 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "swagger-ui-bundle"
         version = "1.1.0"
@@ -6970,6 +7600,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/a2/66/8fb11445940bde7ca328d6aa23dd36b6056197d862f4bd6bb51c820c50e5/swagger_ui_bundle-1.1.0-py3-none-any.whl", hash = "sha256:f7526f7bb99923e10594c54247265839bec97e96b0438561ac86faf40d40dd57", size = 2626591 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "tabulate"
         version = "0.9.0"
@@ -6978,6 +7611,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/40/44/4a5f08c96eb108af5cb50b41f76142f0afa346dfa99d5296fe7202a11854/tabulate-0.9.0-py3-none-any.whl", hash = "sha256:024ca478df22e9340661486f85298cff5f6dcdba14f3813e8830015b9ed1948f", size = 35252 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "tenacity"
@@ -6988,6 +7624,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/f4/f1/990741d5bb2487d529d20a433210ffa136a367751e454214013b441c4575/tenacity-8.2.3-py3-none-any.whl", hash = "sha256:ce510e327a630c9e1beaf17d42e6ffacc88185044ad85cf74c0a8887c6a0f88c", size = 24401 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "termcolor"
         version = "2.4.0"
@@ -6997,6 +7636,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/d9/5f/8c716e47b3a50cbd7c146f45881e11d9414def768b7cd9c5e6650ec2a80a/termcolor-2.4.0-py3-none-any.whl", hash = "sha256:9297c0df9c99445c2412e832e882a7884038a25617c60cea2ad69488d4040d63", size = 7719 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "text-unidecode"
         version = "1.3"
@@ -7005,6 +7647,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/a6/a5/c0b6468d3824fe3fde30dbb5e1f687b291608f9473681bbf7dabbf5a87d7/text_unidecode-1.3-py2.py3-none-any.whl", hash = "sha256:1311f10e8b895935241623731c2ba64f4c455287888b18189350b67134a822e8", size = 78154 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "time-machine"
@@ -7029,6 +7674,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/22/5e/19db2889ac0930ffa3e128206422d56ff96c19a610cb6c81200d67e0af19/time_machine-2.14.1-cp312-cp312-win_arm64.whl", hash = "sha256:edea570f3835a036e8860bb8d6eb8d08473c59313db86e36e3b207f796fd7b14", size = 18279 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typing-extensions"
         version = "4.10.0"
@@ -7037,6 +7685,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475", size = 33926 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "tzdata"
@@ -7047,6 +7698,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/65/58/f9c9e6be752e9fcb8b6a0ee9fb87e6e7a1f6bcab2cdc73f02bb7ba91ada0/tzdata-2024.1-py2.py3-none-any.whl", hash = "sha256:9068bc196136463f5245e51efda838afa15aaeca9903f49050dfa2679db4d252", size = 345370 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "uc-micro-py"
         version = "1.0.3"
@@ -7056,11 +7710,17 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/37/87/1f677586e8ac487e29672e4b17455758fce261de06a0d086167bb760361a/uc_micro_py-1.0.3-py3-none-any.whl", hash = "sha256:db1dffff340817673d7b466ec86114a9dc0e9d4d9b5ba229d9d60e5c12600cd5", size = 6229 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "unicodecsv"
         version = "0.14.1"
         source = { registry = "https://pypi.org/simple" }
         sdist = { url = "https://files.pythonhosted.org/packages/6f/a4/691ab63b17505a26096608cc309960b5a6bdf39e4ba1a793d5f9b1a53270/unicodecsv-0.14.1.tar.gz", hash = "sha256:018c08037d48649a0412063ff4eda26eaa81eff1546dbffa51fa5293276ff7fc", size = 10267 }
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "urllib3"
@@ -7070,6 +7730,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/a2/73/a68704750a7679d0b6d3ad7aa8d4da8e14e151ae82e6fee774e6e0d05ec8/urllib3-2.2.1-py3-none-any.whl", hash = "sha256:450b20ec296a467077128bff42b73080516e71b56ff59a60a02bef2232c4fa9d", size = 121067 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "werkzeug"
@@ -7082,6 +7745,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c3/fc/254c3e9b5feb89ff5b9076a23218dafbc99c96ac5941e900b71206e6313b/werkzeug-3.0.1-py3-none-any.whl", hash = "sha256:90a285dc0e42ad56b34e696398b8122ee4c681833fb35b8334a095d82c56da10", size = 226669 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "wrapt"
@@ -7102,6 +7768,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ff/21/abdedb4cdf6ff41ebf01a74087740a709e2edb146490e4d9beea054b0b7a/wrapt-1.16.0-py3-none-any.whl", hash = "sha256:6906c4100a8fcbf2fa735f6059214bb13b97f75b1a61777fcf6432121ef12ef1", size = 23362 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "wtforms"
         version = "3.1.2"
@@ -7113,6 +7782,9 @@ fn extra_inferences() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/18/19/c3232f35e24dccfad372e9f341c4f3a1166ae7c66e4e1351a9467c921cc1/wtforms-3.1.2-py3-none-any.whl", hash = "sha256:bf831c042829c8cdbad74c27575098d541d039b1faa74c771545ecac916f2c07", size = 145961 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "yarl"
@@ -7141,6 +7813,9 @@ fn extra_inferences() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c5/f4/2fdc5a11503bc61818243653d836061c9ce0370e2dd9ac5917258a007675/yarl-1.9.4-cp312-cp312-win_amd64.whl", hash = "sha256:a9bd00dc3bc395a662900f33f74feb3e757429e545d831eef5bb280252631984", size = 76397 },
             { url = "https://files.pythonhosted.org/packages/4d/05/4d79198ae568a92159de0f89e710a8d19e3fa267b719a236582eee921f4a/yarl-1.9.4-py3-none-any.whl", hash = "sha256:928cecb0ef9d5a7946eb6ff58417ad2fe9375762382f1bf5c55e61645f2c43ad", size = 31638 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
@@ -7244,6 +7919,9 @@ fn deduplicate_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ea/65/9c7a31be86861d43da3d4f8661f677b38120320540773a04979ad6fa9ecd/idna-3.5-py3-none-any.whl", hash = "sha256:79b8f0ac92d2351be5f6122356c9a592c96d81c9a79e4b488bf2a6a15f88057a", size = 61566 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.6"
@@ -7256,6 +7934,9 @@ fn deduplicate_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl", hash = "sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f", size = 61567 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "markupsafe"
         version = "2.0.0"
@@ -7265,6 +7946,9 @@ fn deduplicate_resolution_markers() -> Result<()> {
         ]
         sdist = { url = "https://files.pythonhosted.org/packages/67/6a/5b3ed5c122e20c33d2562df06faf895a6b91b0a6b96a4626440ffe1d5c8e/MarkupSafe-2.0.0.tar.gz", hash = "sha256:4fae0677f712ee090721d8b17f412f1cbceefbf0dc180fe91bab3232f38b4527", size = 18466 }
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "markupsafe"
         version = "2.1.0"
@@ -7273,6 +7957,9 @@ fn deduplicate_resolution_markers() -> Result<()> {
             "sys_platform == 'linux'",
         ]
         sdist = { url = "https://files.pythonhosted.org/packages/62/0f/52c009332fdadd484e898dc8f2acca0663c1031b3517070fd34ad9c1b64e/MarkupSafe-2.1.0.tar.gz", hash = "sha256:80beaf63ddfbc64a0452b841d8036ca0611e049650e20afcb882f5d3c266d65f", size = 18546 }
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "pkg"
@@ -7416,6 +8103,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/a5/32/8f6669fc4798494966bf446c8c4a162e0b5d893dff088afddf76414f70e1/certifi-2024.12.14-py3-none-any.whl", hash = "sha256:1275f7a45be9464efc1173084eaa30f866fe2e47d389406136d332ed4967ec56", size = 164927 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "charset-normalizer"
         version = "3.4.1"
@@ -7438,6 +8128,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/0e/f6/65ecc6878a89bb1c23a086ea335ad4bf21a588990c3f535a227b9eea9108/charset_normalizer-3.4.1-py3-none-any.whl", hash = "sha256:d98b1668f06378c6dbefec3b92299716b931cd4e6061f3c875a71ced1780ab85", size = 49767 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "click"
         version = "8.1.8"
@@ -7450,6 +8143,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/7e/d4/7ebdbd03970677812aac39c869717059dbb71a4cfc033ca6e5221787892c/click-8.1.8-py3-none-any.whl", hash = "sha256:63c132bbbed01578a06712a2d1f497bb62d9c1c0d329b7903a866228027263b2", size = 98188 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "colorama"
         version = "0.4.6"
@@ -7458,6 +8154,9 @@ fn overlapping_resolution_markers() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "docker-pycreds"
@@ -7471,6 +8170,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/f5/e8/f6bd1eee09314e7e6dee49cbe2c5e22314ccdb38db16c9fc72d2fa80d054/docker_pycreds-0.4.0-py2.py3-none-any.whl", hash = "sha256:7266112468627868005106ec19cd0d722702d2b7d5912a28e19b826c3d37af49", size = 8982 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "filelock"
         version = "3.17.0"
@@ -7480,6 +8182,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/89/ec/00d68c4ddfedfe64159999e5f8a98fb8442729a63e2077eb9dcd89623d27/filelock-3.17.0-py3-none-any.whl", hash = "sha256:533dc2f7ba78dc2f0f531fc6c4940addf7b70a481e269a5a3b93be94ffbe8338", size = 16164 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "fsspec"
         version = "2024.12.0"
@@ -7488,6 +8193,9 @@ fn overlapping_resolution_markers() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/de/86/5486b0188d08aa643e127774a99bac51ffa6cf343e3deb0583956dca5b22/fsspec-2024.12.0-py3-none-any.whl", hash = "sha256:b520aed47ad9804237ff878b504267a3b0b441e97508bd6d2d8774e3db85cee2", size = 183862 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "gitdb"
@@ -7501,6 +8209,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/a0/61/5c78b91c3143ed5c14207f463aecfc8f9dbb5092fb2869baf37c273b2705/gitdb-4.0.12-py3-none-any.whl", hash = "sha256:67073e15955400952c6565cc3e707c554a4eea2e428946f7a4c162fab9bd9bcf", size = 62794 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "gitpython"
         version = "3.1.44"
@@ -7513,6 +8224,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/1d/9a/4114a9057db2f1462d5c8f8390ab7383925fe1ac012eaa42402ad65c2963/GitPython-3.1.44-py3-none-any.whl", hash = "sha256:9e0e10cda9bed1ee64bc9a6de50e7e38a9c9943241cd7f585f6df3ed28011110", size = 207599 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "idna"
         version = "3.10"
@@ -7521,6 +8235,9 @@ fn overlapping_resolution_markers() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/76/c6/c88e154df9c4e1a2a66ccf0005a88dfb2650c1dffb6f5ce603dfbd452ce3/idna-3.10-py3-none-any.whl", hash = "sha256:946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3", size = 70442 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "jinja2"
@@ -7533,6 +8250,9 @@ fn overlapping_resolution_markers() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/bd/0f/2ba5fbcd631e3e88689309dbe978c5769e883e4b84ebfe7da30b43275c5a/jinja2-3.1.5-py3-none-any.whl", hash = "sha256:aba0f4dc9ed8013c424088f68a5c226f7d6097ed89b246d7749c2ec4175c6adb", size = 134596 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "markupsafe"
@@ -7552,6 +8272,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/44/06/e7175d06dd6e9172d4a69a72592cb3f7a996a9c396eee29082826449bbc3/MarkupSafe-3.0.2-cp310-cp310-win_amd64.whl", hash = "sha256:6af100e168aa82a50e186c82875a5893c5597a0c1ccdb0d8b40240b1f28b969a", size = 15514 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "mpmath"
         version = "1.3.0"
@@ -7560,6 +8283,9 @@ fn overlapping_resolution_markers() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl", hash = "sha256:a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c", size = 536198 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "networkx"
@@ -7570,6 +8296,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/b9/54/dd730b32ea14ea797530a4479b2ed46a6fb250f682a9cfb997e968bf0261/networkx-3.4.2-py3-none-any.whl", hash = "sha256:df5d4365b724cf81b8c6a7312509d0c22386097011ad1abe274afd5e9d3bbc5f", size = 1723263 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-cublas-cu12"
         version = "12.1.3.1"
@@ -7578,6 +8307,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/37/6d/121efd7382d5b0284239f4ab1fc1590d86d34ed4a4a2fdb13b30ca8e5740/nvidia_cublas_cu12-12.1.3.1-py3-none-manylinux1_x86_64.whl", hash = "sha256:ee53ccca76a6fc08fb9701aa95b6ceb242cdaab118c3bb152af4e579af792728", size = 410594774 },
             { url = "https://files.pythonhosted.org/packages/c5/ef/32a375b74bea706c93deea5613552f7c9104f961b21df423f5887eca713b/nvidia_cublas_cu12-12.1.3.1-py3-none-win_amd64.whl", hash = "sha256:2b964d60e8cf11b5e1073d179d85fa340c120e99b3067558f3cf98dd69d02906", size = 439918445 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "nvidia-cuda-cupti-cu12"
@@ -7588,6 +8320,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/d0/56/0021e32ea2848c24242f6b56790bd0ccc8bf99f973ca790569c6ca028107/nvidia_cuda_cupti_cu12-12.1.105-py3-none-win_amd64.whl", hash = "sha256:bea8236d13a0ac7190bd2919c3e8e6ce1e402104276e6f9694479e48bb0eb2a4", size = 10154340 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-cuda-nvrtc-cu12"
         version = "12.1.105"
@@ -7597,6 +8332,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ad/1d/f76987c4f454eb86e0b9a0e4f57c3bf1ac1d13ad13cd1a4da4eb0e0c0ce9/nvidia_cuda_nvrtc_cu12-12.1.105-py3-none-win_amd64.whl", hash = "sha256:0a98a522d9ff138b96c010a65e145dc1b4850e9ecb75a0172371793752fd46ed", size = 19331863 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-cuda-runtime-cu12"
         version = "12.1.105"
@@ -7605,6 +8343,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/eb/d5/c68b1d2cdfcc59e72e8a5949a37ddb22ae6cade80cd4a57a84d4c8b55472/nvidia_cuda_runtime_cu12-12.1.105-py3-none-manylinux1_x86_64.whl", hash = "sha256:6e258468ddf5796e25f1dc591a31029fa317d97a0a94ed93468fc86301d61e40", size = 823596 },
             { url = "https://files.pythonhosted.org/packages/9f/e2/7a2b4b5064af56ea8ea2d8b2776c0f2960d95c88716138806121ae52a9c9/nvidia_cuda_runtime_cu12-12.1.105-py3-none-win_amd64.whl", hash = "sha256:dfb46ef84d73fababab44cf03e3b83f80700d27ca300e537f85f636fac474344", size = 821226 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "nvidia-cudnn-cu12"
@@ -7617,6 +8358,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/ff/74/a2e2be7fb83aaedec84f391f082cf765dfb635e7caa9b49065f73e4835d8/nvidia_cudnn_cu12-8.9.2.26-py3-none-manylinux1_x86_64.whl", hash = "sha256:5ccb288774fdfb07a7e7025ffec286971c06d8d7b4fb162525334616d7629ff9", size = 731725872 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-cufft-cu12"
         version = "11.0.2.54"
@@ -7626,6 +8370,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/f7/57/7927a3aa0e19927dfed30256d1c854caf991655d847a4e7c01fe87e3d4ac/nvidia_cufft_cu12-11.0.2.54-py3-none-win_amd64.whl", hash = "sha256:d9ac353f78ff89951da4af698f80870b1534ed69993f10a4cf1d96f21357e253", size = 121344196 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-curand-cu12"
         version = "10.3.2.106"
@@ -7634,6 +8381,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/44/31/4890b1c9abc496303412947fc7dcea3d14861720642b49e8ceed89636705/nvidia_curand_cu12-10.3.2.106-py3-none-manylinux1_x86_64.whl", hash = "sha256:9d264c5036dde4e64f1de8c50ae753237c12e0b1348738169cd0f8a536c0e1e0", size = 56467784 },
             { url = "https://files.pythonhosted.org/packages/5c/97/4c9c7c79efcdf5b70374241d48cf03b94ef6707fd18ea0c0f53684931d0b/nvidia_curand_cu12-10.3.2.106-py3-none-win_amd64.whl", hash = "sha256:75b6b0c574c0037839121317e17fd01f8a69fd2ef8e25853d826fec30bdba74a", size = 55995813 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "nvidia-cusolver-cu12"
@@ -7649,6 +8399,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/b8/80/8fca0bf819122a631c3976b6fc517c1b10741b643b94046bd8dd451522c5/nvidia_cusolver_cu12-11.4.5.107-py3-none-win_amd64.whl", hash = "sha256:74e0c3a24c78612192a74fcd90dd117f1cf21dea4822e66d89e8ea80e3cd2da5", size = 121643081 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-cusparse-cu12"
         version = "12.1.0.106"
@@ -7661,6 +8414,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/0f/95/48fdbba24c93614d1ecd35bc6bdc6087bd17cbacc3abc4b05a9c2a1ca232/nvidia_cusparse_cu12-12.1.0.106-py3-none-win_amd64.whl", hash = "sha256:b798237e81b9719373e8fae8d4f091b70a0cf09d9d85c95a557e11df2d8e9a5a", size = 195414588 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-nccl-cu12"
         version = "2.19.3"
@@ -7668,6 +8424,9 @@ fn overlapping_resolution_markers() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/38/00/d0d4e48aef772ad5aebcf70b73028f88db6e5640b36c38e90445b7a57c45/nvidia_nccl_cu12-2.19.3-py3-none-manylinux1_x86_64.whl", hash = "sha256:a9734707a2c96443331c1e48c717024aa6678a0e2a4cb66b2c364d18cee6b48d", size = 165987969 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "nvidia-nvjitlink-cu12"
@@ -7679,6 +8438,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/7f/c6/0d1b2bfeb2ef42c06db0570c4d081e5cde4450b54c09e43165126cfe6ff6/nvidia_nvjitlink_cu12-12.8.61-py3-none-win_amd64.whl", hash = "sha256:1166a964d25fdc0eae497574d38824305195a5283324a21ccb0ce0c802cbf41c", size = 268514099 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "nvidia-nvtx-cu12"
         version = "12.1.105"
@@ -7688,6 +8450,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/b8/d7/bd7cb2d95ac6ac6e8d05bfa96cdce69619f1ef2808e072919044c2d47a8c/nvidia_nvtx_cu12-12.1.105-py3-none-win_amd64.whl", hash = "sha256:65f4d98982b31b60026e0e6de73fbdfc09d08a96f4656dd3665ca616a11e1e82", size = 66307 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "platformdirs"
         version = "4.3.6"
@@ -7696,6 +8461,9 @@ fn overlapping_resolution_markers() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/3c/a6/bc1012356d8ece4d66dd75c4b9fc6c1f6650ddd5991e421177d9f8f671be/platformdirs-4.3.6-py3-none-any.whl", hash = "sha256:73e575e1408ab8103900836b97580d5307456908a03e92031bab39e4554cc3fb", size = 18439 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "protobuf"
@@ -7711,6 +8479,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/fd/b2/ab07b09e0f6d143dfb839693aa05765257bceaa13d03bf1a696b78323e7a/protobuf-5.29.3-py3-none-any.whl", hash = "sha256:0a18ed4a24198528f2333802eb075e59dea9d679ab7a6c5efb017a59004d849f", size = 172550 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "psutil"
         version = "6.1.1"
@@ -7725,6 +8496,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/38/53/bd755c2896f4461fd4f36fa6a6dcb66a88a9e4b9fd4e5b66a77cf9d4a584/psutil-6.1.1-cp37-abi3-win32.whl", hash = "sha256:eaa912e0b11848c4d9279a93d7e2783df352b082f40111e078388701fd479e53", size = 250602 },
             { url = "https://files.pythonhosted.org/packages/7b/d7/7831438e6c3ebbfa6e01a927127a6cb42ad3ab844247f3c5b96bea25d73d/psutil-6.1.1-cp37-abi3-win_amd64.whl", hash = "sha256:f35cfccb065fff93529d2afb4a2e89e363fe63ca1e4a5da22b603a85833c2649", size = 254444 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "pyyaml"
@@ -7743,6 +8517,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/b5/84/0fa4b06f6d6c958d207620fc60005e241ecedceee58931bb20138e1e5776/PyYAML-6.0.2-cp310-cp310-win_amd64.whl", hash = "sha256:a4d3091415f010369ae4ed1fc6b79def9416358877534caf6a0fdd2146c87a3e", size = 161774 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "requests"
         version = "2.32.3"
@@ -7758,6 +8535,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/f9/9b/335f9764261e915ed497fcdeb11df5dfd6f7bf257d4a6a2a686d80da4d54/requests-2.32.3-py3-none-any.whl", hash = "sha256:70761cfe03c773ceb22aa2f671b4757976145175cdfca038c02654d061d6dcc6", size = 64928 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "sentry-sdk"
         version = "2.20.0"
@@ -7770,6 +8550,9 @@ fn overlapping_resolution_markers() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/e6/0f/6f7e6cd0f4a141752caef3f79300148422fdf2b8b68b531f30b2b0c0cbda/sentry_sdk-2.20.0-py2.py3-none-any.whl", hash = "sha256:c359a1edf950eb5e80cffd7d9111f3dbeef57994cb4415df37d39fda2cf22364", size = 322576 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "setproctitle"
@@ -7795,6 +8578,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/b0/8d/9e4a4651b1c5845a9aec0d2c08c65768ba5ca2ec76598124b45d384a5f46/setproctitle-1.3.4-pp310-pypy310_pp73-win_amd64.whl", hash = "sha256:5519f2a7b8c535b0f1f77b30441476571373add72008230c81211ee17b423b57", size = 12105 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "setuptools"
         version = "75.8.0"
@@ -7803,6 +8589,9 @@ fn overlapping_resolution_markers() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/69/8a/b9dc7678803429e4a3bc9ba462fa3dd9066824d3c607490235c6a796be5a/setuptools-75.8.0-py3-none-any.whl", hash = "sha256:e3982f444617239225d675215d51f6ba05f845d4eec313da4418fdbb56fb27e3", size = 1228782 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "six"
@@ -7813,6 +8602,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl", hash = "sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274", size = 11050 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "smmap"
         version = "5.0.2"
@@ -7821,6 +8613,9 @@ fn overlapping_resolution_markers() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/04/be/d09147ad1ec7934636ad912901c5fd7667e1c858e19d355237db0d0cd5e4/smmap-5.0.2-py3-none-any.whl", hash = "sha256:b30115f0def7d7531d22a0fb6502488d879e75b260a9db4d0819cfb25403af5e", size = 24303 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "sympy"
@@ -7833,6 +8628,9 @@ fn overlapping_resolution_markers() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/99/ff/c87e0622b1dadea79d2fb0b25ade9ed98954c9033722eb707053d310d4f3/sympy-1.13.3-py3-none-any.whl", hash = "sha256:54612cf55a62755ee71824ce692986f23c88ffa77207b30c1368eda4a7060f73", size = 6189483 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "torch"
@@ -7854,6 +8652,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://download.pytorch.org/whl/cpu/torch-2.2.2-cp310-none-macosx_10_9_x86_64.whl", hash = "sha256:e677c4d74db0cfc2b10923de1bde575d981cba54505ddc082b0508d964119850" },
             { url = "https://download.pytorch.org/whl/cpu/torch-2.2.2-cp310-none-macosx_11_0_arm64.whl", hash = "sha256:b520d14d2f2810ad5da758bea10caf7978ef3643565bc00f90de892e00d77925" },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "torch"
@@ -7892,6 +8693,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/33/6b/21496316c9b8242749ee2a9064406271efdf979e91d440e8a3806b5e84bf/torch-2.2.2-cp310-none-macosx_11_0_arm64.whl", hash = "sha256:877b3e6593b5e00b35bbe111b7057464e76a7dd186a287280d941b564b0563c2", size = 59707286 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "torch"
         version = "2.2.2+cpu"
@@ -7913,6 +8717,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://download.pytorch.org/whl/cpu/torch-2.2.2%2Bcpu-cp310-cp310-win_amd64.whl", hash = "sha256:fc29dda2795dd7220d769c5926b1c50ddac9b4827897e30a10467063691cdf54" },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "triton"
         version = "2.2.0"
@@ -7924,6 +8731,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/95/05/ed974ce87fe8c8843855daa2136b3409ee1c126707ab54a8b72815c08b49/triton-2.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a2294514340cfe4e8f4f9e5c66c702744c4a117d25e618bd08469d0bfed1e2e5", size = 167900779 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "typing-extensions"
         version = "4.12.2"
@@ -7933,6 +8743,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d", size = 37438 },
         ]
 
+        [package.metadata]
+        provides-extras = []
+
         [[package]]
         name = "urllib3"
         version = "2.3.0"
@@ -7941,6 +8754,9 @@ fn overlapping_resolution_markers() -> Result<()> {
         wheels = [
             { url = "https://files.pythonhosted.org/packages/c8/19/4ec628951a74043532ca2cf5d97b7b14863931476d117c471e8e2b1eb39f/urllib3-2.3.0-py3-none-any.whl", hash = "sha256:1cee9ad369867bfdbbb48b7dd50374c0967a0bb7710050facf0dd6911440e3df", size = 128369 },
         ]
+
+        [package.metadata]
+        provides-extras = []
 
         [[package]]
         name = "wandb"
@@ -7969,6 +8785,9 @@ fn overlapping_resolution_markers() -> Result<()> {
             { url = "https://files.pythonhosted.org/packages/df/b9/1d26752a7c9ff5b255c921e13a9c5176e21a0b77e53d3febf892d90c86a5/wandb-0.17.6-py3-none-win32.whl", hash = "sha256:247b1c9677fd633a460201f421d4fd4f370e7243d06257fab0ad1bb728ddcc1c", size = 6504208 },
             { url = "https://files.pythonhosted.org/packages/fc/2c/280b8891362967e54de2267454ac6033568b8412ec31225f00ecc11db7a6/wandb-0.17.6-py3-none-win_amd64.whl", hash = "sha256:51954f993b372c20812616838302183f0e3abf137614f05d80c7c17c307bfff9", size = 6504213 },
         ]
+
+        [package.metadata]
+        provides-extras = []
         "###
         );
     });
