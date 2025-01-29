@@ -1786,6 +1786,16 @@ impl Package {
                 .collect::<Result<_, _>>()
                 .map_err(LockErrorKind::RequirementRelativePath)?
         };
+        let provides_extras = if id.source.is_immutable() {
+            Vec::new()
+        } else {
+            annotated_dist
+                .metadata
+                .as_ref()
+                .expect("metadata is present")
+                .provides_extras
+                .clone()
+        };
         let dependency_groups = if id.source.is_immutable() {
             BTreeMap::default()
         } else {
@@ -1816,6 +1826,7 @@ impl Package {
             dependency_groups: BTreeMap::default(),
             metadata: PackageMetadata {
                 requires_dist,
+                provides_extras,
                 dependency_groups,
             },
         })
@@ -2630,6 +2641,8 @@ struct PackageWire {
 struct PackageMetadata {
     #[serde(default)]
     requires_dist: BTreeSet<Requirement>,
+    #[serde(default)]
+    provides_extras: Vec<ExtraName>,
     #[serde(default, rename = "requires-dev", alias = "dependency-groups")]
     dependency_groups: BTreeMap<GroupName, BTreeSet<Requirement>>,
 }
