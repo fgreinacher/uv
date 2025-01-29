@@ -979,6 +979,7 @@ fn lock_wheel_url() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = ["doc", "test", "trio"]
         requires-dist = [
             { name = "anyio", extras = ["trio"], marker = "extra == 'test'" },
             { name = "coverage", extras = ["toml"], marker = "extra == 'test'", specifier = ">=7" },
@@ -1129,6 +1130,7 @@ fn lock_sdist_url() -> Result<()> {
         sdist = { hash = "sha256:f75253795a87df48568485fd18cdd2a3fa5c4f7c5be8e5e36637733fce06fed6" }
 
         [package.metadata]
+        provides-extras = ["doc", "test", "trio"]
         requires-dist = [
             { name = "anyio", extras = ["trio"], marker = "extra == 'test'" },
             { name = "coverage", extras = ["toml"], marker = "extra == 'test'", specifier = ">=7" },
@@ -1574,6 +1576,7 @@ fn lock_project_extra() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = ["test"]
         requires-dist = [
             { name = "anyio", specifier = "==3.7.0" },
             { name = "iniconfig", marker = "extra == 'test'" },
@@ -10384,6 +10387,7 @@ fn lock_mixed_extras() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = ["async"]
         requires-dist = [{ name = "iniconfig", marker = "extra == 'async'", specifier = ">=2" }]
 
         [[package]]
@@ -10392,6 +10396,7 @@ fn lock_mixed_extras() -> Result<()> {
         source = { editable = "../workspace2/packages/leaf2" }
 
         [package.metadata]
+        provides-extras = ["async"]
         requires-dist = [{ name = "packaging", marker = "extra == 'async'", specifier = ">=24" }]
 
         [[package]]
@@ -10418,6 +10423,7 @@ fn lock_mixed_extras() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = ["async"]
         requires-dist = [
             { name = "leaf1", editable = "packages/leaf1" },
             { name = "typing-extensions", marker = "extra == 'async'", specifier = ">=4" },
@@ -10577,6 +10583,7 @@ fn lock_transitive_extra() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = ["async"]
         requires-dist = [{ name = "iniconfig", marker = "extra == 'async'", specifier = ">=2" }]
 
         [[package]]
@@ -10603,6 +10610,7 @@ fn lock_transitive_extra() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = ["async"]
         requires-dist = [
             { name = "leaf", editable = "packages/leaf" },
             { name = "leaf", extras = ["async"], marker = "extra == 'async'", editable = "packages/leaf" },
@@ -17827,6 +17835,7 @@ fn lock_multiple_sources_index_mixed() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = ["i18n"]
         requires-dist = [
             { name = "babel", marker = "extra == 'i18n'", specifier = ">=2.7" },
             { name = "markupsafe", specifier = ">=2.0" },
@@ -18286,6 +18295,7 @@ fn lock_multiple_sources_extra() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = ["cpu"]
         requires-dist = [
             { name = "iniconfig", marker = "extra == 'cpu'", url = "https://files.pythonhosted.org/packages/ef/a6/62565a6e1cf69e10f5727360368e451d4b7f58beeac6173dc9db836a5b46/iniconfig-2.0.0-py3-none-any.whl" },
             { name = "iniconfig", marker = "extra != 'cpu'" },
@@ -20152,6 +20162,7 @@ fn lock_dynamic_version_self_extra_hatchling() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = ["all", "async"]
         requires-dist = [
             { name = "anyio", marker = "extra == 'all'" },
             { name = "anyio", marker = "extra == 'async'" },
@@ -20312,6 +20323,7 @@ fn lock_dynamic_version_self_extra_setuptools() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = ["all", "async"]
         requires-dist = [
             { name = "anyio", marker = "extra == 'async'" },
             { name = "project", extras = ["async"], marker = "extra == 'all'" },
@@ -21591,6 +21603,7 @@ fn lock_recursive_extra() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = ["foo", "bar", "baz", "bop", "qux"]
         requires-dist = [
             { name = "iniconfig", marker = "extra == 'foo'" },
             { name = "project", extras = ["bar"], marker = "sys_platform == 'darwin' and extra == 'bop'" },
@@ -22058,6 +22071,7 @@ fn lock_self_extra_to_extra_compatible() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = ["foo"]
         requires-dist = [
             { name = "project", extras = ["foo"], marker = "extra == 'foo'" },
             { name = "typing-extensions" },
@@ -22227,6 +22241,7 @@ fn lock_self_extra_compatible() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = ["foo"]
         requires-dist = [
             { name = "project", marker = "extra == 'foo'" },
             { name = "typing-extensions" },
@@ -23463,6 +23478,7 @@ fn lock_pytorch_cpu() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = ["cpu", "cu124"]
         requires-dist = [
             { name = "jinja2", specifier = "<=3.1.4" },
             { name = "numpy", specifier = "<=2.2.0" },
@@ -24011,6 +24027,7 @@ fn lock_pytorch_preferences() -> Result<()> {
         ]
 
         [package.metadata]
+        provides-extras = ["cpu", "cu118"]
         requires-dist = [
             { name = "torch", marker = "sys_platform == 'darwin' and extra == 'cpu'", specifier = "==2.2.2" },
             { name = "torch", marker = "sys_platform == 'darwin' and extra == 'cu118'", specifier = "==2.2.2" },
